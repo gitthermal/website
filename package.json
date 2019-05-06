@@ -1,0 +1,25 @@
+{
+  "name": "therma-website",
+  "description": "Thermal website",
+  "main": "src/main.js",
+  "private": true,
+  "author": {
+    "name": "CodeCarrot, Inc.",
+    "url": "https://www.codecarrot.net",
+    "email": "contact@codecarrot.net"
+  },
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "bugs": {
+    "url": "https://github.com/gitthermal/website/issues"
+  },
+  "repository": {
+    "url": "https://github.com/gitthermal/website/"
+  },
+  "dependencies": {
+    "gridsome": "^0.5.0"
+  }
+}
