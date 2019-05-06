@@ -2,7 +2,7 @@
   "version": 2,
   "name": "thermal-website",
   "alias": "thermal",
-  "builds": [{ "src": "*", "use": "@now/static" }],
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
   "scope": "thermal",
   "regions": ["bom1", "dub1", "gru1", "hnd1", "syd1", "sfo1"],
   "github": {
