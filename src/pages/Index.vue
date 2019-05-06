@@ -78,15 +78,21 @@
 
 		<div class="index__cta">
 			<container>
-				<div class="index__cta-content">
-					<div class="index__cta-heading">
-						Git made simpler.
+				<div class="index__cta-container">
+					<div class="index__cta-content">
+						<div class="index__cta-heading">
+							Git made simpler.
+						</div>
+						<div class="index__cta-description">
+							Free. Open source. Runs everywhere.
+						</div>
 					</div>
-					<div class="index__cta-description">
-						Free. Open source. Runs everywhere.
+					<div class="index__cta-button">
+						<Button
+							text="Download"
+							:size="2"
+						/>
 					</div>
-				</div>
-				<div class="index__cta-button">
 				</div>
 			</container>
 		</div>
@@ -96,19 +102,55 @@
 
 <script>
 import Container from "../layouts/Container"
+import Button from "../components/Button"
 
 export default {
   metaInfo: {
     title: 'Hello, world!'
 	},
 	components: {
-		Container
+		Container,
+		Button
 	}
 }
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
+<style lang="sass">
+.index
+	&__cta
+		background-image: url("../../static/cta-background.png")
+		padding-top: 60px
+		padding-bottom: 60px
+
+		&-container
+			display: flex
+			flex-direction: column
+
+		&-heading, &-description
+			color: white
+
+		&-heading
+			font-size: 2.1rem
+			margin-bottom: 14px
+			line-height: 1.2
+
+@media (max-width: 768px)
+	.index__cta-button
+		margin-top: 1rem
+
+@media (min-width: 768px)
+	.index
+		&__cta
+			padding-top: 80px
+			padding-bottom: 80px
+
+			&-container
+				flex-direction: row
+				align-items: center
+
+			&-heading
+				font-size: 3rem
+
+			&-button
+				margin-left: auto
 </style>
