@@ -1,8 +1,8 @@
 <template>
 	<div class="layout">
-		<header theme="dark" />
+		<Header theme="dark" />
 		<slot />
-		<footer />
+		<Footer />
 	</div>
 </template>
 
