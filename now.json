@@ -4,7 +4,7 @@
   "alias": "thermal",
   "builds": [{ "src": "*", "use": "@now/static" }],
   "scope": "thermal",
-  "regions": "all",
+  "regions": ["bom1", "dub1", "gru1", "hnd1", "syd1", "sfo1"],
   "github": {
     "enabled": true,
     "autoAlias": true,
