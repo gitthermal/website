@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "thermal-website",
+  "alias": "thermal",
+  "builds": [{ "src": "*", "use": "@now/static" }],
+  "scope": "thermal",
+  "regions": "all",
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "autoJobCancelation": false
+  }
+}
