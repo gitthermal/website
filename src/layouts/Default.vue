@@ -10,29 +10,26 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
+export default {
+	name: "Default",
+	components: {
+		Header,
+		Footer
+	}
+};
+</script>
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+<style lang="sass">
+@import url('https://rsms.me/inter/inter.css')
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
 
-.nav__link {
-}
+body
+	font-family: 'Inter', sans-serif
+	line-height: 1.5
+	-webkit-font-smoothing: antialiased
+	font-weight: 400
 </style>
