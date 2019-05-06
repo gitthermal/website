@@ -1,0 +1,62 @@
+<template>
+	<a
+		class="button"
+		:class="{
+			button__primary: apperance === 'primary',
+			button__outline: apperance === 'outline',
+			'button__size-1': size === 1,
+			'button__size-2': size === 2
+		}"
+	>
+		{{ text }}
+	</a>
+</template>
+
+<script>
+export default {
+	name: "Button",
+	props: {
+		apperance: {
+			type: String,
+			default: "primary"
+		},
+		text: {
+			type: String
+		},
+		size: {
+			type: Number,
+			default: 2,
+			required: true
+		}
+	}
+}
+</script>
+
+<style lang='sass'>
+.button
+	cursor: pointer
+	opacity: 1
+	user-select: none
+	text-align: center
+	display: inline-block
+	border-radius: 50px
+	font-weight: 600
+
+	&__primary
+		background-color: #00ADB5
+		color: white
+
+	&__outline
+		background-color: white
+		color: #00ADB5
+
+	&__size
+		&-1
+			font-size: 0.820rem
+			padding: .5rem 1rem
+
+		&-2
+			font-size: 1.125rem
+			padding: .75rem 1.5rem
+
+</style>
