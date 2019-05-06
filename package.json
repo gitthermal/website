@@ -11,7 +11,8 @@
   "scripts": {
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "build": "gridsome build"
+    "build": "gridsome build",
+    "now-build": "gridsome build"
   },
   "bugs": {
     "url": "https://github.com/gitthermal/website/issues"
