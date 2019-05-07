@@ -4,7 +4,7 @@
 
 			<div class="footer__main">
 				<Logo />
-				<p>© Copyright 2019 CodeCarrot, Inc</p>
+				<p>© Copyright {{ new Date().getFullYear() }} CodeCarrot, Inc</p>
 			</div>
 
 			<div class="footer__navbar">
