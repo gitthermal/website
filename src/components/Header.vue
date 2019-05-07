@@ -140,6 +140,7 @@ export default {
 		&-menu
 			margin-left: auto
 			z-index: 10
+			cursor: pointer
 
 			svg
 				stroke: rgba(225, 225, 225, .8)
