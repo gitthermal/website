@@ -11,8 +11,11 @@
 					<Logo :color="logoColor" />
 				</g-link>
 				<div
-					v-if="toggleNavbar"
 					class="header__navbar"
+					:class="{
+						'is-open': navbar.status === true,
+						'is-close': navbar.status === false
+					}"
 				>
 					<g-link to="/features" class="header__navbar-item">
 						Features
@@ -92,9 +95,6 @@ export default {
 				case "light":
 					return "222831"
 			}
-		},
-		toggleNavbar() {
-			return (window.screen.width <= 768) && (this.navbar.status)
 		}
 	},
 	methods: {
