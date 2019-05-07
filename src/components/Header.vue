@@ -121,6 +121,7 @@ export default {
 	&__navbar
 		align-items: center
 		display: flex
+		z-index: 10
 
 		&-item, .navbar__dropdown-item
 			color: rgba(225, 225, 225, .8)
