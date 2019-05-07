@@ -128,6 +128,7 @@ export default {
 	&__hero
 		background-color: #222831
 		text-align: center
+		min-height: 360px
 
 		&-heading
 			color: white
@@ -148,6 +149,7 @@ export default {
 		&-preview
 			text-align: center
 			position: relative
+			margin-top: -160px
 
 			p
 				color: white
@@ -208,9 +210,6 @@ export default {
 
 @media (max-width: 768px)
 	.index
-		&__hero
-			min-height: 76vh
-
 		&__features
 			&-item
 				&:not(:last-child)
@@ -222,24 +221,26 @@ export default {
 	.hero__button-patron
 		display: none
 
-@media (max-width: 576px)
-	.index__hero-preview
-		margin-top: -200px
+@media (min-width: 500px)
+	.index__hero
+		min-height: 340px
 
-@media (min-width: 576px)
-	.index__hero-preview
-		margin-top: -340px
+		&-preview
+			margin-top: -200px
 
 @media (min-width: 768px)
 	.index
 		&__hero
-			min-height: 87vh
+			min-height: 460px
 
 			&-heading
 				font-size: 3rem
 
 			&-description
 				font-size: 1.75rem
+
+			&-preview
+				margin-top: -280px
 
 		&__features
 			padding-top: 80px
