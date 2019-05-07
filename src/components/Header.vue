@@ -5,41 +5,70 @@
 			backgroundColor: '#' + backgroundColor
 		}"
 	>
-		<container>
-      <div class="header__logo">
-        <Logo :color="logoColor" />
-      </div>
-      <div class="header__navbar">
-        <div class="header__navbar-item">
-          Features
-        </div>
+		<Container>
+			<div class="header__container">
+				<g-link to="/" class="header__logo">
+					<Logo :color="logoColor" />
+				</g-link>
+				<div
+					v-if="toggleNavbar"
+					class="header__navbar"
+				>
+					<g-link to="/features" class="header__navbar-item">
+						Features
+					</g-link>
 
-        <div class="header__navbar-item">
-          Patron
-        </div>
+					<a href="https://thermal.netlify.com" target="_blank" class="header__navbar-item">
+						Guide
+					</a>
 
-        <div class="header__navbar-item">
-          Support
-        </div>
+					<div
+						href="https://discord.gg/KT3nAR5"
+						target="_blank"
+						class="header__navbar-item"
+					>
+						Support
+					</div>
 
-        <div class="header__navbar-item header__navbar-button">
-          Download
-        </div>
+					<div class="header__navbar-item header__navbar-button">
+						<Button
+							apperance="outline"
+							text="Download"
+							:size="1"
+						/>
+					</div>
 
-      </div>
-		</container>
+				</div>
+
+				<div
+					@click="navbarToggle()"
+					class="header__navbar-menu"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+				</div>
+			</div>
+		</Container>
 	</div>
 </template>
 
 <script>
 import Container from "../layouts/Container";
 import Logo from "./Logo";
+import Button from "./Button"
 
 export default {
-  name: "Header",
+	name: "Header",
+	data() {
+		return {
+			navbar: {
+				status: false
+			}
+		}
+	},
   components: {
     Container,
-    Logo
+		Logo,
+		Button
 	},
 	props: {
 		theme: {
@@ -63,7 +92,94 @@ export default {
 				case "light":
 					return "222831"
 			}
+		},
+		toggleNavbar() {
+			return (window.screen.width <= 768) && (this.navbar.status)
+		}
+	},
+	methods: {
+		navbarToggle() {
+			this.navbar.status = !this.navbar.status
 		}
 	}
 }
 </script>
+
+<style lang='sass'>
+.header
+	padding-top: 1.5rem
+	padding-bottom: 1.5rem
+	display: flex
+
+	&__logo
+		cursor: pointer
+
+	&__container
+		align-items: center
+		display: flex
+
+	&__navbar
+		align-items: center
+		display: flex
+
+		&-item, .navbar__dropdown-item
+			color: rgba(225, 225, 225, .8)
+			font-size: .820rem
+			cursor: pointer
+			display: flex
+			align-items: center
+			flex-direction: column
+
+			&:hover
+				color: rgb(225, 225, 225)
+
+		&-dropdown
+			display: flex
+			flex-direction: row
+
+		&-menu
+			margin-left: auto
+			z-index: 10
+
+			svg
+				stroke: rgba(225, 225, 225, .8)
+
+.is-open
+	display: flex
+
+.is-close
+	display: none
+
+@media (max-width: 768px)
+	.header__navbar
+		position: absolute
+		top: 77px
+		background-color: black
+		left: 0
+		right: 0
+		flex-direction: column
+		align-items: center
+
+		&-item
+			width: 100%
+			padding-top: .85rem
+			padding-bottom: .85rem
+
+			&:not(:last-child)
+				border-bottom: 1px solid rgba(225, 225, 225, .3)
+
+@media (min-width: 768px)
+	.header
+		&__container
+			flex-direction: row
+
+		&__navbar
+			margin-left: auto
+			flex-direction: row
+
+			&-item
+				margin-left: 1.25rem
+
+			&-menu
+				display: none
+</style>
