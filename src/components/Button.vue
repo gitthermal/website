@@ -1,5 +1,7 @@
 <template>
 	<a
+		:href="link"
+		:target="target"
 		class="button"
 		:class="{
 			button__primary: apperance === 'primary',
@@ -24,10 +26,29 @@ export default {
 		text: {
 			type: String
 		},
+		link: {
+			type: String,
+			default: null
+		},
+		external: {
+			type: Boolean,
+			default: null
+		},
 		size: {
 			type: Number,
 			default: 2,
 			required: true
+		}
+	},
+	computed: {
+		target() {
+			switch (this.external) {
+				case true:
+					return "_blank"
+				default:
+				case false:
+					return "_self"
+			}
 		}
 	}
 };
