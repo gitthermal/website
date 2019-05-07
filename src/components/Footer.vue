@@ -17,9 +17,9 @@
 				<a href="https://patreon.com/mittalyashu" target="_blank" class="footer__navbar-item">
 					Patron
 				</a>
+				<a href="https://github.com/gitthermal/thermal/issues/new/choose" target="_blank" class="footer__navbar-item">
 					Feedback
-				</div>
-				<div class="footer__navbar-item">
+				</a>
 				<a href="https://github.com/gitthermal/thermal/" target="_blank" class="footer__navbar-item">
 					Source
 				</a>
