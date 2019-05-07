@@ -36,37 +36,33 @@
 
 		<div class="index__features">
 			<container>
-				<div class="index__features-item">
-					<div class="index__features-icon">
-
+				<div class="index__features-container">
+					<div class="index__features-item">
+						<g-image src="../../static/open-source-2x.png" class="index__features-icon" />
+						<div class="index__features-heading">
+							Open Source
+						</div>
+						<div class="index__features-description">
+							Leveraging the power of open source developer community and build better software.
+						</div>
 					</div>
-					<div class="index__features-heading">
-						Open Source
+					<div class="index__features-item">
+						<g-image src="../../static/easy-to-use-2x.png" class="index__features-icon" />
+						<div class="index__features-heading">
+							Easy to use
+						</div>
+						<div class="index__features-description">
+							New to Git? Thermal provides a seamless graphical experience to get started quickly.
+						</div>
 					</div>
-					<div class="index__features-description">
-						Leveraging the power of open source developer community and build better software.
-					</div>
-				</div>
-				<div class="index__features-item">
-					<div class="index__features-icon">
-
-					</div>
-					<div class="index__features-heading">
-						Easy to use
-					</div>
-					<div class="index__features-description">
-						New to Git? Thermal provides a seamless graphical experience to get started quickly.
-					</div>
-				</div>
-				<div class="index__features-item">
-					<div class="index__features-icon">
-
-					</div>
-					<div class="index__features-heading">
-						Cross platform
-					</div>
-					<div class="index__features-description">
-						The app is available on Windows, Linux, and Mac operating system.
+					<div class="index__features-item">
+						<g-image src="../../static/multi-os-2x.png" class="index__features-icon" />
+						<div class="index__features-heading">
+							Cross platform
+						</div>
+						<div class="index__features-description">
+							The app is available on Windows, Linux, and Mac operating system.
+						</div>
 					</div>
 				</div>
 			</container>
@@ -164,6 +160,35 @@ export default {
 				box-shadow: 0px 10px 50px rgba(32, 37, 46, 0.25)
 				width: 100%
 				border-radius: 3px
+
+	&__features
+		background-color: #222831
+		padding-top: 40px
+		padding-bottom: 40px
+
+		&-container
+			display: flex
+			flex-direction: column
+
+		&-item
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+
+		&-icon
+			width: 30px
+			height: 30px
+			margin-bottom: .5rem
+
+		&-heading
+			color: white
+			font-size: 1.652rem
+
+		&-description
+			color: #474C55
+			font-size: 1.375rem
+
 	&__cta
 		background-image: url("../../static/cta-background.png")
 		padding-top: 60px
@@ -185,6 +210,11 @@ export default {
 	.index
 		&__hero
 			min-height: 76vh
+
+		&__features
+			&-item
+				&:not(:last-child)
+					margin-bottom: 2rem
 
 		&__cta-button
 			margin-top: 1rem
@@ -210,6 +240,17 @@ export default {
 
 			&-description
 				font-size: 1.75rem
+
+		&__features
+			padding-top: 80px
+			padding-bottom: 80px
+
+			&-container
+				flex-direction: row
+
+			&-item
+				&:not(:last-child)
+					margin-right: 2rem
 
 		&__cta
 			padding-top: 80px
