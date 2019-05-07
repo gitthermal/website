@@ -139,7 +139,6 @@ export default {
 
 		&-menu
 			margin-left: auto
-			z-index: 10
 			cursor: pointer
 
 			svg
