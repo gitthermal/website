@@ -31,6 +31,22 @@
 
 		<div class="index__new__features">
 			<container>
+				<div class="index__new__features-container">
+					<NewFeature
+						image="./commit-feature-4x.png"
+						title="Commits"
+						description="What took minutes in the command line now takes seconds with Thermal."
+						:order="0"
+						class="index__new__features-item"
+					/>
+					<NewFeature
+						image="./file-diff-feature-4x.png"
+						title="Clean diff"
+						description="Visualize every commit with clear diff in workspace and history."
+						:order="1"
+						class="index__new__features-item"
+					/>
+				</div>
 			</container>
 		</div>
 
@@ -107,6 +123,7 @@
 <script>
 import Container from "../layouts/Container"
 import Button from "../components/Button"
+import NewFeature from "../components/NewFeature"
 
 export default {
   metaInfo: {
@@ -114,7 +131,8 @@ export default {
 	},
 	components: {
 		Container,
-		Button
+		Button,
+		NewFeature
 	}
 }
 </script>
@@ -158,6 +176,18 @@ export default {
 				box-shadow: 0px 10px 50px rgba(32, 37, 46, 0.25)
 				width: 100%
 				border-radius: 3px
+
+	&__new__features
+		padding-top: 60px
+		padding-bottom: 60px
+
+		&-container
+			max-width: 830px
+			margin: 0 auto
+
+		&-item
+			&:not(:last-child)
+				margin-bottom: 3rem
 
 	&__features
 		background-color: #222831
