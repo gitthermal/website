@@ -189,7 +189,7 @@ export default {
 
 		&-description
 			color: #474C55
-			font-size: 1.375rem
+			font-size: 1.125rem
 
 	&__cta
 		background-image: url("../../static/cta-background.png")
@@ -214,6 +214,9 @@ export default {
 			&-item
 				&:not(:last-child)
 					margin-bottom: 2rem
+
+				&-description
+					margin-top: .875rem
 
 		&__cta-button
 			margin-top: 1rem
