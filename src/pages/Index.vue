@@ -129,7 +129,47 @@ import NewFeature from "../components/NewFeature"
 
 export default {
   metaInfo: {
-    title: 'One Stop. Git Repository'
+		title: 'One Stop. Git Repository',
+		meta: [
+			{
+				name: 'description',
+				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+			},
+
+			// Google
+			{
+				itemprop: 'description',
+				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+			},
+
+			// Facebook
+			{
+				property: 'og:title',
+				content: 'One Stop. Git Repository'
+			},
+			{
+				property: 'og:url',
+				content: 'https://www.gitthermal.com/'
+			},
+			{
+				property: 'og:description',
+				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+			},
+
+			// Twitter
+			{
+				name: 'twitter:title',
+				content: 'One Stop. Git Repository'
+			},
+			{
+				name: 'twitter:description',
+				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+			},
+			{
+				name: 'twitter:url',
+				content: 'https://www.gitthermal.com/'
+			}
+		]
 	},
 	components: {
 		Container,
