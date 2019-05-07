@@ -34,5 +34,6 @@ body
 	font-weight: 400
 
 a
+	cursor: pointer
 	text-decoration: none
 </style>
