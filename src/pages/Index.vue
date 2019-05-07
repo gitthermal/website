@@ -165,8 +165,8 @@ export default {
 
 	&__features
 		background-color: #222831
-		padding-top: 40px
-		padding-bottom: 40px
+		padding-top: 60px
+		padding-bottom: 60px
 
 		&-container
 			display: flex
