@@ -137,7 +137,6 @@ export default {
 			color: white
 			font-size: 2.5rem
 			line-height: 1.25
-			margin-bottom: .875rem
 
 		&-description
 			color: #474C55
