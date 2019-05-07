@@ -11,10 +11,9 @@
 				<div class="footer__navbar-item">
 					About
 				</div>
-				<div class="footer__navbar-item">
+				<a href="https://discord.gg/KT3nAR5" target="_blank" class="footer__navbar-item">
 					Help
-				</div>
-				<div class="footer__navbar-item">
+				</a>
 					Feedback
 				</div>
 				<div class="footer__navbar-item">
