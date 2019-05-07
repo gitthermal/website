@@ -3,6 +3,7 @@
 		class="button"
 		:class="{
 			button__primary: apperance === 'primary',
+			button__secondary: apperance === 'secondary',
 			button__outline: apperance === 'outline',
 			'button__size-1': size === 1,
 			'button__size-2': size === 2
@@ -29,7 +30,7 @@ export default {
 			required: true
 		}
 	}
-}
+};
 </script>
 
 <style lang='sass'>
@@ -46,9 +47,13 @@ export default {
 		background-color: #00ADB5
 		color: white
 
-	&__outline
+	&__secondary
 		background-color: white
 		color: #00ADB5
+
+	&__outline
+		border: 1px solid rgba(225, 225, 225, .8)
+		color: rgba(225, 225, 225, .8)
 
 	&__size
 		&-1
