@@ -32,4 +32,7 @@ body
 	line-height: 1.5
 	-webkit-font-smoothing: antialiased
 	font-weight: 400
+
+a
+	text-decoration: none
 </style>
