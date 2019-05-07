@@ -70,17 +70,13 @@
 
 		<div class="index__pp">
 			<container>
-				<div class="index__pp-content">
-					<div class="index__pp-heading">
-						Pair Programming
-					</div>
-					<div class="index__pp-description">
-						Thermal is an open source project, and we need your contribution to make it better, whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the community, we also offer free pair programming sessions, come join our Discord server and say hi to our core team.
-					</div>
+				<div class="index__pp-heading">
+					Pair Programming
 				</div>
-				<div class="index__pp-image">
-
+				<div class="index__pp-description">
+					Thermal is an open source project, and we need your contribution to make it better, whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the community, we also offer free pair programming sessions, come join our Discord server and say hi to our core team.
 				</div>
+				<Button text="Join discord server" />
 			</container>
 		</div>
 
@@ -191,6 +187,17 @@ export default {
 			color: #474C55
 			font-size: 1.125rem
 
+	&__pp
+		padding-top: 60px
+		padding-bottom: 60px
+
+		&-heading
+			font-size: 2rem
+
+		&-description
+			padding-top: .875rem
+			padding-bottom: 2rem
+
 	&__cta
 		background-image: url("../../static/cta-background.png")
 		padding-top: 60px
@@ -255,6 +262,10 @@ export default {
 			&-item
 				&:not(:last-child)
 					margin-right: 2rem
+
+		&__pp
+			padding-top: 80px
+			padding-bottom: 80px
 
 		&__cta
 			padding-top: 80px
