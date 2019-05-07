@@ -23,11 +23,12 @@
 				<a href="https://github.com/gitthermal/thermal/" target="_blank" class="footer__navbar-item">
 					Source
 				</a>
+				<!-- <div class="footer__navbar-item">
 					Privacy
 				</div>
 				<div class="footer__navbar-item">
 					Terms
-				</div>
+				</div> -->
 			</div>
 
 			<div class="footer__social">
