@@ -8,9 +8,9 @@
 			</div>
 
 			<div class="footer__navbar">
-				<div class="footer__navbar-item">
+				<g-link to="/about" class="footer__navbar-item">
 					About
-				</div>
+				</g-link>
 				<a href="https://discord.gg/KT3nAR5" target="_blank" class="footer__navbar-item">
 					Help
 				</a>
