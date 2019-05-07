@@ -16,6 +16,8 @@
 					<Button
 						apperance="outline"
 						text="Become a Patron"
+						link="https://patreon.com/mittalyashu"
+						:external="true"
 						class="index__hero-button hero__button-patron"
 					/>
 				</div>
