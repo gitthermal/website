@@ -14,9 +14,15 @@
 				<a href="https://discord.gg/KT3nAR5" target="_blank" class="footer__navbar-item">
 					Help
 				</a>
+				<a href="https://patreon.com/mittalyashu" target="_blank" class="footer__navbar-item">
+					Patron
+				</a>
 					Feedback
 				</div>
 				<div class="footer__navbar-item">
+				<a href="https://github.com/gitthermal/thermal/" target="_blank" class="footer__navbar-item">
+					Source
+				</a>
 					Privacy
 				</div>
 				<div class="footer__navbar-item">
