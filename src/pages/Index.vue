@@ -8,12 +8,24 @@
 				<div class="index__hero-description">
 					All-in-one place to manage your Git repository.
 				</div>
-				<div class="index__hero-button">
+				<div class="index__hero-cta">
+					<Button
+						text="Download"
+						class="index__hero-button"
+					/>
+					<Button
+						apperance="outline"
+						text="Become a Patron"
+						class="index__hero-button hero__button-patron"
+					/>
 				</div>
-				<div class="index__hero-preview">
-					<p>All features are not available as shown below</p>
-					<g-image src="../../static/thermal-app-preview.png" alt="Thermal Application Screenshot" />
-				</div>
+			</container>
+		</div>
+
+		<div class="index__hero-preview">
+			<container>
+				<p>*All features are not available as shown below</p>
+				<g-image src="../../static/thermal-app-preview.png" alt="Thermal Application Screenshot" />
 			</container>
 		</div>
 
@@ -117,6 +129,42 @@ export default {
 
 <style lang="sass">
 .index
+	&__hero
+		background-color: #222831
+		text-align: center
+
+		&-heading
+			color: white
+			font-size: 2.5rem
+			line-height: 1.25
+			margin-bottom: .875rem
+
+		&-description
+			color: #474C55
+
+		&-cta
+			margin-top: 1rem
+			margin-bottom: 1.875rem
+
+		&-button
+			&:not(:first-child)
+				margin-left: 1.5rem
+
+		&-preview
+			text-align: center
+			position: relative
+
+			p
+				color: white
+				font-size: .5rem
+				font-weight: 200
+				margin-bottom: 4px
+				letter-spacing: .8px
+
+			img
+				box-shadow: 0px 10px 50px rgba(32, 37, 46, 0.25)
+				width: 100%
+				border-radius: 3px
 	&__cta
 		background-image: url("../../static/cta-background.png")
 		padding-top: 60px
@@ -135,11 +183,35 @@ export default {
 			line-height: 1.2
 
 @media (max-width: 768px)
-	.index__cta-button
-		margin-top: 1rem
+	.index
+		&__hero
+			min-height: 76vh
+
+		&__cta-button
+			margin-top: 1rem
+
+	.hero__button-patron
+		display: none
+
+@media (max-width: 576px)
+	.index__hero-preview
+		margin-top: -200px
+
+@media (min-width: 576px)
+	.index__hero-preview
+		margin-top: -340px
 
 @media (min-width: 768px)
 	.index
+		&__hero
+			min-height: 87vh
+
+			&-heading
+				font-size: 3rem
+
+			&-description
+				font-size: 1.75rem
+
 		&__cta
 			padding-top: 80px
 			padding-bottom: 80px
