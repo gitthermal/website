@@ -88,12 +88,18 @@ export default {
 		flex-direction: row
 
 		&-item
+			display: flex
+
 			&:not(:first-child)
 				margin-left: 40px
 
 			img
 				width: 20px
 				height: 20px
+
+			&:nth-child(3)
+				img
+					width: 24px
 
 @media (max-width: 992px)
 	.footer__navbar
