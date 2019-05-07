@@ -145,12 +145,6 @@ export default {
 			svg
 				stroke: rgba(225, 225, 225, .8)
 
-.is-open
-	display: flex
-
-.is-close
-	display: none
-
 @media (max-width: 768px)
 	.header__navbar
 		position: absolute
@@ -168,6 +162,12 @@ export default {
 
 			&:not(:last-child)
 				border-bottom: 1px solid rgba(225, 225, 225, .3)
+
+	.is-open
+		display: flex
+
+	.is-close
+		display: none
 
 @media (min-width: 768px)
 	.header
