@@ -118,7 +118,7 @@ import Button from "../components/Button"
 
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'One Stop. Git Repository'
 	},
 	components: {
 		Container,
