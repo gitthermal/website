@@ -94,7 +94,7 @@
 				<div class="index__pp-description">
 					Thermal is an open source project, and we need your contribution to make it better, whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the community, we also offer free pair programming sessions, come join our Discord server and say hi to our core team.
 				</div>
-				<Button text="Join discord server" />
+				<Button text="Join discord server" link="https://discord.gg/KT3nAR5" :external="true" />
 			</container>
 		</div>
 
