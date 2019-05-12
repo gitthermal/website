@@ -21,6 +21,7 @@
     "url": "https://github.com/gitthermal/website/"
   },
   "dependencies": {
+    "@octokit/rest": "^16.25.3",
     "gridsome": "0.5.8"
   },
   "devDependencies": {
