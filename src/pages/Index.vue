@@ -11,6 +11,7 @@
 				<div class="index__hero-cta">
 					<Button
 						text="Download"
+						:link="downloadUrl"
 						class="index__hero-button"
 					/>
 					<Button
