@@ -25,5 +25,31 @@ export default {
 					return "MacOS";
 			}
 		}
+	},
+	methods: {
+		releasesAssets(assets) {
+			// console.log(assets);
+			for (let i = 0; i < assets.length; i++) {
+				console.log(assets[i].browserDownloadUrl);
+				this.browserDownloadUrl(assets[i].browserDownloadUrl, i);
+			}
+		},
+		browserDownloadUrl(url, index) {
+			console.log(url.split(".").pop());
+			console.log(index);
+			switch (url.split(".").pop()) {
+				// Windows
+				case "exe":
+					return index;
+				// Linux
+				case "deb":
+				case "snap":
+				case "AppImage":
+					return index;
+				// Mac
+				case "zip":
+					return index;
+			}
+		}
 	}
 }
