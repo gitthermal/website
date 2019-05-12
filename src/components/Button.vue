@@ -1,5 +1,6 @@
 <template>
 	<a
+		v-if="external"
 		:href="link"
 		:target="target"
 		class="button"
@@ -13,6 +14,20 @@
 	>
 		{{ text }}
 	</a>
+	<g-link
+		v-else
+		:to="link"
+		class="button"
+		:class="{
+			button__primary: apperance === 'primary',
+			button__secondary: apperance === 'secondary',
+			button__outline: apperance === 'outline',
+			'button__size-1': size === 1,
+			'button__size-2': size === 2
+		}"
+	>
+		{{ text }}
+	</g-link>
 </template>
 
 <script>
