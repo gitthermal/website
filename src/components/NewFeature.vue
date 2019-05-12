@@ -34,7 +34,6 @@ export default {
 	},
 	computed: {
 		containerStyle() {
-			console.log(this.order);
 			return ((this.order === 0) ? "fd-row" : "fd-rr") + " " + ((this.order === 0) ? "ta-left" : "ta-right")
 		},
 		imageStyle() {
