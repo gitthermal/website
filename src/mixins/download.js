@@ -1,13 +1,16 @@
+const platform = require('platform');
+
 export default {
 	computed: {
 		downloadUrl() {
 			return 'download' + '/?os=' + this.platformName
 		},
 		platformName() {
-			switch (window.navigator.platform) {
+			switch (platform.os.family) {
 				case "Win":
 				case "Win32":
 				case "Win64":
+				case "Windows":
 					return "windows"
 				case "Linux":
 					return "linux"
