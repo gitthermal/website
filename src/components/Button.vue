@@ -76,6 +76,10 @@ export default {
 		border: 1px solid rgba(225, 225, 225, .8)
 		color: rgba(225, 225, 225, .8)
 
+		&:hover
+			border: 1px solid rgba(225, 225, 225, 1)
+			color: rgba(225, 225, 225, 1)
+
 	&__size
 		&-1
 			font-size: 0.820rem
