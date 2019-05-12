@@ -47,7 +47,7 @@ export default {
 		},
 		external: {
 			type: Boolean,
-			default: null
+			default: false
 		},
 		size: {
 			type: Number,
