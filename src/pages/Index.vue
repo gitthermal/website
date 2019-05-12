@@ -135,6 +135,7 @@ import Button from "../components/Button"
 import NewFeature from "../components/NewFeature"
 
 export default {
+	name: "Index",
   metaInfo: {
 		title: 'One Stop. Git Repository',
 		meta: [
