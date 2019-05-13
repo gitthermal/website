@@ -6,7 +6,10 @@
 					<!-- <h1 v-if="!!platformLabel" class="download__heading">Thermal for {{ platformLabel }}</h1> -->
 					<div v-if="!!platformLabel" class="download__progress">
 						<h2>Thanks for downloading Thermal for {{ platformLabel }}</h2>
-						Download not starting? Try this direct download link.
+						<p>
+							Download not started? Try this
+							<g-link :to="downloadLink">direct download link</g-link>.
+						</p>
 					</div>
 					<h1 v-else class="download__heading">
 						Thermal for Windows, Mac & Linux
@@ -52,8 +55,16 @@ export default {
 	metaInfo: {
 		title: "Download application"
 	},
+	data() {
+		currentOSDownloadURL: "";
+	},
 	components: {
 		container
+	},
+	computed: {
+		downloadLink() {
+			return this.currentOSDownloadURL;
+		}
 	},
 	methods: {
 		downloadApp(url) {
