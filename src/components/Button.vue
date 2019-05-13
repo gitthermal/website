@@ -51,8 +51,7 @@ export default {
 		},
 		size: {
 			type: Number,
-			default: 2,
-			required: true
+			default: 2
 		}
 	},
 	computed: {
