@@ -25,13 +25,13 @@
 						Guide
 					</a>
 
-					<div
+					<a
 						href="https://discord.gg/KT3nAR5"
 						target="_blank"
 						class="header__navbar-item"
 					>
 						Support
-					</div>
+					</a>
 
 					<div class="header__navbar-item header__navbar-button">
 						<Button
