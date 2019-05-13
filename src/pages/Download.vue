@@ -14,36 +14,27 @@
 					<div class="download__other">
 						<p class="download__other-heading" v-if="!!platformLabel">Download for other platform</p>
 						<div class="download__other-list">
-							<a
-								href="/download?os=windows"
-								class="download__other-item"
-							>
+							<div class="download__other-item">
 								<g-image
 									src="../../static/images/windows.svg"
 									class="download__other-image"
 								/>
 								<h4>Windows</h4>
-							</a>
-							<a
-								href="/download?os=mac"
-								class="download__other-item"
-							>
+							</div>
+							<div class="download__other-item">
 								<g-image
 									src="../../static/images/mac.png"
 									class="download__other-image"
 								/>
 								<h4>MacOS</h4>
-							</a>
-							<a
-								href="/download?os=linux"
-								class="download__other-item"
-							>
+							</div>
+							<div class="download__other-item">
 								<g-image
 									src="../../static/images/linux.svg"
 									class="download__other-image"
 								/>
 								<h4>Linux</h4>
-							</a>
+							</div>
 						</div>
 					</div>
 				</div>
