@@ -55,6 +55,25 @@ export default {
 	components: {
 		container
 	},
+	methods: {
+		downloadApp(url) {
+			setTimeout(function() {
+				window.open(url);
+			}, 1500);
+		}
+	},
+	mounted() {
+		this.osReleasesAssets(this.$page.allgithub.edges[0].node.assets);
+		for (let i = 0; i < this.osBuild.length; i++) {
+			if (this.$router.history.current.query.os === this.osBuild[i].os) {
+				console.log(this.osBuild[i].ext);
+				for (let j = 0; j < this.osBuild[i].ext.length; j++) {
+					this.currentOSDownloadURL = this.osBuild[i].ext[j].browserDownloadUrl;
+					this.downloadApp(this.currentOSDownloadURL);
+				}
+			}
+		}
+	},
 	mixins: [DownloadMixin]
 };
 </script>
