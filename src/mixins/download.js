@@ -3,7 +3,7 @@ const platform = require('platform');
 export default {
 	computed: {
 		downloadUrl() {
-			return 'download' + '/?os=' + this.platformName
+			return 'download' + '/?os=' + this.platformName + '&build=' + this.buildType
 		},
 		platformName() {
 			switch (platform.os.family) {
@@ -16,6 +16,16 @@ export default {
 					return "linux"
 				case "Mac":
 					return "mac"
+			}
+		},
+		buildType() {
+			switch (this.platformName) {
+				case "windows":
+					return "exe"
+				case "linux":
+					return "linux"
+				case "mac":
+					return "zip"
 			}
 		},
 		platformLabel() {
