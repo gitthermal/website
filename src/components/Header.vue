@@ -38,6 +38,7 @@
 							apperance="outline"
 							text="Download"
 							:size="1"
+							:link="downloadUrl"
 						/>
 					</div>
 
@@ -58,6 +59,7 @@
 import Container from "../layouts/Container";
 import Logo from "./Logo";
 import Button from "./Button"
+import DownloadMixin from "../mixins/download"
 
 export default {
 	name: "Header",
@@ -101,7 +103,10 @@ export default {
 		navbarToggle() {
 			this.navbar.status = !this.navbar.status
 		}
-	}
+	},
+	mixins: [
+		DownloadMixin
+	]
 }
 </script>
 

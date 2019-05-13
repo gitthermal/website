@@ -121,6 +121,7 @@
 						<Button
 							text="Download"
 							:size="2"
+							:link="downloadUrl"
 						/>
 					</div>
 				</div>
