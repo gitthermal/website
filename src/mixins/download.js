@@ -60,7 +60,7 @@ export default {
 	methods: {
 		osReleasesAssets(assets) {
 			for (let i = 0; i < assets.length; i++) {
-				let downloadUrl = assets[i].browserDownloadUrl
+				let downloadUrl = assets[i].browser_download_url
 				let buildType = downloadUrl.split(".").pop()
 				switch (buildType) {
 					// Windows

@@ -98,7 +98,7 @@ export default {
 					title
 					assets {
 						url
-						browserDownloadUrl
+						browser_download_url
 					}
 				}
 			}
