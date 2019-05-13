@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^16.25.3",
-    "gridsome": "0.5.8"
+    "gridsome": "0.6.0"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
