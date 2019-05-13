@@ -1,24 +1,6 @@
 const platform = require('platform');
 
 export default {
-	data() {
-		return {
-			osBuild: [
-				{
-					os: "windows",
-					ext: []
-				},
-				{
-					os: "mac",
-					ext: []
-				},
-				{
-					os: "linux",
-					ext: []
-				}
-			]
-		}
-	},
 	computed: {
 		downloadUrl() {
 			return 'download' + '/?os=' + this.platformName + '&build=' + this.buildType
@@ -55,41 +37,6 @@ export default {
 				case "mac":
 					return "MacOS";
 			}
-		}
-	},
-	methods: {
-		osReleasesAssets(assets) {
-			for (let i = 0; i < assets.length; i++) {
-				let downloadUrl = assets[i].browser_download_url
-				let buildType = downloadUrl.split(".").pop()
-				switch (buildType) {
-					// Windows
-					case "exe":
-						this.addBuildType("exe", downloadUrl, 0);
-						break;
-					// Linux
-					case "deb":
-						this.addBuildType("deb", downloadUrl, 2);
-						break;
-					case "snap":
-						this.addBuildType("snap", downloadUrl, 2);
-						break;
-					case "AppImage":
-						this.addBuildType("AppImage", downloadUrl, 2);
-						break;
-						// Mac
-					case "zip":
-						this.addBuildType("zip", downloadUrl, 1);
-						break;
-				}
-			}
-		},
-		addBuildType(type, downloadUrl, index) {
-			let data = {
-				name: type,
-				browserDownloadUrl: downloadUrl
-			}
-			this.osBuild[index].ext.push(data)
 		}
 	}
 }

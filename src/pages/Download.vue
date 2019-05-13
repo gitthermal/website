@@ -56,7 +56,23 @@ export default {
 		title: "Download application"
 	},
 	data() {
-		currentOSDownloadURL: "";
+		return {
+			currentOSDownloadURL: "",
+			osBuild: [
+				{
+					os: "windows",
+					ext: []
+				},
+				{
+					os: "mac",
+					ext: []
+				},
+				{
+					os: "linux",
+					ext: []
+				}
+			]
+		}
 	},
 	components: {
 		container
@@ -71,6 +87,39 @@ export default {
 			setTimeout(function() {
 				window.open(url);
 			}, 1500);
+		},
+		osReleasesAssets(assets) {
+			for (let i = 0; i < assets.length; i++) {
+				let downloadUrl = assets[i].browser_download_url
+				let buildType = downloadUrl.split(".").pop()
+				switch (buildType) {
+					// Windows
+					case "exe":
+						this.addBuildType("exe", downloadUrl, 0);
+						break;
+					// Linux
+					case "deb":
+						this.addBuildType("deb", downloadUrl, 2);
+						break;
+					case "snap":
+						this.addBuildType("snap", downloadUrl, 2);
+						break;
+					case "AppImage":
+						this.addBuildType("AppImage", downloadUrl, 2);
+						break;
+						// Mac
+					case "zip":
+						this.addBuildType("zip", downloadUrl, 1);
+						break;
+				}
+			}
+		},
+		addBuildType(type, downloadUrl, index) {
+			let data = {
+				name: type,
+				browser_download_url: downloadUrl
+			}
+			this.osBuild[index].ext.push(data)
 		}
 	},
 	mounted() {
