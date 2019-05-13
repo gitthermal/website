@@ -11,6 +11,7 @@
 				<div class="index__hero-cta">
 					<Button
 						text="Download"
+						:link="downloadUrl"
 						class="index__hero-button"
 					/>
 					<Button
@@ -126,6 +127,7 @@
 import Container from "../layouts/Container"
 import Button from "../components/Button"
 import NewFeature from "../components/NewFeature"
+import DownloadMixin from "../mixins/download"
 
 export default {
   metaInfo: {
@@ -175,7 +177,10 @@ export default {
 		Container,
 		Button,
 		NewFeature
-	}
+	},
+	mixins: [
+		DownloadMixin
+	]
 }
 </script>
 
