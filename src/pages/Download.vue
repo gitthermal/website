@@ -118,11 +118,14 @@ export default {
 		margin-bottom: 2rem
 
 	&__progress
-		background-color: #f1f8ee
-		color: #3c763d
+		background-color: #EFEFEF
+		color: #7A7D84
 		padding: 1.2rem 1.5rem
 		border-radius: .3rem
 		margin-bottom: 3rem
+
+		a
+			color: #00ADB5
 
 	&__other
 
