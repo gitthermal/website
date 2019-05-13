@@ -21,10 +21,12 @@
     "url": "https://github.com/gitthermal/website/"
   },
   "dependencies": {
+    "@octokit/rest": "^16.25.3",
     "gridsome": "0.5.8"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
+    "platform": "^1.3.5",
     "sass-loader": "^7.1.0"
   }
 }
