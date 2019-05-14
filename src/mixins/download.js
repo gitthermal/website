@@ -3,7 +3,7 @@ const platform = require('platform');
 export default {
 	computed: {
 		downloadUrl() {
-			return 'download' + '/?os=' + this.platformName + '&build=' + this.buildType
+			return '/download' + '/?os=' + this.platformName + '&build=' + this.buildType
 		},
 		platformName() {
 			switch (platform.os.family) {

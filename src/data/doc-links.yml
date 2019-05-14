@@ -1,0 +1,51 @@
+- title: Introduction
+  items:
+    - title: Getting started
+      link: /
+
+- title: First step with Thermal
+  items:
+    - title: How it works
+      link: /how-it-works
+    - title: User interface overview
+      link: /user-interface-overview
+
+- title: Adding repositories
+  items:
+    - title: Add existing repository
+      link: /add-existing-repository
+    - title: Clone repository
+      link: /clone-repository
+    - title: Create repository
+      link: /create-repository
+
+- title: Managing repositories
+  items:
+    - title: Organizing repositories
+      link: /organizing-repositories
+    - title: Opening repositories
+      link: /opening-repositories
+    - title: Repositories settings
+      link: /repositories-settings
+
+- title: Contribute
+  items:
+    - title: How to contribute
+      link: /how-to-contribute
+    - title: Contribution guide
+      link: /contribution-guide
+    - title: Experimental features
+      link: /experimental-features
+    - title: Reporting issues
+      link: /reporting-issue
+    - title: Pair programming
+      link: /pair-programming
+    - title: How to join core team?
+      link: /how-to-join-core-team
+    - title: Code of conduct
+      link: /code-of-conduct
+
+- title: Help
+  items:
+    - title: FAQ
+      link: /faq
