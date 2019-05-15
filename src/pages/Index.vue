@@ -9,12 +9,15 @@
 					All-in-one place to manage your Git repository.
 				</div>
 				<div class="index__hero-cta">
-					<Button
-						text="Download"
-						:size="2"
-						:link="downloadUrl"
-						class="index__hero-button"
-					/>
+					<div class="index__hero-platforms">
+						<Button
+							text="Download"
+							:size="2"
+							:link="downloadUrl"
+							class="index__hero-button"
+						/>
+						<g-image class="index__hero-os" src="../../static/images/os.png"/>
+					</div>
 					<Button
 						apperance="outline"
 						text="Become a Patron"
@@ -212,6 +215,15 @@ export default {
 			margin-top: 1rem
 			margin-bottom: 1.875rem
 
+		&-platforms
+			display: inline-flex
+			align-items: center
+			flex-direction: column
+
+		&-os
+			width: 60px
+			margin-top: 6px
+
 		&-button
 			&:not(:first-child)
 				margin-left: 1.5rem
@@ -219,7 +231,7 @@ export default {
 		&-preview
 			text-align: center
 			position: relative
-			margin-top: -160px
+			margin-top: -140px
 
 			p
 				color: white
