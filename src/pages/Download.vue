@@ -84,9 +84,7 @@ export default {
 	},
 	methods: {
 		downloadApp(url) {
-			setTimeout(function() {
-				window.open(url);
-			}, 1500);
+			window.open(url);
 		},
 		osReleasesAssets(assets) {
 			for (let i = 0; i < assets.length; i++) {
