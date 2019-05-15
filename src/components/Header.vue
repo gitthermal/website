@@ -21,9 +21,9 @@
 						Features
 					</g-link>
 
-					<a href="https://thermal.netlify.com" target="_blank" class="header__navbar-item">
-						Guide
-					</a>
+					<g-link to="/docs" class="header__navbar-item">
+						Docs
+					</g-link>
 
 					<a
 						href="https://discord.gg/KT3nAR5"
@@ -115,6 +115,9 @@ export default {
 	padding-top: 1.5rem
 	padding-bottom: 1.5rem
 	display: flex
+	position: sticky
+	top: 0
+	z-index: 10
 
 	&__logo
 		cursor: pointer
@@ -126,7 +129,7 @@ export default {
 	&__navbar
 		align-items: center
 		display: flex
-		z-index: 10
+		z-index: 9
 
 		&-item, .navbar__dropdown-item
 			color: rgba(225, 225, 225, .8)
