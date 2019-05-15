@@ -21,6 +21,7 @@
     "url": "https://github.com/gitthermal/website/"
   },
   "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
     "@octokit/rest": "^16.25.3",
     "gridsome": "0.6.0"
   },
