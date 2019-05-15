@@ -128,7 +128,7 @@ export default {
 			if (this.$router.history.current.query.os === this.osBuild[i].os) {
 				console.log(this.osBuild[i].ext);
 				for (let j = 0; j < this.osBuild[i].ext.length; j++) {
-					this.currentOSDownloadURL = this.osBuild[i].ext[j].browserDownloadUrl;
+					this.currentOSDownloadURL = this.osBuild[i].ext[j].browser_download_url;
 					this.downloadApp(this.currentOSDownloadURL);
 				}
 			}
