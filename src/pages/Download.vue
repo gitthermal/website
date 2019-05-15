@@ -8,7 +8,7 @@
 						<h2>Thanks for downloading Thermal for {{ platformLabel }}</h2>
 						<p>
 							Download not started? Try this
-							<g-link :to="downloadLink">direct download link</g-link>.
+							<a :href="downloadLink" target="_blank">direct download link</a>.
 						</p>
 					</div>
 					<h1 v-else class="download__heading">
