@@ -3,7 +3,13 @@ module.exports = {
 	siteUrl: 'https://thermal.now.sh/',
 	titleTemplate: "%s | Thermal",
 
-  plugins: [
+	plugins: [
+		{
+			use: '@gridsome/plugin-google-analytics',
+			options: {
+				id: 'UA-131193769-3'
+			}
+		},
 		{
 			use: "@gridsome/source-filesystem",
 			options: {
