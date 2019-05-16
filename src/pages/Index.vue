@@ -33,7 +33,7 @@
 		<div class="index__hero-preview">
 			<container>
 				<p>*All features are not available as shown below</p>
-				<g-image src="../../static/thermal-app-preview.png" alt="Thermal Application Screenshot" />
+				<g-image src="../../static/images/thermal-app-preview.png" alt="Thermal Application Screenshot" />
 			</container>
 		</div>
 
@@ -41,14 +41,14 @@
 			<container>
 				<div class="index__new__features-container">
 					<NewFeature
-						image="./commit-feature-4x.png"
+						image="./images/commit-feature-4x.png"
 						title="Commits"
 						description="What took minutes in the command line now takes seconds with Thermal."
 						:order="0"
 						class="index__new__features-item"
 					/>
 					<NewFeature
-						image="./file-diff-feature-4x.png"
+						image="./images/file-diff-feature-4x.png"
 						title="Clean diff"
 						description="Visualize every commit with clear diff in workspace and history."
 						:order="1"
@@ -62,7 +62,7 @@
 			<container>
 				<div class="index__features-container">
 					<div class="index__features-item">
-						<g-image src="../../static/open-source-2x.png" class="index__features-icon" />
+						<g-image src="../../static/images/open-source-2x.png" class="index__features-icon" />
 						<div class="index__features-heading">
 							Open Source
 						</div>
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					<div class="index__features-item">
-						<g-image src="../../static/easy-to-use-2x.png" class="index__features-icon" />
+						<g-image src="../../static/images/easy-to-use-2x.png" class="index__features-icon" />
 						<div class="index__features-heading">
 							Easy to use
 						</div>
@@ -80,7 +80,7 @@
 						</div>
 					</div>
 					<div class="index__features-item">
-						<g-image src="../../static/multi-os-2x.png" class="index__features-icon" />
+						<g-image src="../../static/images/multi-os-2x.png" class="index__features-icon" />
 						<div class="index__features-heading">
 							Cross platform
 						</div>
@@ -147,13 +147,13 @@ export default {
 		meta: [
 			{
 				name: 'description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 
 			// Google
 			{
 				itemprop: 'description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 
 			// Facebook
@@ -167,7 +167,7 @@ export default {
 			},
 			{
 				property: 'og:description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 
 			// Twitter
@@ -177,7 +177,7 @@ export default {
 			},
 			{
 				name: 'twitter:description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 			{
 				name: 'twitter:url',
@@ -297,7 +297,7 @@ export default {
 			padding-bottom: 2rem
 
 	&__cta
-		background-image: url("../../static/cta-background.png")
+		background-image: url("../../static/images/cta-background.png")
 		padding-top: 60px
 		padding-bottom: 60px
 
