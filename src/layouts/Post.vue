@@ -4,7 +4,7 @@
 			<slot />
 		</div>
 		<a :href="editLink" target="_blank" class="edit-link">
-			<g-image src="../../static/github-4x.png" />
+			<g-image src="../../static/images/github-4x.png" />
 			<span>Edit this page on GitHub</span>
 		</a>
 	</div>

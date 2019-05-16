@@ -63,7 +63,7 @@ export default {
 			},
 			{
 				itemprop: 'image',
-				content: './meta-image.png'
+				content: '/images/meta-image.png'
 			},
 
 			// Facebook
@@ -73,7 +73,7 @@ export default {
 			},
 			{
 				name: 'og:image',
-				content: './meta-image.png'
+				content: '/images/meta-image.png'
 			},
 			{
 				name: 'og:url',
@@ -103,7 +103,7 @@ export default {
 			},
 			{
 				name: 'twitter:image',
-				content: './meta-image.png'
+				content: '/images/meta-image.png'
 			},
 			{
 				name: 'twitter:url',
