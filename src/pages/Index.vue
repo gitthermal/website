@@ -163,7 +163,7 @@ export default {
 			},
 			{
 				property: 'og:url',
-				content: 'https://www.gitthermal.com/'
+				content: 'https://thermal.codecarrot.net/'
 			},
 			{
 				property: 'og:description',
@@ -181,7 +181,7 @@ export default {
 			},
 			{
 				name: 'twitter:url',
-				content: 'https://www.gitthermal.com/'
+				content: 'https://thermal.codecarrot.net/'
 			}
 		]
 	},

@@ -24,7 +24,7 @@ export default {
 			},
 			{
 				name: 'url',
-				content: 'https://www.gitthermal.com/'
+				content: 'https://thermal.codecarrot.net/'
 			},
 			{
 				name: 'copyright',
@@ -77,7 +77,7 @@ export default {
 			},
 			{
 				name: 'og:url',
-				content: 'https://www.gitthermal.com/'
+				content: 'https://thermal.codecarrot.net/'
 			},
 			{
 				name: 'og:site_name',
@@ -107,7 +107,7 @@ export default {
 			},
 			{
 				name: 'twitter:url',
-				content: 'https://www.gitthermal.com/'
+				content: 'https://thermal.codecarrot.net/'
 			},
 			{
 				name: 'twitter:site',
