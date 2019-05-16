@@ -1,8 +1,20 @@
 <template>
-	<div class="container">
+	<div class="container" :style="'max-width: ' + width + 'px'">
 		<slot />
 	</div>
 </template>
+
+<script>
+export default {
+	name: "Container",
+	props: {
+		width: {
+			type: Number,
+			default: null
+		}
+	}
+}
+</script>
 
 <style lang="sass">
 .container
