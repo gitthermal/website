@@ -16,7 +16,7 @@ export default {
 		meta: [
 			{
 				name: 'description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 			{
 				name: 'keywords',
@@ -59,11 +59,11 @@ export default {
 			},
 			{
 				itemprop: 'description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 			{
 				itemprop: 'image',
-				content: './meta-image.png'
+				content: '/images/meta-image.png'
 			},
 
 			// Facebook
@@ -73,7 +73,7 @@ export default {
 			},
 			{
 				name: 'og:image',
-				content: './meta-image.png'
+				content: '/images/meta-image.png'
 			},
 			{
 				name: 'og:url',
@@ -85,7 +85,7 @@ export default {
 			},
 			{
 				name: 'og:description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 			{
 				name: "fb:page_id",
@@ -99,11 +99,11 @@ export default {
 			// Twitter
 			{
 				name: 'twitter:description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 			{
 				name: 'twitter:image',
-				content: './meta-image.png'
+				content: '/images/meta-image.png'
 			},
 			{
 				name: 'twitter:url',

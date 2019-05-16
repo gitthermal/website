@@ -33,13 +33,13 @@
 
 			<div class="footer__social">
 				<div class="footer__social-item">
-					<g-image src="../../static/github-4x.png" />
+					<g-image src="../../static/images/github-4x.png" />
 				</div>
 				<div class="footer__social-item">
-					<g-image src="../../static/producthunt-4x.png" />
+					<g-image src="../../static/images/producthunt-4x.png" />
 				</div>
 				<div class="footer__social-item">
-					<g-image src="../../static/twitter-4x.png" />
+					<g-image src="../../static/images/twitter-4x.png" />
 				</div>
 			</div>
 
