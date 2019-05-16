@@ -32,18 +32,18 @@
 			</div>
 
 			<div class="footer__social">
-				<g-link to="https://www.github.com/gitthermal/thermal" class="footer__social-item">
+				<a href="https://www.github.com/gitthermal/thermal" class="footer__social-item">
 					<g-image src="../../static/images/github-4x.png" />
-				</g-link>
-				<g-link to="https://discord.gg/KT3nAR5" class="footer__social-item">
+				</a>
+				<a href="https://discord.gg/KT3nAR5" class="footer__social-item">
 					<g-image src="../../static/images/discord-4x.png" />
-				</g-link>
-				<g-link to="https://www.producthunt.com/posts/thermal" class="footer__social-item">
+				</a>
+				<a href="https://www.producthunt.com/posts/thermal" class="footer__social-item">
 					<g-image src="../../static/images/producthunt-4x.png" />
-				</g-link>
-				<g-link to="https://www.twitter.com/gitthermal" class="footer__social-item">
+				</a>
+				<a href="https://www.twitter.com/gitthermal" class="footer__social-item">
 					<g-image src="../../static/images/twitter-4x.png" />
-				</g-link>
+				</a>
 			</div>
 
 		</div>
