@@ -36,6 +36,9 @@
 					<g-image src="../../static/images/github-4x.png" />
 				</div>
 				<div class="footer__social-item">
+					<g-image src="../../static/images/discord-4x.png" />
+				</div>
+				<div class="footer__social-item">
 					<g-image src="../../static/images/producthunt-4x.png" />
 				</div>
 				<div class="footer__social-item">
