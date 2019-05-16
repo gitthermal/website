@@ -147,13 +147,13 @@ export default {
 		meta: [
 			{
 				name: 'description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 
 			// Google
 			{
 				itemprop: 'description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 
 			// Facebook
@@ -167,7 +167,7 @@ export default {
 			},
 			{
 				property: 'og:description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 
 			// Twitter
@@ -177,7 +177,7 @@ export default {
 			},
 			{
 				name: 'twitter:description',
-				content: 'Thermal is one stop to manage all Git repository at one place by providing you a simple to use graphic user interface with built-in features commits, history, repository settings and more.'
+				content: 'One stop to manage all Git repository at one place.'
 			},
 			{
 				name: 'twitter:url',
