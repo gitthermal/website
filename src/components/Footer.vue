@@ -100,7 +100,7 @@ export default {
 				width: 20px
 				height: 20px
 
-			&:nth-child(3)
+			&:last-child
 				img
 					width: 24px
 
