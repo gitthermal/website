@@ -36,9 +36,9 @@
 					</a>
 
 					<div class="header__navbar-item header__navbar-button">
-						<Button
-							apperance="outline"
+						<outline-button
 							text="Download"
+							:theme="theme"
 							:size="1"
 							:link="downloadUrl"
 						/>
@@ -60,7 +60,7 @@
 <script>
 import Container from "../layouts/Container";
 import Logo from "./Logo";
-import Button from "./Button"
+import OutlineButton from "./Button/OutlineButton"
 import DownloadMixin from "../mixins/download"
 
 export default {
@@ -75,7 +75,7 @@ export default {
   components: {
     Container,
 		Logo,
-		Button
+		OutlineButton
 	},
 	props: {
 		theme: {
