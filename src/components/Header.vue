@@ -2,7 +2,9 @@
 	<div
 		class="header"
 		:style="{
-			backgroundColor: '#' + backgroundColor
+			backgroundColor: '#' + backgroundColor,
+			paddingTop: size + 'rem',
+			paddingBottom: size + 'rem'
 		}"
 	>
 		<Container>
@@ -79,6 +81,10 @@ export default {
 		theme: {
 			type: String,
 			required: true
+		},
+		size: {
+			type: Number,
+			default: 2
 		}
 	},
 	computed: {
