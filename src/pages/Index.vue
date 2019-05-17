@@ -10,7 +10,7 @@
 				</div>
 				<div class="index__hero-cta">
 					<div class="index__hero-platforms">
-						<Button
+						<primary-button
 							text="Download"
 							:size="2"
 							:link="downloadUrl"
@@ -18,8 +18,7 @@
 						/>
 						<g-image class="index__hero-os" src="../../static/images/os.png"/>
 					</div>
-					<Button
-						apperance="outline"
+					<outline-button
 						text="Become a Patron"
 						link="https://patreon.com/mittalyashu"
 						:size="2"
@@ -100,7 +99,7 @@
 				<div class="index__pp-description">
 					Thermal is an open source project, and we need your contribution to make it better, whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the community, we also offer free pair programming sessions, come join our Discord server and say hi to our core team.
 				</div>
-				<Button
+				<primary-button
 					text="Join discord server"
 					link="https://discord.gg/KT3nAR5"
 					:size="2"
@@ -121,7 +120,7 @@
 						</div>
 					</div>
 					<div class="index__cta-button">
-						<Button
+						<primary-button
 							text="Download"
 							:size="2"
 							:link="downloadUrl"
@@ -136,7 +135,8 @@
 
 <script>
 import Container from "../layouts/Container"
-import Button from "../components/Button"
+import OutlineButton from "../components/Button/OutlineButton"
+import PrimaryButton from "../components/Button/PrimaryButton"
 import NewFeature from "../components/NewFeature"
 import DownloadMixin from "../mixins/download"
 
@@ -187,7 +187,8 @@ export default {
 	},
 	components: {
 		Container,
-		Button,
+		PrimaryButton,
+		OutlineButton,
 		NewFeature
 	},
 	mixins: [
