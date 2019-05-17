@@ -56,13 +56,13 @@ export default {
 		border-right: 1px solid rgba(#474C55, .3)
 		max-width: 300px
 		overflow-y: scroll
-		top: 85.33px
+		top: 69px
 		padding:
 			top: 1rem
 			left: 2rem
 			right: 2rem
 			bottom: 2rem
-		height: calc(100vh - 85.33px)
+		height: calc(100vh - 69px)
 
 	&__content
 		padding-top: 2rem
