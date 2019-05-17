@@ -8,6 +8,7 @@
 			'button__size-2': size === 2
 		}"
 		:link="link"
+		:external="external"
 	>
 		{{ text }}
 	</Link>
@@ -36,6 +37,10 @@ export default {
 		theme: {
 			type: String,
 			default: "dark"
+		},
+		external: {
+			type: Boolean,
+			default: false
 		}
 	}
 };
