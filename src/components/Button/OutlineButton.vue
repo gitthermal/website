@@ -18,7 +18,7 @@
 import Link from "../Link";
 
 export default {
-	name: "Button",
+	name: "OutlineButton",
 	components: {
 		Link
 	},
