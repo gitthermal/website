@@ -1,5 +1,6 @@
 <template>
-	<Layout :footer="false">
+	<div class="docs">
+		<Header theme="dark" :size="1" />
 		<div class="docs__container">
 			<div class="docs__sidebar">
 				<template v-for="group in links" class="sidebar__menu">
@@ -25,15 +26,17 @@
 				</div>
 			</div>
 		</div>
-	</Layout>
+	</div>
 </template>
 
 <script>
-import PostLayout from "./Post"
+import Header from "../components/Header";
+import PostLayout from "./Post";
 
 export default {
 	name: "DocsLayout",
 	components: {
+		Header,
 		PostLayout
 	},
 	props: {
