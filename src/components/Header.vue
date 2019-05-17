@@ -17,17 +17,17 @@
 						'is-close': navbar.status === false
 					}"
 				>
-					<g-link to="/features" class="header__navbar-item">
+					<g-link to="/features" :style="'color: #' + textColor" class="header__navbar-item">
 						Features
 					</g-link>
 
-					<g-link to="/docs" class="header__navbar-item">
+					<g-link to="/docs" :style="'color: #' + textColor" class="header__navbar-item">
 						Docs
 					</g-link>
 
 					<a
 						href="https://discord.gg/KT3nAR5"
-						target="_blank"
+						target="_blank" :style="'color: #' + textColor"
 						class="header__navbar-item"
 					>
 						Support
@@ -87,13 +87,21 @@ export default {
 				case "dark":
 					return "222831"
 				case "light":
-					return "ffffff"
+					return "fffffff2"
 			}
 		},
 		logoColor() {
 			switch (this.theme) {
 				case "dark":
 					return "ffffff"
+				case "light":
+					return "222831"
+			}
+		},
+		textColor() {
+			switch (this.theme) {
+				case "dark":
+					return "fffc"
 				case "light":
 					return "222831"
 			}
