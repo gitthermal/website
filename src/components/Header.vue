@@ -140,7 +140,7 @@ export default {
 		z-index: 9
 
 		&-item, .navbar__dropdown-item
-			color: rgba(225, 225, 225, .8)
+			color: rgba(255, 255, 255, .8)
 			font-size: .820rem
 			cursor: pointer
 			display: flex
@@ -148,7 +148,7 @@ export default {
 			flex-direction: column
 
 			&:hover
-				color: rgb(225, 225, 225)
+				color: rgb(255, 255, 255)
 
 		&-dropdown
 			display: flex
@@ -159,7 +159,7 @@ export default {
 			cursor: pointer
 
 			svg
-				stroke: rgba(225, 225, 225, .8)
+				stroke: rgba(255, 255, 255, .8)
 
 @media (max-width: 768px)
 	.header__navbar
@@ -177,7 +177,7 @@ export default {
 			padding-bottom: .85rem
 
 			&:not(:last-child)
-				border-bottom: 1px solid rgba(225, 225, 225, .3)
+				border-bottom: 1px solid rgba(255, 255, 255, .3)
 
 	.is-open
 		display: flex
