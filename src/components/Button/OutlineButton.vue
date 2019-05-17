@@ -34,7 +34,8 @@ export default {
 			default: 2
 		},
 		theme: {
-			type: String
+			type: String,
+			default: "dark"
 		}
 	}
 };
