@@ -15,4 +15,3 @@ To remove an item from the list of repositories, click on the gear icon, you wil
 > You can add the repository again, once you remove it.
 
 ![Repository settings page](./images/repository-settings.png)
-
