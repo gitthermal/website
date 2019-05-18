@@ -1,6 +1,6 @@
 module.exports = {
 	siteName: 'Thermal',
-	siteUrl: 'https://thermal.now.sh/',
+	siteUrl: 'https://thermal.codecarrot.net/',
 	titleTemplate: "%s | Thermal",
 
 	plugins: [
