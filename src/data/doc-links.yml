@@ -21,6 +21,8 @@
 
 - title: Managing repositories
   items:
+    - title: Overview
+      link: /manage-repository-overview
     - title: Organizing repositories
       link: /organizing-repositories
     - title: Opening repositories
