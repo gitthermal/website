@@ -97,12 +97,12 @@ export default {
 			right: 1.5rem
 			display: flex
 			border-radius: 50px
-			padding: .875rem
+			padding: .6rem
 
 			svg
 				stroke: white
-				width: 30px
-				height: 30px
+				width: 25px
+				height: 25px
 
 	&__content
 		padding-top: 2rem
