@@ -83,6 +83,8 @@ export default {
 			right: 2rem
 			bottom: 2rem
 		height: calc(100vh - 85.33px)
+		z-index: 5
+		background-color: white
 
 		&-toggle
 			position: fixed
@@ -137,8 +139,12 @@ export default {
 				color: #00ADB5
 
 @media (max-width: 768px)
-	.docs__sidebar-none
-		display: none
+	.docs
+		&__sidebar
+			position: fixed
+
+			&-none
+				display: none
 
 @media (min-width: 768px)
 	.docs__sidebar-toggle
