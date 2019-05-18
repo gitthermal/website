@@ -32,15 +32,18 @@
 			</div>
 
 			<div class="footer__social">
-				<div class="footer__social-item">
-					<g-image src="../../static/github-4x.png" />
-				</div>
-				<div class="footer__social-item">
-					<g-image src="../../static/producthunt-4x.png" />
-				</div>
-				<div class="footer__social-item">
-					<g-image src="../../static/twitter-4x.png" />
-				</div>
+				<a href="https://www.github.com/gitthermal/thermal" class="footer__social-item">
+					<g-image src="../../static/images/github-4x.png" />
+				</a>
+				<a href="https://discord.gg/KT3nAR5" class="footer__social-item">
+					<g-image src="../../static/images/discord-4x.png" />
+				</a>
+				<a href="https://www.producthunt.com/posts/thermal" class="footer__social-item">
+					<g-image src="../../static/images/producthunt-4x.png" />
+				</a>
+				<a href="https://www.twitter.com/gitthermal" class="footer__social-item">
+					<g-image src="../../static/images/twitter-4x.png" />
+				</a>
 			</div>
 
 		</div>
@@ -97,7 +100,7 @@ export default {
 				width: 20px
 				height: 20px
 
-			&:nth-child(3)
+			&:last-child
 				img
 					width: 24px
 

@@ -2,7 +2,9 @@
 	<div
 		class="header"
 		:style="{
-			backgroundColor: '#' + backgroundColor
+			backgroundColor: '#' + backgroundColor,
+			paddingTop: size + 'rem',
+			paddingBottom: size + 'rem'
 		}"
 	>
 		<Container>
@@ -17,26 +19,26 @@
 						'is-close': navbar.status === false
 					}"
 				>
-					<g-link to="/features" class="header__navbar-item">
+					<g-link to="/features" :style="'color: #' + textColor" class="header__navbar-item">
 						Features
 					</g-link>
 
-					<g-link to="/docs" class="header__navbar-item">
+					<g-link to="/docs" :style="'color: #' + textColor" class="header__navbar-item">
 						Docs
 					</g-link>
 
 					<a
 						href="https://discord.gg/KT3nAR5"
-						target="_blank"
+						target="_blank" :style="'color: #' + textColor"
 						class="header__navbar-item"
 					>
 						Support
 					</a>
 
 					<div class="header__navbar-item header__navbar-button">
-						<Button
-							apperance="outline"
+						<outline-button
 							text="Download"
+							:theme="theme"
 							:size="1"
 							:link="downloadUrl"
 						/>
@@ -58,7 +60,7 @@
 <script>
 import Container from "../layouts/Container";
 import Logo from "./Logo";
-import Button from "./Button"
+import OutlineButton from "./Button/OutlineButton"
 import DownloadMixin from "../mixins/download"
 
 export default {
@@ -73,12 +75,16 @@ export default {
   components: {
     Container,
 		Logo,
-		Button
+		OutlineButton
 	},
 	props: {
 		theme: {
 			type: String,
 			required: true
+		},
+		size: {
+			type: Number,
+			default: 2
 		}
 	},
 	computed: {
@@ -87,13 +93,21 @@ export default {
 				case "dark":
 					return "222831"
 				case "light":
-					return "ffffff"
+					return "fffffff2"
 			}
 		},
 		logoColor() {
 			switch (this.theme) {
 				case "dark":
 					return "ffffff"
+				case "light":
+					return "222831"
+			}
+		},
+		textColor() {
+			switch (this.theme) {
+				case "dark":
+					return "fffc"
 				case "light":
 					return "222831"
 			}
@@ -132,7 +146,7 @@ export default {
 		z-index: 9
 
 		&-item, .navbar__dropdown-item
-			color: rgba(225, 225, 225, .8)
+			color: rgba(255, 255, 255, .8)
 			font-size: .820rem
 			cursor: pointer
 			display: flex
@@ -140,7 +154,7 @@ export default {
 			flex-direction: column
 
 			&:hover
-				color: rgb(225, 225, 225)
+				color: rgb(255, 255, 255)
 
 		&-dropdown
 			display: flex
@@ -151,7 +165,7 @@ export default {
 			cursor: pointer
 
 			svg
-				stroke: rgba(225, 225, 225, .8)
+				stroke: rgba(255, 255, 255, .8)
 
 @media (max-width: 768px)
 	.header__navbar
@@ -169,7 +183,7 @@ export default {
 			padding-bottom: .85rem
 
 			&:not(:last-child)
-				border-bottom: 1px solid rgba(225, 225, 225, .3)
+				border-bottom: 1px solid rgba(255, 255, 255, .3)
 
 	.is-open
 		display: flex

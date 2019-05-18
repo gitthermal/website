@@ -1,5 +1,6 @@
 <template>
-	<Layout :footer="false">
+	<div class="docs">
+		<Header theme="dark" :size="1" />
 		<div class="docs__container">
 			<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
 				<template v-for="group in links" class="sidebar__menu">
@@ -29,11 +30,12 @@
 				<RightArrow v-else />
 			</div>
 		</div>
-	</Layout>
+	</div>
 </template>
 
 <script>
-import PostLayout from "./Post"
+import Header from "../components/Header";
+import PostLayout from "./Post";
 import LeftArrow from "../assets/images/chevrons-left.svg";
 import RightArrow from "../assets/images/chevrons-right.svg";
 
@@ -45,6 +47,7 @@ export default {
 		}
 	},
 	components: {
+		Header,
 		PostLayout
 		LeftArrow,
 		RightArrow
@@ -76,13 +79,13 @@ export default {
 		border-right: 1px solid rgba(#474C55, .3)
 		max-width: 300px
 		overflow-y: scroll
-		top: 85.33px
+		top: 69px
 		padding:
 			top: 1rem
 			left: 2rem
 			right: 2rem
 			bottom: 2rem
-		height: calc(100vh - 85.33px)
+		height: calc(100vh - 69px)
 		z-index: 5
 		background-color: white
 
