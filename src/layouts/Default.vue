@@ -50,6 +50,10 @@ export default {
 				name: 'owner',
 				content: 'CodeCarrot, contact@codecarrot.net'
 			},
+			{
+				name: "theme-color",
+				content: "#222831"
+			},
 
 
 			// Google
