@@ -145,6 +145,9 @@ export default {
 	.docs
 		&__sidebar
 			position: fixed
+			padding:
+				left: 1rem
+				right: 1rem
 
 			&-none
 				display: none
