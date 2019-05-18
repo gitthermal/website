@@ -12,5 +12,3 @@
 - Push to a remote repository
 - Create new repository
 - and a lot more...
-
-> If you're completely new to version control and/or Git, we suggest you read the [git docs](https://git-scm.com/).
