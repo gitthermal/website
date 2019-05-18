@@ -1,4 +1,4 @@
-# FAQ
+# Frequently asked questions
 
 ## How to file an issue?
 
