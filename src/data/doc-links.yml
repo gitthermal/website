@@ -49,3 +49,5 @@
   items:
     - title: FAQ
       link: /faq
+    - title: Keyboard shortcuts
+      link: /keyboard-shortcuts
