@@ -48,7 +48,7 @@ export default {
 	},
 	components: {
 		Header,
-		PostLayout
+		PostLayout,
 		LeftArrow,
 		RightArrow
 	},
