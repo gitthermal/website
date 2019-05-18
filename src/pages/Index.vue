@@ -62,7 +62,7 @@
 			<container>
 				<div class="index__features-container">
 					<div class="index__features-item">
-						<g-image src="../../static/open-source-2x.png" class="index__features-icon" />
+						<g-image src="../../static/images/icon/open-source.svg" class="index__features-icon" />
 						<div class="index__features-heading">
 							Open Source
 						</div>
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					<div class="index__features-item">
-						<g-image src="../../static/easy-to-use-2x.png" class="index__features-icon" />
+						<g-image src="../../static/images/icon/easy-to-use.svg" class="index__features-icon" />
 						<div class="index__features-heading">
 							Easy to use
 						</div>
@@ -80,7 +80,7 @@
 						</div>
 					</div>
 					<div class="index__features-item">
-						<g-image src="../../static/multi-os-2x.png" class="index__features-icon" />
+						<g-image src="../../static/images/icon/multi-os.svg" class="index__features-icon" />
 						<div class="index__features-heading">
 							Cross platform
 						</div>
