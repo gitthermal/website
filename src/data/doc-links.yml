@@ -21,6 +21,8 @@
 
 - title: Managing repositories
   items:
+    - title: Overview
+      link: /manage-repository-overview
     - title: Organizing repositories
       link: /organizing-repositories
     - title: Opening repositories
@@ -45,7 +47,7 @@
     - title: Code of conduct
       link: /code-of-conduct
 
-- title: Help
+- title: FAQ & help
   items:
-    - title: FAQ
+    - title: Frequently asked questions
       link: /faq

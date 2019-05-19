@@ -13,3 +13,21 @@
 	to = "/404"
 	status = 404
 	force = false
+
+[[redirects]]
+	from = "/discord"
+	to = "https://discord.gg/KT3nAR5"
+	status = 302
+	force = true
+
+[[redirects]]
+	from = "/github"
+	to = "http://github.com/gitthermal/thermal"
+	status = 302
+	force = true
+
+[[redirects]]
+	from = "/patreon"
+	to = "https://patreon.com/mittalyashu"
+	status = 302
+	force = true

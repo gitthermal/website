@@ -1,0 +1,20 @@
+{
+	"name": "Thermal",
+	"short_name": "thermal",
+	"start_url": "/?source=pwa",
+	"display": "standalone",
+	"background_color": "#222831",
+	"theme_color": "#00ADB5",
+	"icons": [
+		{
+			"src": "/images/icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/images/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}
