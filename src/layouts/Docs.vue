@@ -7,7 +7,7 @@
 					<h6 :key="`title-${group.title}`" class="sidebar__menu-heading">
 						{{ group.title }}
 					</h6>
-					<template v-for="(item, i2) in group.items">
+					<template v-for="item in group.items">
 						<div
 							@click="linkToDocs(`/docs${item.link}`)"
 							:key="`item-${item.title}-${item.link}`"
