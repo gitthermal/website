@@ -2,7 +2,7 @@
 	<div class="docs">
 		<Header theme="dark" :size="1" />
 		<div class="docs__container">
-			<div class="docs__sidebar">
+			<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
 				<template v-for="group in links" class="sidebar__menu">
 					<h6 :key="`title-${group.title}`" class="sidebar__menu-heading">
 						{{ group.title }}
@@ -25,6 +25,10 @@
 					</PostLayout>
 				</div>
 			</div>
+			<div @click="toggleSidebar()" class="docs__sidebar-toggle">
+				<LeftArrow v-if="sidebar" />
+				<RightArrow v-else />
+			</div>
 		</div>
 	</div>
 </template>
@@ -32,15 +36,34 @@
 <script>
 import Header from "../components/Header";
 import PostLayout from "./Post";
+import LeftArrow from "../assets/images/chevrons-left.svg";
+import RightArrow from "../assets/images/chevrons-right.svg";
 
 export default {
 	name: "DocsLayout",
+	data() {
+		return {
+			sidebarToggleable: false
+		}
+	},
 	components: {
 		Header,
-		PostLayout
+		PostLayout,
+		LeftArrow,
+		RightArrow
 	},
 	props: {
 		links: Array
+	},
+	computed: {
+		sidebar() {
+			return this.sidebarToggleable && (window.innerWidth <= 768)
+		}
+	},
+	methods: {
+		toggleSidebar() {
+			this.sidebarToggleable = !this.sidebarToggleable
+		}
 	}
 };
 </script>
@@ -63,6 +86,23 @@ export default {
 			right: 2rem
 			bottom: 2rem
 		height: calc(100vh - 69px)
+		z-index: 5
+		background-color: white
+
+		&-toggle
+			position: fixed
+			background-color: #00ADB5
+			bottom: 1.225rem
+			cursor: pointer
+			right: 1.5rem
+			display: flex
+			border-radius: 50px
+			padding: .6rem
+
+			svg
+				stroke: white
+				width: 25px
+				height: 25px
 
 	&__content
 		padding-top: 2rem
@@ -100,4 +140,19 @@ export default {
 
 			&:hover
 				color: #00ADB5
+
+@media (max-width: 768px)
+	.docs
+		&__sidebar
+			position: fixed
+			padding:
+				left: 1rem
+				right: 1rem
+
+			&-none
+				display: none
+
+@media (min-width: 768px)
+	.docs__sidebar-toggle
+		display: none
 </style>
