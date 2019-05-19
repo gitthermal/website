@@ -8,13 +8,13 @@
 						{{ group.title }}
 					</h6>
 					<template v-for="(item, i2) in group.items">
-						<g-link
-							:to="`/docs${item.link}`"
 							:key="`item-${item.title}`"
+						<div
+							@click="linkToDocs(`/docs${item.link}`)"
 							class="sidebar__menu-item"
 						>
 							{{ item.title }}
-						</g-link>
+						</div>
 					</template>
 				</template>
 			</div>
@@ -63,6 +63,10 @@ export default {
 	methods: {
 		toggleSidebar() {
 			this.sidebarToggleable = !this.sidebarToggleable
+		},
+		linkToDocs(link) {
+			this.sidebarToggleable = false
+			this.$router.push(link)
 		}
 	}
 };
@@ -137,6 +141,7 @@ export default {
 			padding-bottom: 3px
 			color: rgba(#474C55, .8)
 			font-weight: 500
+			cursor: pointer
 
 			&:hover
 				color: #00ADB5
