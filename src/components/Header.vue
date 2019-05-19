@@ -12,13 +12,7 @@
 				<g-link to="/" class="header__logo">
 					<Logo :color="logoColor" />
 				</g-link>
-				<div
-					class="header__navbar"
-					:class="{
-						'is-open': navbar.status === true,
-						'is-close': navbar.status === false
-					}"
-				>
+				<div class="header__navbar header__desktop-navbar">
 					<g-link to="/features" :style="'color: #' + textColor" class="header__navbar-item">
 						Features
 					</g-link>
@@ -43,15 +37,20 @@
 							:link="downloadUrl"
 						/>
 					</div>
-
 				</div>
 
-				<div
-					@click="navbarToggle()"
-					class="header__navbar-menu"
-				>
-					<MenuIcon />
+				<div class="header__navbar header__mobile-navbar" >
+					<a href="https://www.github.com/gitthermal/thermal">
+						<GitHubIcon />
+					</a>
+					<a href="https://discord.gg/KT3nAR5">
+						<DiscordIcon />
+					</a>
+					<a href="https://www.twitter.com/gitthermal">
+						<TwitterIcon />
+					</a>
 				</div>
+				
 			</div>
 		</Container>
 	</div>
@@ -60,23 +59,20 @@
 <script>
 import Container from "../layouts/Container";
 import Logo from "./Logo";
-import MenuIcon from "../../static/images/icon/menu.svg"
+import GitHubIcon from "../../static/images/icon/github.svg"
+import DiscordIcon from "../../static/images/icon/discord.svg"
+import TwitterIcon from "../../static/images/icon/twitter.svg"
 import OutlineButton from "./Button/OutlineButton"
 import DownloadMixin from "../mixins/download"
 
 export default {
 	name: "Header",
-	data() {
-		return {
-			navbar: {
-				status: false
-			}
-		}
-	},
   components: {
     Container,
 		Logo,
-		MenuIcon,
+		GitHubIcon,
+		DiscordIcon,
+		TwitterIcon,
 		OutlineButton
 	},
 	props: {
@@ -115,11 +111,6 @@ export default {
 			}
 		}
 	},
-	methods: {
-		navbarToggle() {
-			this.navbar.status = !this.navbar.status
-		}
-	},
 	mixins: [
 		DownloadMixin
 	]
@@ -141,70 +132,37 @@ export default {
 	&__container
 		align-items: center
 		display: flex
+		flex-direction: row
 
 	&__navbar
 		align-items: center
+		margin-left: auto
 		display: flex
-		z-index: 9
+		flex-direction: row
 
-		&-item, .navbar__dropdown-item
+		&-item
 			color: rgba(255, 255, 255, .8)
 			font-size: .820rem
 			cursor: pointer
 			display: flex
 			align-items: center
 			flex-direction: column
+			margin-left: 1.25rem
 
 			&:hover
 				color: rgb(255, 255, 255)
 
-		&-dropdown
+	&__mobile-navbar
+
+		a
 			display: flex
-			flex-direction: row
-
-		&-menu
-			margin-left: auto
-			cursor: pointer
-
-			svg
-				stroke: rgba(255, 255, 255, .8)
+			margin-left: 1.25rem
 
 @media (max-width: 768px)
-	.header__navbar
-		position: absolute
-		top: 77px
-		background-color: black
-		left: 0
-		right: 0
-		flex-direction: column
-		align-items: center
-
-		&-item
-			width: 100%
-			padding-top: .85rem
-			padding-bottom: .85rem
-
-			&:not(:last-child)
-				border-bottom: 1px solid rgba(255, 255, 255, .3)
-
-	.is-open
-		display: flex
-
-	.is-close
+	.header__desktop-navbar
 		display: none
 
 @media (min-width: 768px)
-	.header
-		&__container
-			flex-direction: row
-
-		&__navbar
-			margin-left: auto
-			flex-direction: row
-
-			&-item
-				margin-left: 1.25rem
-
-			&-menu
-				display: none
+	.header__mobile-navbar
+		display: none
 </style>
