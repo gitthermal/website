@@ -19,21 +19,21 @@
 						<div class="download__other-list">
 							<div class="download__other-item">
 								<g-image
-									src="../../static/images/windows.svg"
+									src="../../static/images/icon/windows.svg"
 									class="download__other-image"
 								/>
 								<h4>Windows</h4>
 							</div>
 							<div class="download__other-item">
 								<g-image
-									src="../../static/images/mac.png"
+									src="../../static/images/icon/mac.png"
 									class="download__other-image"
 								/>
 								<h4>MacOS</h4>
 							</div>
 							<div class="download__other-item">
 								<g-image
-									src="../../static/images/linux.svg"
+									src="../../static/images/icon/linux.svg"
 									class="download__other-image"
 								/>
 								<h4>Linux</h4>
