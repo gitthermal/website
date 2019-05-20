@@ -1,6 +1,6 @@
 <template>
 	<div class="layout">
-		<Header theme="dark" />
+		<Header :theme="headerTheme" :size="headerSize" />
 		<slot />
 		<Footer v-if="footer" />
 	</div>
@@ -124,6 +124,14 @@ export default {
 		Footer
 	},
 	props: {
+		headerTheme: {
+			type: String,
+			default: "dark"
+		},
+		headerSize: {
+			type: Number,
+			default: 1
+		},
 		footer: {
 			type: Boolean,
 			default: true

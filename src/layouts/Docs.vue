@@ -1,36 +1,37 @@
 <template>
-	<div class="docs">
-		<Header theme="dark" :size="1" />
-		<div class="docs__container">
-			<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
-				<template v-for="group in links" class="sidebar__menu">
-					<h6 :key="`title-${group.title}`" class="sidebar__menu-heading">
-						{{ group.title }}
-					</h6>
-					<template v-for="item in group.items">
-						<div
-							@click="linkToDocs(`/docs${item.link}`)"
-							:key="`item-${item.title}-${item.link}`"
-							class="sidebar__menu-item"
-						>
-							{{ item.title }}
-						</div>
+	<Layout :headerSize="1" :footer="false">
+		<div class="docs">
+			<div class="docs__container">
+				<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
+					<template v-for="group in links" class="sidebar__menu">
+						<h6 :key="`title-${group.title}`" class="sidebar__menu-heading">
+							{{ group.title }}
+						</h6>
+						<template v-for="item in group.items">
+							<div
+								@click="linkToDocs(`/docs${item.link}`)"
+								:key="`item-${item.title}-${item.link}`"
+								class="sidebar__menu-item"
+							>
+								{{ item.title }}
+							</div>
+						</template>
 					</template>
-				</template>
-			</div>
-			<div class="docs__content">
-				<div class="docs__content-container">
-					<PostLayout>
-						<slot />
-					</PostLayout>
+				</div>
+				<div class="docs__content">
+					<div class="docs__content-container">
+						<PostLayout>
+							<slot />
+						</PostLayout>
+					</div>
+				</div>
+				<div @click="toggleSidebar()" class="docs__sidebar-toggle">
+					<LeftArrow v-if="sidebar" />
+					<RightArrow v-else />
 				</div>
 			</div>
-			<div @click="toggleSidebar()" class="docs__sidebar-toggle">
-				<LeftArrow v-if="sidebar" />
-				<RightArrow v-else />
-			</div>
 		</div>
-	</div>
+	</Layout>
 </template>
 
 <script>
