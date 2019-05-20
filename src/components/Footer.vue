@@ -8,6 +8,8 @@
 			</div>
 
 			<div class="footer__navbar">
+				<g-link to="/features" class="footer__navbar-item">
+					Features
 				</g-link>
 				<a href="https://discord.gg/KT3nAR5" target="_blank" class="footer__navbar-item">
 					Help
