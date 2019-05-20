@@ -75,7 +75,7 @@ export default {
 
 		&-version
 			margin-right: .875rem
-			min-width: 100px
+			min-width: 120px
 			text-align: right
 			padding-top: .875rem
 
