@@ -3,7 +3,7 @@
 		<div class="post__content">
 			<slot />
 		</div>
-		<a :href="editLink" target="_blank" class="edit-link">
+		<a :href="editLink" v-if="editOnGH" target="_blank" class="edit-link">
 			<g-image src="../../static/images/github-4x.png" />
 			<span>Edit this page on GitHub</span>
 		</a>
@@ -22,6 +22,12 @@ export default {
 			if ((path.match(new RegExp("/", "g")) || []).length == 1)
 				path = path + "/README";
 			return `https://github.com/gitthermal/website/blob/master${path}.md`;
+		}
+	},
+	props: {
+		editOnGH: {
+			type: Boolean,
+			default: true
 		}
 	}
 };
