@@ -25,6 +25,14 @@ module.exports = {
 				path: "docs/**/*.md",
 				typeName: 'DocPage'
 			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
+				path: "releases/**/*.md",
+				typeName: 'ReleasePage',
+				route: '/releases/:slug'
+			}
 		}
 	]
 }
