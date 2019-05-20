@@ -86,7 +86,7 @@ export default {
 		},
 		size: {
 			type: Number,
-			default: 2
+			default: 1
 		}
 	},
 	computed: {
