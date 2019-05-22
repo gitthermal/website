@@ -4,15 +4,20 @@
 			<slot />
 		</div>
 		<a :href="editLink" v-if="editOnGH" target="_blank" class="edit-link">
-			<g-image src="../../static/images/github-4x.png" />
+			<GitHubIcon />
 			<span>Edit this page on GitHub</span>
 		</a>
 	</div>
 </template>
 
 <script>
+import GitHubIcon from "../../static/images/icon/github.svg"
+
 export default {
 	name: "PostLayout",
+	components: {
+		GitHubIcon
+	},
 	computed: {
 		currentPath() {
 			return this.$route.matched[0].path;
@@ -100,7 +105,7 @@ export default {
 	flex-direction: row
 	align-items: center
 
-	img
+	svg
 		width: 20px
 		height: 20px
 		margin-right: 8px
