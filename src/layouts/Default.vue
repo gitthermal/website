@@ -3,12 +3,14 @@
 		<Header theme="dark" />
 		<slot />
 		<Footer v-if="footer" />
+		<Navbar />
 	</div>
 </template>
 
 <script>
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Navbar from "./partials/Navbar"
 
 export default {
 	name: "Default",
@@ -121,7 +123,8 @@ export default {
 	},
 	components: {
 		Header,
-		Footer
+		Footer,
+		Navbar
 	},
 	props: {
 		footer: {

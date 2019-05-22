@@ -30,12 +30,14 @@
 				<RightArrow v-else />
 			</div>
 		</div>
+		<Navbar />
 	</div>
 </template>
 
 <script>
 import Header from "../components/Header";
 import PostLayout from "./Post";
+import Navbar from "./partials/Navbar";
 import LeftArrow from "../assets/images/chevrons-left.svg";
 import RightArrow from "../assets/images/chevrons-right.svg";
 
@@ -49,6 +51,7 @@ export default {
 	components: {
 		Header,
 		PostLayout,
+		Navbar,
 		LeftArrow,
 		RightArrow
 	},
@@ -96,7 +99,7 @@ export default {
 		&-toggle
 			position: fixed
 			background-color: #00ADB5
-			bottom: 1.225rem
+			bottom: 4.225rem
 			cursor: pointer
 			right: 1.5rem
 			display: flex

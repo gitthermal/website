@@ -65,7 +65,8 @@ export default {
 
 <style lang='sass'>
 .footer
-	padding: 60px 0
+	padding-top: 3.75rem
+	padding-bottom: 7.5rem
 	display: flex
 	flex-direction: column
 
