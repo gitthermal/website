@@ -20,9 +20,9 @@
 				<a href="https://github.com/gitthermal/thermal/issues/new/choose" target="_blank" class="footer__navbar-item">
 					Feedback
 				</a>
-				<a href="https://github.com/gitthermal/thermal/" target="_blank" class="footer__navbar-item">
-					Source
-				</a>
+				<g-link to="/releases" class="footer__navbar-item">
+					Release notes
+				</g-link>
 				<!-- <div class="footer__navbar-item">
 					Privacy
 				</div>
