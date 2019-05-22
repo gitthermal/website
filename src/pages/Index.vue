@@ -1,5 +1,5 @@
 <template>
-  <layout>
+  <layout :headerSize="2">
 		<div class="index__hero">
 			<container>
 				<div class="index__hero-heading">
