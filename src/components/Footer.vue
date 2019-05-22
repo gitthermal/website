@@ -8,8 +8,8 @@
 			</div>
 
 			<div class="footer__navbar">
-				<g-link to="/about" class="footer__navbar-item">
-					About
+				<g-link to="/features" class="footer__navbar-item">
+					Features
 				</g-link>
 				<a href="https://discord.gg/KT3nAR5" target="_blank" class="footer__navbar-item">
 					Help
@@ -20,9 +20,9 @@
 				<a href="https://github.com/gitthermal/thermal/issues/new/choose" target="_blank" class="footer__navbar-item">
 					Feedback
 				</a>
-				<a href="https://github.com/gitthermal/thermal/" target="_blank" class="footer__navbar-item">
-					Source
-				</a>
+				<g-link to="/releases" class="footer__navbar-item">
+					Release notes
+				</g-link>
 				<!-- <div class="footer__navbar-item">
 					Privacy
 				</div>
@@ -65,7 +65,8 @@ export default {
 
 <style lang='sass'>
 .footer
-	padding: 60px 0
+	padding-top: 3.75rem
+	padding-bottom: 7.5rem
 	display: flex
 	flex-direction: column
 
