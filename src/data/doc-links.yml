@@ -9,6 +9,8 @@
       link: /how-it-works
     - title: User interface overview
       link: /user-interface-overview
+    - title: Basic Git workflow
+      link: /basic-git-workflow
 
 - title: Adding repositories
   items:
