@@ -689,10 +689,10 @@
   dependencies:
     vue-analytics "^5.16.1"
 
-"@gridsome/source-filesystem@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.4.1.tgz#d42388988cecbf82150a6b07fe735d5ad9e721ec"
-  integrity sha512-bX2ykZSYqk4lDtmW/HgrMfDasMU+lclt9gDM0YDGkP+isDTqYp4sDaStgJFZrRju1OxT0532vcfqZ1g7nQKS4g==
+"@gridsome/source-filesystem@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.5.0.tgz#7b88f5dcdde1014c6c7da5c5bcbca0e284101992"
+  integrity sha512-gTtUw3jesCG/zsIQT1k555Bn+3HC/xK46R3747olTYThldzun31wAW+YHBCc2l8mAsFp++JkCxgxKGdy8yaJhg==
   dependencies:
     chokidar "^2.0.4"
     fs-extra "^7.0.0"
