@@ -24,7 +24,7 @@ If you want to understand how Code works or want to debug an issue, you'll want 
 
 ### Getting the sources
 
-First, fork the VS Code repository so that you can make a pull request. Then, clone your fork locally:
+First, fork the Thermal repository so that you can make a pull request. Then, clone your fork locally:
 
 ```sh
 git clone https://github.com/<<<your-github-account>>>/thermal.git
@@ -38,7 +38,7 @@ We use ESLint for linting our sources. You can run eslint across the sources by 
 
 ## Work Branches
 
-Even if you have push rights on the Microsoft/vscode repository, you should create a personal fork and create feature branches there when you need them. This keeps the main repository clean and your personal workflow cruft out of sight.
+Even if you have push rights on the [gitthermal/thermal](https://github.com/gitthermal/thermal) repository, you should create a personal fork and create feature branches there when you need them. This keeps the main repository clean and your personal workflow cruft out of sight.
 
 ## Pull Requests
 
