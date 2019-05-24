@@ -21,6 +21,15 @@ import CallToAction from "../components/hero/CallToAction";
 
 export default {
 	name: "Features",
+	metaInfo: {
+		title: "Features",
+		meta: [
+			{
+				name: "description",
+				content: "List of most awesome features of Thermal application."
+			}
+		]
+	},
 	components: {
 		Container,
 		CallToAction
