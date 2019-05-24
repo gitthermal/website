@@ -6,7 +6,7 @@
 					Features
 				</div>
 				<div class="features__hero-description">
-					One place to manage all of your Git repositories
+					One place to manage all Git repositories
 				</div>
 			</Container>
 		</div>
