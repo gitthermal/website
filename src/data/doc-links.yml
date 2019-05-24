@@ -14,6 +14,8 @@
   items:
     - title: Add existing repository
       link: /add-existing-repository
+    - title: Initialize repository
+      link: /initialize-repository
     - title: Clone repository
       link: /clone-repository
     - title: Create repository
