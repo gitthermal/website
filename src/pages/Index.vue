@@ -48,8 +48,8 @@
 					/>
 					<NewFeature
 						image="./images/file-diff-feature-4x.png"
-						title="Clean diff"
-						description="Visualize every commit with clear diff in workspace and history."
+						title="See the difference"
+						description="Diffs compare versions of your source code side by side, highlighting the parts that are new, edited, or deleted."
 						:order="1"
 						class="index__new__features-item"
 					/>
