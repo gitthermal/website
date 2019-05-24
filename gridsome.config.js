@@ -24,6 +24,11 @@ module.exports = {
 				index: ['readme'],
 				path: "docs/**/*.md",
 				typeName: 'DocPage'
+			},
+			remark: {
+				plugins: [
+					'@gridsome/remark-prismjs'
+				]
 			}
 		},
 		{
@@ -32,6 +37,11 @@ module.exports = {
 				path: "releases/**/*.md",
 				typeName: 'ReleasePage',
 				route: '/releases/:slug'
+			},
+			remark: {
+				plugins: [
+					'@gridsome/remark-prismjs'
+				]
 			}
 		}
 	]
