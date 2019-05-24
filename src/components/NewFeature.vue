@@ -57,8 +57,13 @@ export default {
 		flex-grow: 1
 
 	&__title
-		font-size: 1.5rem
+		font-size: 1.25rem
 		flex-grow: 2
+		margin-bottom: .25rem
+
+	&__description
+		font-size: 1rem
+		color: rgba(#000, .8)
 
 @media (max-width: 768px)
 	.newfeature
