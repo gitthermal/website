@@ -108,27 +108,7 @@
 			</container>
 		</div>
 
-		<div class="index__cta">
-			<container>
-				<div class="index__cta-container">
-					<div class="index__cta-content">
-						<div class="index__cta-heading">
-							Git made simpler.
-						</div>
-						<div class="index__cta-description">
-							Free. Open source. Runs everywhere.
-						</div>
-					</div>
-					<div class="index__cta-button">
-						<primary-button
-							text="Download"
-							:size="2"
-							:link="downloadUrl"
-						/>
-					</div>
-				</div>
-			</container>
-		</div>
+		<call-to-action />
 
   </layout>
 </template>
@@ -139,6 +119,7 @@ import OutlineButton from "../components/Button/OutlineButton"
 import PrimaryButton from "../components/Button/PrimaryButton"
 import NewFeature from "../components/NewFeature"
 import DownloadMixin from "../mixins/download"
+import CallToAction from "../components/hero/CallToAction";
 
 export default {
 	name: "Index",
@@ -189,7 +170,8 @@ export default {
 		Container,
 		PrimaryButton,
 		OutlineButton,
-		NewFeature
+		NewFeature,
+		CallToAction
 	},
 	mixins: [
 		DownloadMixin
@@ -297,23 +279,6 @@ export default {
 			padding-top: .875rem
 			padding-bottom: 2rem
 
-	&__cta
-		background-image: url("../../static/images/cta-background.png")
-		padding-top: 60px
-		padding-bottom: 60px
-
-		&-container
-			display: flex
-			flex-direction: column
-
-		&-heading, &-description
-			color: white
-
-		&-heading
-			font-size: 2.1rem
-			margin-bottom: 14px
-			line-height: 1.2
-
 @media (max-width: 768px)
 	.index
 		&__features
@@ -323,9 +288,6 @@ export default {
 
 				&-description
 					margin-top: .875rem
-
-		&__cta-button
-			margin-top: 1rem
 
 	.hero__button-patron
 		display: none
@@ -365,18 +327,4 @@ export default {
 		&__pp
 			padding-top: 80px
 			padding-bottom: 80px
-
-		&__cta
-			padding-top: 80px
-			padding-bottom: 80px
-
-			&-container
-				flex-direction: row
-				align-items: center
-
-			&-heading
-				font-size: 3rem
-
-			&-button
-				margin-left: auto
 </style>
