@@ -84,7 +84,7 @@ export default {
 		align-items: center
 
 		&__image
-			width: 350px
+			width: 380px
 			height: 100%
 
 	.fd-row
@@ -100,8 +100,8 @@ export default {
 		text-align: right
 
 	.ml
-		margin-left: 2rem
+		margin-left: 4rem
 
 	.mr
-		margin-right: 2rem
+		margin-right: 4rem
 </style>
