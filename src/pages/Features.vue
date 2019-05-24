@@ -10,6 +10,7 @@
 				</div>
 			</Container>
 		</div>
+		</div>
 		<call-to-action />
 	</Layout>
 </template>
