@@ -2,6 +2,9 @@
 	<div
 		class="newfeature"
 		:class="containerStyle"
+		:style="{
+			marginBottom: mb + 'rem'
+		}"
 	>
 		<g-image
 			:src="image"
@@ -31,6 +34,10 @@ export default {
 			type: Number,
 			default: 0,
 			required: true
+		},
+		mb: {
+			type: Number,
+			default: 3
 		}
 	},
 	computed: {
