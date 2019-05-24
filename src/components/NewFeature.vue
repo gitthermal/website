@@ -6,11 +6,7 @@
 			marginBottom: mb + 'rem'
 		}"
 	>
-		<g-image
-			:src="image"
-			class="newfeature__image"
-			:class="imageStyle"
-		/>
+		<g-image :src="image" class="newfeature__image" :class="imageStyle" />
 		<div class="newfeature__content">
 			<div class="newfeature__title">
 				{{ title }}
@@ -19,7 +15,6 @@
 				{{ description }}
 			</div>
 		</div>
-
 	</div>
 </template>
 
@@ -41,13 +36,17 @@ export default {
 	},
 	computed: {
 		containerStyle() {
-			return ((this.order === 0) ? "fd-row" : "fd-rr") + " " + ((this.order === 0) ? "ta-left" : "ta-right")
+			return (
+				(this.order === 0 ? "fd-row" : "fd-rr") +
+				" " +
+				(this.order === 0 ? "ta-left" : "ta-right")
+			);
 		},
 		imageStyle() {
-			return ((this.order === 0) ? "mr" : "ml")
+			return this.order === 0 ? "mr" : "ml";
 		}
 	}
-}
+};
 </script>
 
 <style lang='sass'>
