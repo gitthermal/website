@@ -38,6 +38,8 @@
       link: /how-to-contribute
     - title: Contribution guide
       link: /contribution-guide
+    - title: Setup development environment
+      link: /setup-development-environment
     - title: Experimental features
       link: /experimental-features
     - title: Reporting issues
