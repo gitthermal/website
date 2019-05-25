@@ -2,12 +2,11 @@
 	<div
 		class="newfeature"
 		:class="containerStyle"
+		:style="{
+			marginBottom: mb + 'rem'
+		}"
 	>
-		<g-image
-			:src="image"
-			class="newfeature__image"
-			:class="imageStyle"
-		/>
+		<g-image :src="image" class="newfeature__image" :class="imageStyle" />
 		<div class="newfeature__content">
 			<div class="newfeature__title">
 				{{ title }}
@@ -16,7 +15,6 @@
 				{{ description }}
 			</div>
 		</div>
-
 	</div>
 </template>
 
@@ -29,18 +27,26 @@ export default {
 		image: String,
 		order: {
 			type: Number,
-			required: true
+			default: 0
+		},
+		mb: {
+			type: Number,
+			default: 3
 		}
 	},
 	computed: {
 		containerStyle() {
-			return ((this.order === 0) ? "fd-row" : "fd-rr") + " " + ((this.order === 0) ? "ta-left" : "ta-right")
+			return (
+				(this.order === 0 ? "fd-row" : "fd-rr") +
+				" " +
+				(this.order === 0 ? "ta-left" : "ta-right")
+			);
 		},
 		imageStyle() {
-			return ((this.order === 0) ? "mr" : "ml")
+			return this.order === 0 ? "mr" : "ml";
 		}
 	}
-}
+};
 </script>
 
 <style lang='sass'>
@@ -56,8 +62,13 @@ export default {
 		flex-grow: 1
 
 	&__title
-		font-size: 1.5rem
+		font-size: 1.25rem
 		flex-grow: 2
+		margin-bottom: .25rem
+
+	&__description
+		font-size: 1rem
+		color: rgba(#000, .8)
 
 @media (max-width: 768px)
 	.newfeature
@@ -72,7 +83,7 @@ export default {
 		align-items: center
 
 		&__image
-			width: 350px
+			width: 380px
 			height: 100%
 
 	.fd-row
@@ -88,8 +99,8 @@ export default {
 		text-align: right
 
 	.ml
-		margin-left: 2rem
+		margin-left: 4rem
 
 	.mr
-		margin-right: 2rem
+		margin-right: 4rem
 </style>
