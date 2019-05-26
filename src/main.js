@@ -12,4 +12,9 @@ export default function (Vue, { router, head, isClient }) {
 		rel: "manifest",
 		href: "/manifest.json"
 	})
+
+	// stripe checkout
+	head.script.push({
+		src: "http://js.stripe.com/v3"
+	})
 }
