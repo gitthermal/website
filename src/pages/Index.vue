@@ -19,12 +19,11 @@
 						<g-image class="index__hero-os" src="../../static/images/os.png"/>
 					</div>
 					<outline-button
-						text="Become a Patron"
-						link="https://patreon.com/mittalyashu"
+						text="Become a Sponsor"
+						link="/sponsor"
 						:size="2"
-						:external="true"
 						theme="light"
-						class="index__hero-button hero__button-patron"
+						class="index__hero-button hero__button-sponsor"
 					/>
 				</div>
 			</container>
@@ -290,7 +289,7 @@ export default {
 				&-description
 					margin-top: .875rem
 
-	.hero__button-patron
+	.hero__button-sponsor
 		display: none
 
 @media (min-width: 500px)
