@@ -8,6 +8,7 @@ export default function (Vue, { router, head, isClient }) {
 	Vue.component('Layout', DefaultLayout)
 	Vue.use(router),
 
+	// PWA manifest file
 	head.link.push({
 		rel: "manifest",
 		href: "/manifest.json"
