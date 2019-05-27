@@ -15,6 +15,6 @@ export default function (Vue, { router, head, isClient }) {
 
 	// stripe checkout
 	head.script.push({
-		src: "http://js.stripe.com/v3"
+		src: "https://js.stripe.com/v3"
 	})
 }
