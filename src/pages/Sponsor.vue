@@ -103,6 +103,7 @@ export default {
 			display: flex
 			flex-direction: row
 			align-items: center
+			margin-bottom: .5rem
 
 		&-cost
 			font-weight: 500
