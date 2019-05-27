@@ -21,6 +21,10 @@
 						Docs
 					</g-link>
 
+					<g-link to="/sponsor" :style="'color: #' + textColor" class="header__navbar-item">
+						Sponsor
+					</g-link>
+
 					<a
 						href="https://discord.gg/KT3nAR5"
 						target="_blank" :style="'color: #' + textColor"
