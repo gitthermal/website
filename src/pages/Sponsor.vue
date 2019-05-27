@@ -38,7 +38,6 @@ import Container from "../layouts/Container";
 import OutlineButton from "../components/Button/OutlineButton"
 import SponsorTiers from "../data/sponsor-tiers.yml"
 
-var stripe = Stripe("pk_live_DLEhVwauymdEAIPdN07BsLEx00hNZ8kcwt");
 
 export default {
 	name: "Sponsors",
@@ -56,6 +55,7 @@ export default {
 	},
 	methods: {
 		stripeCheckout(plan_id) {
+			var stripe = Stripe("pk_live_DLEhVwauymdEAIPdN07BsLEx00hNZ8kcwt");
 			// When the customer clicks on the button, redirect
 			// them to Checkout.
 			stripe
