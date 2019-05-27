@@ -26,7 +26,7 @@
 								Select
 							</div>
 						</div>
-						<div class="sponsor__tiers-description">
+						<div class="sponsors__tiers-description">
 							{{ item.description }}
 						</div>
 					</div>
