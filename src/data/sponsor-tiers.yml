@@ -1,5 +1,5 @@
 - id: SPON-T1
-  title: Open source lover
+  title: 💻 Open source lover
   price: 100
   currency: ₹
   cycle: month
@@ -9,17 +9,17 @@
     - discord
 
 - id: SPON-T2
-  title: Coffee lover
+  title: ☕ Coffee lover
   price: 200
   currency: ₹
   cycle: month
-  description: ☕ ️Buy me a coffee every month.
+  description: ️Buy me a coffee every month.
   plan_id: plan_F8eRgEf1NIJA72
   perks:
     - discord
 
 - id: SPON-T3
-  title: Backer
+  title: 🤗 Backer
   price: 500
   currency: ₹
   cycle: month
