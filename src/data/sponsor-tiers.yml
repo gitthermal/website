@@ -1,0 +1,27 @@
+- id: SPON-T1
+  title: Open source lover
+  price: 100
+  currency: ₹
+  cycle: month
+  description: Just supporting as open source loving person.
+  perks:
+    - discord
+
+- id: SPON-T2
+  title: Coffee lover
+  price: 200
+  currency: ₹
+  cycle: month
+  description: ☕ ️Buy me a coffee every month.
+  perks:
+    - discord
+
+- id: SPON-T3
+  title: Backer
+  price: 500
+  currency: ₹
+  cycle: month
+  description: Your name will be put in backers.md in the Thermal repository.
+  perks:
+    - discord
+    - backers
