@@ -30,7 +30,7 @@
     - backers
 
 - id: SPON-T4
-  title: 🥉 Bronze Sponsor
+  title: 🥉 Bronze
   price: 3000
   currency: ₹
   cycle: month
@@ -42,7 +42,7 @@
     - backers
 
 - id: SPON-T5
-  title: 🥈 Silver Sponsor
+  title: 🥈 Silver
   price: 5000
   currency: ₹
   cycle: month
@@ -54,7 +54,7 @@
     - backers
 
 - id: SPON-T6
-  title: 🥇 Gold Sponsor
+  title: 🥇 Gold
   price: 10,000
   currency: ₹
   cycle: month
