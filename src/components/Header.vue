@@ -36,7 +36,7 @@
 					<div class="header__navbar-item header__navbar-button">
 						<outline-button
 							text="Download"
-							:theme="theme"
+							:theme="(theme = 'dark') ? 'light' : 'dark'"
 							:size="1"
 							:link="downloadUrl"
 						/>

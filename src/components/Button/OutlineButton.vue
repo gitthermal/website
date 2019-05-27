@@ -2,8 +2,8 @@
 	<Link
 		class="button"
 		:class="{
-			'button__outline-light': theme === 'dark',
-			'button__outline-dark': theme === 'light',
+			'button__outline-light': theme === 'light',
+			'button__outline-dark': theme === 'dark',
 			'button__size-1': size === 1,
 			'button__size-2': size === 2
 		}"
