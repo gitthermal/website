@@ -12,6 +12,10 @@
 			<DownloadIcon />
 			<p>Download</p>
 		</g-link>
+		<g-link to="/sponsor" class="navbar__item">
+			<DollarIcon />
+			<p>Sponsor</p>
+		</g-link>
 	</div>
 </template>
 
@@ -19,6 +23,7 @@
 import StarIcon from "../../../static/images/icon/star.svg"
 import DocsIcon from "../../../static/images/icon/docs.svg"
 import DownloadIcon from "../../../static/images/icon/download.svg"
+import DollarIcon from "../../../static/images/icon/dollar-sign.svg"
 import DownloadMixin from "../../mixins/download"
 
 export default {
@@ -26,7 +31,8 @@ export default {
 	components: {
 		StarIcon,
 		DocsIcon,
-		DownloadIcon
+		DownloadIcon,
+		DollarIcon
 	},
 	mixins: [
 		DownloadMixin
