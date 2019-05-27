@@ -29,6 +29,11 @@
 						<div class="sponsors__tiers-description">
 							{{ item.description }}
 						</div>
+						<div class="sponsors__tiers-perks">
+							<div v-for="perk in item.perks" class="sponsors__perks-item">
+								{{ perk }}
+							</div>
+						</div>
 					</div>
 				</div>
 			</container>
@@ -102,4 +107,22 @@ export default {
 		&-button
 			margin-left: auto
 			color: #00ADB5
+
+		&-description
+			margin-bottom: .5rem
+
+		&-perks
+			display: flex
+			flex-direction: row
+
+	&__perks-item
+		font-size: .85rem
+		padding: 2px 8px
+		border-radius: 20px
+		margin-right: .5rem
+		user-select: none
+		border:
+			width: 1px
+			style: solid
+			color: #ddd
 </style>
