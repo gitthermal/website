@@ -4,6 +4,7 @@
   currency: ₹
   cycle: month
   description: Just supporting as open source loving person.
+  plan_id: plan_F8hYEi75B2wZMy
   perks:
     - discord
 
@@ -13,6 +14,7 @@
   currency: ₹
   cycle: month
   description: ☕ ️Buy me a coffee every month.
+  plan_id: plan_F8eRgEf1NIJA72
   perks:
     - discord
 
@@ -22,6 +24,7 @@
   currency: ₹
   cycle: month
   description: Your name will be put in backers.md in the Thermal repository.
+  plan_id: plan_F8pmrWMggAViOC
   perks:
     - discord
     - backers
