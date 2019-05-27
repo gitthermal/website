@@ -23,6 +23,7 @@
 						link="https://patreon.com/mittalyashu"
 						:size="2"
 						:external="true"
+						theme="light"
 						class="index__hero-button hero__button-patron"
 					/>
 				</div>

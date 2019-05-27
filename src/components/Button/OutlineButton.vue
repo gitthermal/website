@@ -2,8 +2,8 @@
 	<Link
 		class="button"
 		:class="{
-			'button__outline-light': theme === 'dark',
-			'button__outline-dark': theme === 'light',
+			'button__outline-light': theme === 'light',
+			'button__outline-dark': theme === 'dark',
 			'button__size-1': size === 1,
 			'button__size-2': size === 2
 		}"
@@ -58,7 +58,7 @@ export default {
 				color: rgba(255, 255, 255, 1)
 
 		&-dark
-			border: 1px solid rgba(#222831, .8)
+			border: 1px solid rgba(#222831, .2)
 			color: rgba(#222831, .8)
 
 			&:hover
