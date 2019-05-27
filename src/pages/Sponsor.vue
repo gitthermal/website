@@ -104,6 +104,9 @@ export default {
 			flex-direction: row
 			align-items: center
 
+		&-cost
+			font-weight: 500
+
 		&-button
 			margin-left: auto
 			color: #00ADB5
