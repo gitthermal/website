@@ -11,6 +11,7 @@
 						v-for="item in sponsorTiers"
 						:key="item.id"
 						class="sponsors__tiers-item"
+						v-if="item.plan_id"
 					>
 						<div class="sponsors__tiers-content">
 							<div class="sponsors__tiers-cost">
