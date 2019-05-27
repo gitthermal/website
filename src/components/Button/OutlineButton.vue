@@ -62,6 +62,5 @@ export default {
 			color: rgba(#222831, .8)
 
 			&:hover
-				border: 1px solid #222831
-				color: #222831
+				color: #00ADB5
 </style>
