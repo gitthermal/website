@@ -16,12 +16,14 @@
 							<div class="sponsors__tiers-cost">
 								{{ item.currency + ' ' + item.price + ' a ' + item.cycle }}
 							</div>
-							<outline-button
+							<div
 								text="Select"
 								:size="1"
-								class="sponsors__tiers-button"
+								class="sponsors__tiers-button button button__outline-dark button__size-1"
 								@click="stripeCheckout(item.plan_id)"
-							/>
+							>
+								Select
+							</div>
 						</div>
 						<div class="sponsor__tiers-description">
 							{{ item.description }}
@@ -35,9 +37,7 @@
 
 <script>
 import Container from "../layouts/Container";
-import OutlineButton from "../components/Button/OutlineButton"
 import SponsorTiers from "../data/sponsor-tiers.yml"
-
 
 export default {
 	name: "Sponsors",
@@ -45,8 +45,7 @@ export default {
 		title: "Sponsor Thermal Development"
 	},
 	components: {
-		Container,
-		OutlineButton
+		Container
 	},
 	computed: {
 		sponsorTiers() {
@@ -111,4 +110,5 @@ export default {
 
 		&-button
 			margin-left: auto
+			color: #00ADB5
 </style>
