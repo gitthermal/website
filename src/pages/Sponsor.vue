@@ -15,7 +15,7 @@
 					>
 						<div class="sponsors__tiers-content">
 							<div class="sponsors__tiers-cost">
-								{{ item.currency + item.price + ' a ' + item.cycle }}
+								{{ item.title }} - {{ item.currency + item.price + "/" + item.cycle }}
 							</div>
 							<div
 								text="Select"
