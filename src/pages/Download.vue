@@ -183,7 +183,7 @@ export default {
 			edges {
 				node {
 					id
-					title
+					name
 					assets {
 						url
 						browser_download_url
