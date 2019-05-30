@@ -30,16 +30,26 @@
 								/>
 								<h4>Windows</h4>
 							</a>
-							<a
-								:href="osBuild[1].ext[0].browser_download_url"
-								class="download__other-item"
-							>
+							<div class="download__other-item">
 								<g-image
 									src="../../static/images/icon/mac.png"
 									class="download__other-image"
 								/>
 								<h4>MacOS</h4>
-							</a>
+								<div>
+									<select v-model="macBuild" name="download__os-mac">
+										<option value="dmg">Dmg</option>
+										<option value="zip">Zip</option>
+									</select>
+									<outline-button
+										text="Download"
+										:link="downloadBuild(1, macBuild)",
+										:size="1"
+										theme="dark"
+										:external="true"
+									/>
+								</div>
+							</div>
 							<div class="download__other-item">
 								<g-image
 									src="../../static/images/icon/linux.svg"
@@ -55,7 +65,7 @@
 									</select>
 									<outline-button
 										text="Download"
-										:link="downloadLinuxBuild(linuxBuild)"
+										:link="downloadBuild(2, linuxBuild)"
 										:size="1"
 										theme="dark"
 										:external="true"
@@ -84,6 +94,7 @@ export default {
 		return {
 			currentOSDownloadURL: "",
 			linuxBuild: "",
+			macBuild: "",
 			osBuild: [
 				{
 					os: "windows",
@@ -152,10 +163,10 @@ export default {
 			};
 			this.osBuild[index].ext.push(data);
 		},
-		downloadLinuxBuild(build) {
-			for (let i = 0; i < this.osBuild[2].ext.length; i++) {
-				if (this.osBuild[2].ext[i].name === build) {
-					return this.osBuild[2].ext[i].browser_download_url;
+		downloadBuild(index, build) {
+			for (let i = 0; i < this.osBuild[index].ext.length; i++) {
+				if (this.osBuild[index].ext[i].name === build) {
+					return this.osBuild[index].ext[i].browser_download_url;
 				}
 			}
 		}
