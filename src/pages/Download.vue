@@ -15,28 +15,52 @@
 						Thermal for Windows, Mac & Linux
 					</h1>
 					<div class="download__other">
-						<p class="download__other-heading" v-if="!!platformLabel">Download for other platform</p>
+						<p class="download__other-heading" v-if="!!platformLabel">
+							Download for other platform
+						</p>
 						<div class="download__other-list">
-							<div class="download__other-item">
+							<a
+								:href="osBuild[0].ext[0].browser_download_url"
+								target="_blank"
+								class="download__other-item"
+							>
 								<g-image
 									src="../../static/images/icon/windows.svg"
 									class="download__other-image"
 								/>
 								<h4>Windows</h4>
-							</div>
-							<div class="download__other-item">
+							</a>
+							<a
+								:href="osBuild[1].ext[0].browser_download_url"
+								class="download__other-item"
+							>
 								<g-image
 									src="../../static/images/icon/mac.png"
 									class="download__other-image"
 								/>
 								<h4>MacOS</h4>
-							</div>
+							</a>
 							<div class="download__other-item">
 								<g-image
 									src="../../static/images/icon/linux.svg"
 									class="download__other-image"
 								/>
 								<h4>Linux</h4>
+								<div>
+									<select v-model="linuxBuild" name="download__os-linux">
+										<option value="deb">Deb</option>
+										<option value="snap">Snap</option>
+										<option value="zip">Zip</option>
+										<option value="AppImage">AppImage</option>
+									</select>
+									<outline-button
+										text="Download"
+										:link="downloadLinuxBuild(linuxBuild)"
+										:size="1"
+										theme="dark"
+										:external="true"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -49,6 +73,7 @@
 <script>
 import container from "../layouts/Container";
 import DownloadMixin from "../mixins/download";
+import OutlineButton from "../components/Button/OutlineButton";
 
 export default {
 	name: "Download",
@@ -58,6 +83,7 @@ export default {
 	data() {
 		return {
 			currentOSDownloadURL: "",
+			linuxBuild: "",
 			osBuild: [
 				{
 					os: "windows",
@@ -72,10 +98,11 @@ export default {
 					ext: []
 				}
 			]
-		}
+		};
 	},
 	components: {
-		container
+		container,
+		OutlineButton
 	},
 	computed: {
 		downloadLink() {
@@ -90,36 +117,47 @@ export default {
 		},
 		osReleasesAssets(assets) {
 			for (let i = 0; i < assets.length; i++) {
-				let downloadUrl = assets[i].browser_download_url
-				let buildType = downloadUrl.split(".").pop()
-				switch (buildType) {
-					// Windows
-					case "exe":
-						this.addBuildType("exe", downloadUrl, 0);
-						break;
-					// Linux
-					case "deb":
-						this.addBuildType("deb", downloadUrl, 2);
-						break;
-					case "snap":
-						this.addBuildType("snap", downloadUrl, 2);
-						break;
-					case "AppImage":
-						this.addBuildType("AppImage", downloadUrl, 2);
-						break;
-						// Mac
-					case "zip":
-						this.addBuildType("zip", downloadUrl, 1);
-						break;
+				let downloadUrl = assets[i].browser_download_url;
+				if (downloadUrl.includes("linux")) {
+					if (downloadUrl.includes("deb")) {
+						this.addBuildType(2, "deb", downloadUrl);
+					}
+					if (downloadUrl.includes("snap")) {
+						this.addBuildType(2, "snap", downloadUrl);
+					}
+					if (downloadUrl.includes("zip")) {
+						this.addBuildType(2, "zip", downloadUrl);
+					}
+					if (downloadUrl.includes("AppImage")) {
+						this.addBuildType(2, "AppImage", downloadUrl);
+					}
+				}
+				if (downloadUrl.includes("mac")) {
+					if (downloadUrl.includes("dmg")) {
+						this.addBuildType(1, "dmg", downloadUrl);
+					}
+					if (downloadUrl.includes("zip")) {
+						this.addBuildType(1, "zip", downloadUrl);
+					}
+				}
+				if (downloadUrl.includes("win")) {
+					this.addBuildType(0, "win", downloadUrl);
 				}
 			}
 		},
-		addBuildType(type, downloadUrl, index) {
+		addBuildType(index, type, downloadUrl) {
 			let data = {
 				name: type,
 				browser_download_url: downloadUrl
+			};
+			this.osBuild[index].ext.push(data);
+		},
+		downloadLinuxBuild(build) {
+			for (let i = 0; i < this.osBuild[2].ext.length; i++) {
+				if (this.osBuild[2].ext[i].name === build) {
+					return this.osBuild[2].ext[i].browser_download_url;
+				}
 			}
-			this.osBuild[index].ext.push(data)
 		}
 	},
 	mounted() {
@@ -127,7 +165,9 @@ export default {
 		for (let i = 0; i < this.osBuild.length; i++) {
 			if (this.$router.history.current.query.os === this.osBuild[i].os) {
 				for (let j = 0; j < this.osBuild[i].ext.length; j++) {
-					this.currentOSDownloadURL = this.osBuild[i].ext[j].browser_download_url;
+					this.currentOSDownloadURL = this.osBuild[i].ext[
+						j
+					].browser_download_url;
 					this.downloadApp(this.currentOSDownloadURL);
 				}
 			}
