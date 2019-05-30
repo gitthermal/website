@@ -179,7 +179,7 @@ export default {
 
 <page-query>
 	query GitHub {
-		allgithub {
+		allgithub (sort: [{ by: "published_at" }]) {
 			edges {
 				node {
 					id
