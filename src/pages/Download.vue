@@ -19,7 +19,7 @@
 						</p>
 						<div class="download__other-list">
 							<a
-								:href="winBuild"
+								:href="osBuild[0].ext[0].browser_download_url"
 								target="_blank"
 								class="download__other-item"
 							>
@@ -117,9 +117,6 @@ export default {
 	computed: {
 		downloadLink() {
 			return this.currentOSDownloadURL;
-		},
-			return this.osBuild[0].ext[0].browser_download_url
-		winBuild() {
 		}
 	},
 	methods: {
