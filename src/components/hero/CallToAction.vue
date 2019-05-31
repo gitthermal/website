@@ -11,7 +11,7 @@
 					</div>
 				</div>
 				<div class="hero__cta-button">
-					<primary-button text="Download" :size="2" :link="osDownloadUrl" />
+					<primary-button text="Download" :size="2" :link="osDownloadUrl + ctaUrl" />
 				</div>
 			</div>
 		</container>
@@ -28,6 +28,11 @@ export default {
 	components: {
 		container,
 		PrimaryButton
+	},
+	computed: {
+		ctaUrl() {
+			return "?utm_source=website&utm_medium=call_to_action"
+		}
 	},
 	mixins: [PlatformMixin]
 };

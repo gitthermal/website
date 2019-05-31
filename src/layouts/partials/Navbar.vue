@@ -8,11 +8,11 @@
 			<DocsIcon />
 			<p>Docs</p>
 		</g-link>
-		<g-link :to="osDownloadUrl" class="navbar__item">
+		<g-link :to="osDownloadUrl + mobileNavUrl" class="navbar__item">
 			<DownloadIcon />
 			<p>Download</p>
 		</g-link>
-		<g-link to="/sponsor" class="navbar__item">
+		<g-link :to="'/sponsor/' + mobileNavUrl" class="navbar__item">
 			<DollarIcon />
 			<p>Sponsor</p>
 		</g-link>
@@ -33,6 +33,11 @@ export default {
 		DocsIcon,
 		DownloadIcon,
 		DollarIcon
+	},
+	computed: {
+		mobileNavUrl() {
+			return "?utm_source=website&utm_medium=mobile_nav"
+		}
 	},
 	mixins: [
 		PlatformMixin

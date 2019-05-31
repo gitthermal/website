@@ -13,14 +13,14 @@
 						<primary-button
 							text="Download"
 							:size="2"
-							:link="osDownloadUrl"
+							:link="osDownloadUrl + indexUrl"
 							class="index__hero-button"
 						/>
 						<g-image class="index__hero-os" src="../../static/images/os.png"/>
 					</div>
 					<outline-button
 						text="Become a Sponsor"
-						link="/sponsor"
+						:link="'/sponsor' + indexUrl"
 						:size="2"
 						theme="light"
 						class="index__hero-button hero__button-sponsor"
@@ -101,7 +101,7 @@
 				</div>
 				<outline-button
 					text="Join discord server"
-					link="https://discord.gg/KT3nAR5"
+					:link="'https://discordapp.com/invite/KT3nAR5/' + indexUrl"
 					:size="2"
 					:external="true"
 				/>
@@ -172,6 +172,11 @@ export default {
 		OutlineButton,
 		NewFeature,
 		CallToAction
+	},
+	computed: {
+		indexUrl() {
+			return "?utm_source=website&utm_medium=index_page"
+		}
 	},
 	mixins: [
 		PlatformMixin

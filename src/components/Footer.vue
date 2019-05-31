@@ -11,13 +11,13 @@
 				<g-link to="/features" class="footer__navbar-item">
 					Features
 				</g-link>
-				<a href="https://discord.gg/KT3nAR5" target="_blank" class="footer__navbar-item">
+				<a :href="'https://discordapp.com/invite/KT3nAR5/' + footerUrl" target="_blank" class="footer__navbar-item">
 					Help
 				</a>
-				<a href="https://patreon.com/mittalyashu" target="_blank" class="footer__navbar-item">
+				<a :href="'https://patreon.com/mittalyashu' + footerUrl" target="_blank" class="footer__navbar-item">
 					Patron
 				</a>
-				<a href="https://github.com/gitthermal/thermal/issues/new/choose" target="_blank" class="footer__navbar-item">
+				<a :href="'https://github.com/gitthermal/thermal/issues/new/choose' + footerUrl" target="_blank" class="footer__navbar-item">
 					Feedback
 				</a>
 				<g-link to="/releases" class="footer__navbar-item">
@@ -32,16 +32,16 @@
 			</div>
 
 			<div class="footer__social">
-				<a href="https://www.github.com/gitthermal/thermal" class="footer__social-item">
+				<a :href="'https://www.github.com/gitthermal/thermal' + footerUrl" class="footer__social-item">
 					<g-image src="../../static/images/icon/github.svg" />
 				</a>
-				<a href="https://discord.gg/KT3nAR5" class="footer__social-item">
+				<a :href="'https://discordapp.com/invite/KT3nAR5/' + footerUrl" class="footer__social-item">
 					<g-image src="../../static/images/icon/discord.svg" />
 				</a>
-				<a href="https://www.producthunt.com/posts/thermal" class="footer__social-item">
+				<a :href="'https://www.producthunt.com/posts/thermal' + footerUrl" class="footer__social-item">
 					<g-image src="../../static/images/icon/producthunt.svg" />
 				</a>
-				<a href="https://www.twitter.com/gitthermal" class="footer__social-item">
+				<a :href="'https://www.twitter.com/gitthermal' + footerUrl" class="footer__social-item">
 					<g-image src="../../static/images/icon/twitter.svg" />
 				</a>
 			</div>
@@ -59,6 +59,11 @@ export default {
 	components: {
 		Container,
 		Logo
+	},
+	computed: {
+		footerUrl() {
+			return "?utm_source=website&utm_medium=footer"
+		}
 	}
 }
 </script>

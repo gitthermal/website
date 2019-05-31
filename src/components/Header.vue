@@ -21,12 +21,12 @@
 						Docs
 					</g-link>
 
-					<g-link to="/sponsor" :style="'color: #' + textColor" class="header__navbar-item">
+					<g-link :to="'/sponsor' + HeaderUrl" :style="'color: #' + textColor" class="header__navbar-item">
 						Sponsor
 					</g-link>
 
 					<a
-						href="https://discord.gg/KT3nAR5"
+						:href="'https://discordapp.com/invite/KT3nAR5/' + HeaderUrl"
 						target="_blank" :style="'color: #' + textColor"
 						class="header__navbar-item"
 					>
@@ -38,19 +38,19 @@
 							text="Download"
 							:theme="(theme = 'dark') ? 'light' : 'dark'"
 							:size="1"
-							:link="osDownloadUrl"
+							:link="osDownloadUrl + HeaderUrl"
 						/>
 					</div>
 				</div>
 
 				<div class="header__navbar header__mobile-navbar" >
-					<a href="https://www.github.com/gitthermal/thermal">
+					<a :href="'https://www.github.com/gitthermal/thermal' + HeaderUrl">
 						<GitHubIcon />
 					</a>
-					<a href="https://discord.gg/KT3nAR5">
+					<a :href="'https://discordapp.com/invite/KT3nAR5/' + HeaderUrl">
 						<DiscordIcon />
 					</a>
-					<a href="https://www.twitter.com/gitthermal">
+					<a :href="'https://www.twitter.com/gitthermal' + HeaderUrl">
 						<TwitterIcon />
 					</a>
 				</div>
@@ -90,6 +90,9 @@ export default {
 		}
 	},
 	computed: {
+		HeaderUrl() {
+			return "?utm_source=website&utm_medium=header"
+		},
 		backgroundColor() {
 			switch (this.theme) {
 				case "dark":
