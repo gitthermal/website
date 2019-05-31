@@ -120,7 +120,7 @@ export default {
 		}
 	},
 	methods: {
-		downloadApp(url) {
+		osDownloadRedirect(url) {
 			setTimeout(function() {
 				window.open(url);
 			}, 1500);
@@ -178,7 +178,7 @@ export default {
 					this.currentOSDownloadURL = this.osBuild[i].ext[
 						j
 					].browser_download_url;
-					this.downloadApp(this.currentOSDownloadURL);
+					this.osDownloadRedirect(this.currentOSDownloadURL);
 				}
 			}
 		}
