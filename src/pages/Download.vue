@@ -4,8 +4,8 @@
 			<container>
 				<div class="download__container">
 					<!-- <h1 v-if="!!platformLabel" class="download__heading">Thermal for {{ platformLabel }}</h1> -->
-					<div v-if="!!platformLabel" class="download__progress">
-						<h2>Thanks for downloading Thermal for {{ platformLabel }}</h2>
+					<div v-if="!!platformName" class="download__progress">
+						<h2>Thanks for downloading Thermal for {{ platformName }}</h2>
 						<p>
 							Download not started? Try this
 							<a :href="downloadLink" target="_blank">direct download link</a>.
@@ -15,7 +15,7 @@
 						Thermal for Windows, Mac & Linux
 					</h1>
 					<div class="download__other">
-						<p class="download__other-heading" v-if="!!platformLabel">
+						<p class="download__other-heading" v-if="!!platformName">
 							Download for other platform
 						</p>
 						<div class="download__other-list">

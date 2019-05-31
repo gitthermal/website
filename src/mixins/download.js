@@ -28,7 +28,7 @@ export default {
 					return "zip"
 			}
 		},
-		platformLabel() {
+		platformName() {
 			switch (this.$router.history.current.query.os) {
 				case "windows":
 					return "Windows";
