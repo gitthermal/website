@@ -2,14 +2,14 @@
 	<layout>
 		<container>
 			<div class="stats">
-			<div class="stats__total">
-				<apex-chart
-					width="100%"
-					type="bar"
-					:options="options"
-					:series="series"
-				></apex-chart>
-			</div>
+				<div class="stats__total">
+					<!-- <apex-charts
+						width="100%"
+						type="bar"
+						:options="options"
+						:series="series"
+					/> -->
+				</div>
 			</div>
 		</container>
 	</layout>
@@ -17,7 +17,7 @@
 
 <script>
 import Container from "../layouts/Container";
-import ApexChart from "vue-apexcharts";
+// import ApexCharts from "vue-apexcharts";
 
 export default {
 	name: "Stats",
@@ -64,7 +64,7 @@ export default {
 	},
 	components: {
 		Container,
-		ApexChart
+		// ApexCharts
 	},
 	mounted() {
 		let win = 0;
