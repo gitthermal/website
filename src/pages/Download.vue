@@ -18,17 +18,25 @@
 							Download for other platform
 						</p>
 						<div class="download__other-list">
-							<a
-								:href="osBuild[0].ext[0].browser_download_url"
-								target="_blank"
-								class="download__other-item"
-							>
+							<div class="download__other-item">
 								<g-image
 									src="../../static/images/icon/windows.svg"
 									class="download__other-image"
 								/>
 								<h4>Windows</h4>
-							</a>
+								<div>
+									<select v-model="winBuild" name="download__os-win">
+										<option value="exe">Exe</option>
+									</select>
+									<outline-button
+										text="Download"
+										:link="downloadBuild(0, winBuild)"
+										:size="1"
+										theme="dark"
+										:external="true"
+									/>
+								</div>
+							</div>
 							<div class="download__other-item">
 								<g-image
 									src="../../static/images/icon/mac.png"
@@ -92,6 +100,7 @@ export default {
 	data() {
 		return {
 			currentOSDownloadURL: "",
+			winBuild: "",
 			linuxBuild: "",
 			macBuild: "",
 			osBuild: [
@@ -151,7 +160,7 @@ export default {
 					}
 				}
 				if (downloadUrl.includes("win")) {
-					this.addBuildType(0, "win", downloadUrl);
+					this.addBuildType(0, "exe", downloadUrl);
 				}
 			}
 		},
