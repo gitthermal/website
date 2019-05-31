@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@octokit/rest": "^16.27.0",
+    "@octokit/rest": "^16.27.3",
     "gridsome": "0.6.3"
   },
   "devDependencies": {
