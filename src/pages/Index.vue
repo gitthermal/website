@@ -13,7 +13,7 @@
 						<primary-button
 							text="Download"
 							:size="2"
-							:link="downloadUrl"
+							:link="osDownloadUrl"
 							class="index__hero-button"
 						/>
 						<g-image class="index__hero-os" src="../../static/images/os.png"/>

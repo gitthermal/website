@@ -8,7 +8,7 @@
 			<DocsIcon />
 			<p>Docs</p>
 		</g-link>
-		<g-link :to="downloadUrl" class="navbar__item">
+		<g-link :to="osDownloadUrl" class="navbar__item">
 			<DownloadIcon />
 			<p>Download</p>
 		</g-link>

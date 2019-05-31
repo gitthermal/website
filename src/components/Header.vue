@@ -38,7 +38,7 @@
 							text="Download"
 							:theme="(theme = 'dark') ? 'light' : 'dark'"
 							:size="1"
-							:link="downloadUrl"
+							:link="osDownloadUrl"
 						/>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 						<TwitterIcon />
 					</a>
 				</div>
-				
+
 			</div>
 		</Container>
 	</div>

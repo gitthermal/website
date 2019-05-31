@@ -2,8 +2,8 @@ const platform = require('platform');
 
 export default {
 	computed: {
-		downloadUrl() {
 			return '/download' + '/?os=' + this.platformName + '&build=' + this.buildType
+		osDownloadUrl() {
 		},
 		platformName() {
 			switch (platform.os.family) {
