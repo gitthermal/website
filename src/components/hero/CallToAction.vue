@@ -21,13 +21,15 @@
 <script>
 import container from "../../layouts/Container";
 import PrimaryButton from "../Button/PrimaryButton";
+import DownloadMixin from "../../mixins/download"
 
 export default {
 	name: "HomeCallToAction",
 	components: {
 		container,
 		PrimaryButton
-	}
+	},
+	mixins: [DownloadMixin]
 };
 </script>
 
