@@ -3,7 +3,6 @@
 		<div class="download">
 			<container>
 				<div class="download__container">
-					<!-- <h1 v-if="!!platformLabel" class="download__heading">Thermal for {{ platformLabel }}</h1> -->
 					<div v-if="!!platformName" class="download__progress">
 						<h2>Thanks for downloading Thermal for {{ platformName }}</h2>
 						<p>
