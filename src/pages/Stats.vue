@@ -26,7 +26,7 @@ export default {
 	},
 	data() {
 		return {
-			series: [{ data: [22, 45, 20] }],
+			series: [{ data: [0, 0, 0] }],
 			options: {
 				plotOptions: {
 					bar: {
