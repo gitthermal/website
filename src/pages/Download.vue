@@ -20,7 +20,7 @@
 						</p>
 						<div class="download__other-list">
 							<a
-								:href="osBuild[0].ext[0].browser_download_url"
+								:href="windowsDownloadUrl"
 								target="_blank"
 								class="download__other-item"
 							>
@@ -118,6 +118,9 @@ export default {
 	computed: {
 		downloadLink() {
 			return this.currentOSDownloadURL;
+		},
+		windowsDownloadUrl() {
+			return this.osBuild[0].ext[0].browser_download_url
 		}
 	},
 	methods: {
@@ -190,11 +193,11 @@ export default {
 
 <page-query>
 	query GitHub {
-		allgithub {
+		allgithub (sort: [{ by: "published_at" }]) {
 			edges {
 				node {
 					id
-					title
+					name
 					assets {
 						url
 						browser_download_url

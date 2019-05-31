@@ -10,7 +10,7 @@ const octokit = new Octokit()
 
 function latestRelease(api, options) {
 	api.loadSource(async store => {
-		const { data } = await octokit.repos.getLatestRelease({
+		const { data } = await octokit.repos.listReleases({
 			owner: "gitthermal",
 			repo: "thermal"
 		})
@@ -18,15 +18,22 @@ function latestRelease(api, options) {
 			const github = store.addContentType({
 				typeName: 'github'
 			})
-			github.addNode({
-				id: data.id,
-				title: data.name,
-				fields: {
-					target_commitish: data.target_commitish,
-					assets: data.assets
-				},
-				content: data.body
-			})
+			for (let index of data) {
+				github.addNode({
+					id: index.id,
+					name: index.name,
+					tag_name: index.tag_name,
+					target_commitish: index.target_commitish,
+					url: index.url,
+					assets_url: index.assets_url,
+					assets: index.assets,
+					created_at: index.created_at,
+					published_at: index.published_at,
+					prerelease: index.prerelease,
+					draft: index.draft,
+					content: index.body
+				})
+			}
 		} catch(error) {
 			console.log(error);
 		};
