@@ -24,7 +24,7 @@ import StarIcon from "../../../static/images/icon/star.svg"
 import DocsIcon from "../../../static/images/icon/docs.svg"
 import DownloadIcon from "../../../static/images/icon/download.svg"
 import DollarIcon from "../../../static/images/icon/dollar-sign.svg"
-import DownloadMixin from "../../mixins/download"
+import PlatformMixin from "../../mixins/platform"
 
 export default {
 	name: "Navbar",
@@ -35,7 +35,7 @@ export default {
 		DollarIcon
 	},
 	mixins: [
-		DownloadMixin
+		PlatformMixin
 	]
 }
 </script>

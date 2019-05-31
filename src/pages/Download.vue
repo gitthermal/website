@@ -81,7 +81,7 @@
 
 <script>
 import container from "../layouts/Container";
-import DownloadMixin from "../mixins/download";
+import PlatformMixin from "../mixins/platform";
 import OutlineButton from "../components/Button/OutlineButton";
 
 export default {
@@ -186,7 +186,7 @@ export default {
 			}
 		}
 	},
-	mixins: [DownloadMixin]
+	mixins: [PlatformMixin]
 };
 </script>
 

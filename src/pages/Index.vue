@@ -118,7 +118,7 @@ import Container from "../layouts/Container"
 import OutlineButton from "../components/Button/OutlineButton"
 import PrimaryButton from "../components/Button/PrimaryButton"
 import NewFeature from "../components/NewFeature"
-import DownloadMixin from "../mixins/download"
+import PlatformMixin from "../mixins/platform"
 import CallToAction from "../components/hero/CallToAction";
 
 export default {
@@ -174,7 +174,7 @@ export default {
 		CallToAction
 	},
 	mixins: [
-		DownloadMixin
+		PlatformMixin
 	]
 }
 </script>

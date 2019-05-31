@@ -21,7 +21,7 @@
 <script>
 import container from "../../layouts/Container";
 import PrimaryButton from "../Button/PrimaryButton";
-import DownloadMixin from "../../mixins/download"
+import PlatformMixin from "../../mixins/platform"
 
 export default {
 	name: "HomeCallToAction",
@@ -29,7 +29,7 @@ export default {
 		container,
 		PrimaryButton
 	},
-	mixins: [DownloadMixin]
+	mixins: [PlatformMixin]
 };
 </script>
 
