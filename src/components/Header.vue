@@ -38,7 +38,7 @@
 							text="Download"
 							:theme="(theme = 'dark') ? 'light' : 'dark'"
 							:size="1"
-							:link="downloadUrl"
+							:link="osDownloadUrl"
 						/>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 						<TwitterIcon />
 					</a>
 				</div>
-				
+
 			</div>
 		</Container>
 	</div>
@@ -67,7 +67,7 @@ import GitHubIcon from "../../static/images/icon/github.svg"
 import DiscordIcon from "../../static/images/icon/discord.svg"
 import TwitterIcon from "../../static/images/icon/twitter.svg"
 import OutlineButton from "./Button/OutlineButton"
-import DownloadMixin from "../mixins/download"
+import PlatformMixin from "../mixins/platform"
 
 export default {
 	name: "Header",
@@ -116,7 +116,7 @@ export default {
 		}
 	},
 	mixins: [
-		DownloadMixin
+		PlatformMixin
 	]
 }
 </script>

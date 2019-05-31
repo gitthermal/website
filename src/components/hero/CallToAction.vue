@@ -11,7 +11,7 @@
 					</div>
 				</div>
 				<div class="hero__cta-button">
-					<primary-button text="Download" :size="2" :link="downloadUrl" />
+					<primary-button text="Download" :size="2" :link="osDownloadUrl" />
 				</div>
 			</div>
 		</container>
@@ -21,13 +21,15 @@
 <script>
 import container from "../../layouts/Container";
 import PrimaryButton from "../Button/PrimaryButton";
+import PlatformMixin from "../../mixins/platform"
 
 export default {
 	name: "HomeCallToAction",
 	components: {
 		container,
 		PrimaryButton
-	}
+	},
+	mixins: [PlatformMixin]
 };
 </script>
 

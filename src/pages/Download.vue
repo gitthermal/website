@@ -3,9 +3,8 @@
 		<div class="download">
 			<container>
 				<div class="download__container">
-					<!-- <h1 v-if="!!platformLabel" class="download__heading">Thermal for {{ platformLabel }}</h1> -->
-					<div v-if="!!platformLabel" class="download__progress">
-						<h2>Thanks for downloading Thermal for {{ platformLabel }}</h2>
+					<div v-if="!!platformName" class="download__progress">
+						<h2>Thanks for downloading Thermal for {{ platformName }}</h2>
 						<p>
 							Download not started? Try this
 							<a :href="downloadLink" target="_blank">direct download link</a>.
@@ -15,21 +14,29 @@
 						Thermal for Windows, Mac & Linux
 					</h1>
 					<div class="download__other">
-						<p class="download__other-heading" v-if="!!platformLabel">
+						<p class="download__other-heading" v-if="!!platformName">
 							Download for other platform
 						</p>
 						<div class="download__other-list">
-							<a
-								:href="windowsDownloadUrl"
-								target="_blank"
-								class="download__other-item"
-							>
+							<div class="download__other-item">
 								<g-image
 									src="../../static/images/icon/windows.svg"
 									class="download__other-image"
 								/>
 								<h4>Windows</h4>
-							</a>
+								<div>
+									<select v-model="winBuild" name="download__os-win">
+										<option value="exe">Exe</option>
+									</select>
+									<outline-button
+										text="Download"
+										:link="downloadBuild(0, winBuild)"
+										:size="1"
+										theme="dark"
+										:external="true"
+									/>
+								</div>
+							</div>
 							<div class="download__other-item">
 								<g-image
 									src="../../static/images/icon/mac.png"
@@ -43,7 +50,7 @@
 									</select>
 									<outline-button
 										text="Download"
-										:link="downloadBuild(1, macBuild)",
+										:link="downloadBuild(1, macBuild)"
 										:size="1"
 										theme="dark"
 										:external="true"
@@ -82,7 +89,7 @@
 
 <script>
 import container from "../layouts/Container";
-import DownloadMixin from "../mixins/download";
+import PlatformMixin from "../mixins/platform";
 import OutlineButton from "../components/Button/OutlineButton";
 
 export default {
@@ -93,6 +100,7 @@ export default {
 	data() {
 		return {
 			currentOSDownloadURL: "",
+			winBuild: "",
 			linuxBuild: "",
 			macBuild: "",
 			osBuild: [
@@ -118,13 +126,10 @@ export default {
 	computed: {
 		downloadLink() {
 			return this.currentOSDownloadURL;
-		},
-		windowsDownloadUrl() {
-			return this.osBuild[0].ext[0].browser_download_url
 		}
 	},
 	methods: {
-		downloadApp(url) {
+		osDownloadRedirect(url) {
 			setTimeout(function() {
 				window.open(url);
 			}, 1500);
@@ -155,7 +160,7 @@ export default {
 					}
 				}
 				if (downloadUrl.includes("win")) {
-					this.addBuildType(0, "win", downloadUrl);
+					this.addBuildType(0, "exe", downloadUrl);
 				}
 			}
 		},
@@ -182,12 +187,12 @@ export default {
 					this.currentOSDownloadURL = this.osBuild[i].ext[
 						j
 					].browser_download_url;
-					this.downloadApp(this.currentOSDownloadURL);
+					this.osDownloadRedirect(this.currentOSDownloadURL);
 				}
 			}
 		}
 	},
-	mixins: [DownloadMixin]
+	mixins: [PlatformMixin]
 };
 </script>
 
