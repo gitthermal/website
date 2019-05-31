@@ -42,7 +42,7 @@
 									</select>
 									<outline-button
 										text="Download"
-										:link="downloadBuild(1, macBuild)",
+										:link="downloadBuild(1, macBuild)"
 										:size="1"
 										theme="dark"
 										:external="true"
