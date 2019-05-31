@@ -5,7 +5,7 @@ export default {
 			return '/download' + '/?os=' + this.platformName + '&build=' + this.buildType
 		osDownloadUrl() {
 		},
-		platformName() {
+		platformType() {
 			switch (platform.os.family) {
 				case "Win":
 				case "Win32":
@@ -19,7 +19,7 @@ export default {
 			}
 		},
 		buildType() {
-			switch (this.platformName) {
+			switch (this.platformType) {
 				case "windows":
 					return "exe"
 				case "linux":
