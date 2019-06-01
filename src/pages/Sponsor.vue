@@ -36,6 +36,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="stripe-badge">
+					<stripe-badge />
+				</div>
 			</container>
 		</div>
 	</Layout>
@@ -44,6 +47,7 @@
 <script>
 import Container from "../layouts/Container";
 import SponsorTiers from "../data/sponsor-tiers.yml"
+import StripeBadge from "../../static/images/icon/stripe-badge.svg"
 
 export default {
 	name: "Sponsors",
@@ -51,7 +55,8 @@ export default {
 		title: "Sponsor Thermal Development"
 	},
 	components: {
-		Container
+		Container,
+		StripeBadge
 	},
 	computed: {
 		sponsorTiers() {
@@ -129,4 +134,8 @@ export default {
 			width: 1px
 			style: solid
 			color: #ddd
+
+.stripe-badge
+	margin-top: 1.125rem
+	text-align: center
 </style>
