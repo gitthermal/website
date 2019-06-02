@@ -1,41 +1,53 @@
 - id: SPON-T1
   title: 💻 Open source lover
-  price: 100
-  currency: ₹
-  cycle: month
   description: Just supporting as open source loving person.
-  plan_id: plan_F8hYEi75B2wZMy
+  cycle: month
+  country:
+    - currency: ₹
+      price: 100
+      plan_id: plan_F8hYEi75B2wZMy
+    - currency: $
+      price: 5
   perks:
     - discord
 
 - id: SPON-T2
   title: ☕ Coffee lover
-  price: 200
-  currency: ₹
-  cycle: month
   description: ️Buy me a coffee every month.
-  plan_id: plan_F8eRgEf1NIJA72
+  cycle: month
+  country:
+    - currency: ₹
+      price: 100
+      plan_id: plan_F8eRgEf1NIJA72
+    - currency: $
+      price: 10
   perks:
     - discord
 
 - id: SPON-T3
   title: 🤗 Backer
-  price: 500
-  currency: ₹
-  cycle: month
   description: No worries, you got my back.
-  plan_id: plan_F8pmrWMggAViOC
+  cycle: month
+  country:
+    - currency: ₹
+      price: 500
+      plan_id: plan_F8pmrWMggAViOC
+    - currency: $
+      price: 50
   perks:
     - discord
     - backers
 
 - id: SPON-T4
   title: 🥉 Bronze
-  price: 3000
-  currency: ₹
-  cycle: month
   description: You rock!!!
-  plan_id: plan_F8xxa53rxGFbTq
+  cycle: month
+  country:
+    - currency: ₹
+      price: 3000
+      plan_id: plan_F8xxa53rxGFbTq
+    - currency: $
+      price: 100
   perks:
     - website
     - discord
@@ -43,11 +55,14 @@
 
 - id: SPON-T5
   title: 🥈 Silver
-  price: 5000
-  currency: ₹
-  cycle: month
   description: Work on weekdays to add more features and fix bugs.
-  plan_id: plan_F8xzbwnFUjXfYL
+  cycle: month
+  country:
+    - currency: ₹
+      price: 5000
+      plan_id: plan_F8xzbwnFUjXfYL
+    - currency: $
+      price: 200
   perks:
     - website
     - discord
@@ -55,11 +70,14 @@
 
 - id: SPON-T6
   title: 🥇 Gold
-  price: 10,000
-  currency: ₹
-  cycle: month
   description: No words 😭. Thank you so much 🙏🏻.
-  plan_id: plan_F8y0VUGruPD1ub
+  cycle: month
+  country:
+    - currency: ₹
+      price: 10,000
+      plan_id: plan_F8y0VUGruPD1ub
+    - currency: $
+      price: 500
   perks:
     - website
     - discord
@@ -67,11 +85,14 @@
 
 - id: SPON-T7
   title: 🌟 Special
-  price: 20000
-  currency: ₹
-  cycle: month
   description: A 🌟 special tier for companies, your name will appear on thermal application, along with website, backers.md and discord badge.
-  plan_id:
+  cycle: month
+  country:
+    - currency: ₹
+      price: 20,000
+      plan_id:
+    - currency: $
+      price: 1000
   perks:
     - thermal
     - website
