@@ -174,16 +174,16 @@ h2, .h2
   font-size: 2rem
 
 h3, .h3
-  font-size: 1.75rem
-
-h4, .h4
   font-size: 1.5rem
 
-h5, .h5
+h4, .h4
   font-size: 1.25rem
 
-h6, .h6
+h5, .h5
   font-size: 1rem
+
+h6, .h6
+  font-size: .875rem
 
 .active--exact
 	color: #00ADB5
