@@ -53,5 +53,7 @@
 
 - title: FAQ & help
   items:
+    - title: How to upgrade?
+      link: /how-to-upgrade
     - title: FAQ
       link: /faq
