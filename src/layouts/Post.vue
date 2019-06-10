@@ -73,8 +73,12 @@ export default {
 			style: initial
 			color: rgba(#00ADB5, .18)
 
+	p img
+		display: flex
+
 	img
-		width: 100%
+		margin: 0 auto
+		max-width: 100%
 
 	blockquote
 		margin: 0 0 2rem
