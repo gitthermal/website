@@ -21,6 +21,11 @@
     - title: Create repository
       link: /create-repository
 
+- title: Working copy
+  items:
+    - title: Committing Changes
+      link: /commit-changes
+
 - title: Managing repositories
   items:
     - title: Overview
