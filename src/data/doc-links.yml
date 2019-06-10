@@ -32,6 +32,11 @@
     - title: Repositories settings
       link: /repositories-settings
 
+- title: Commit history
+  items:
+    - title: Overview
+      link: /commit-history-overview
+
 - title: Contribute
   items:
     - title: How to contribute
