@@ -32,6 +32,11 @@
     - title: Repositories settings
       link: /repositories-settings
 
+- title: Remote repositories
+  items:
+    - title: Publishing a Local Repository
+      link: /publish-local-repository
+
 - title: Contribute
   items:
     - title: How to contribute
