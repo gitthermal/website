@@ -10,11 +10,14 @@ export default {
 				case "Win":
 				case "Win32":
 				case "Win64":
+				case "Windows Server 2008 R2 / 7":
 				case "Windows":
 					return "windows"
 				case "Linux":
+				case "Ubuntu":
 					return "linux"
 				case "Mac":
+				case "OS X":
 					return "mac"
 			}
 		},
