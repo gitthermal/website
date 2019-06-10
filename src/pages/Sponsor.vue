@@ -2,36 +2,50 @@
 	<Layout>
 		<div class="sponsors">
 			<container>
-				<div id="error-message"></div>
+				<h1 class="sponsors__heading">Sponsor Thermal Development</h1>
+
 				<div class="sponsors__tiers">
-					<h6 class="sponsors__tiers-heading">
-						Select a tier
-					</h6>
-					<div
-						v-for="item in sponsorTiers"
-						:key="item.id"
-						class="sponsors__tiers-item"
-						v-if="item.plan_id"
-					>
-						<div class="sponsors__tiers-content">
-							<div class="sponsors__tiers-cost">
-								{{ item.title }} - {{ item.currency + item.price + "/" + item.cycle }}
-							</div>
+					<div class="sponsors__currency-switch">
+						<div
+							@click="changeCountry('$')"
+							:style="{ backgroundColor: selectedCurrency('$') }"
+							class="sponsors__currency-item"
+						>
+							$
+						</div>
+						<div
+							@click="changeCountry('₹')"
+							:style="{ backgroundColor: selectedCurrency('₹') }"
+							class="sponsors__currency-item"
+						>
+							₹
+						</div>
+					</div>
+					<div class="sponsors__tiers-list">
+						<div
+							v-for="item in sponsorTiers"
+							:key="item.id"
+							class="sponsors__tiers-item"
+						>
 							<div
-								text="Select"
-								:size="1"
-								class="sponsors__tiers-button button button__outline-dark button__size-1"
-								@click="stripeCheckout(item.plan_id)"
+								v-for="currency in item.country"
+								v-if="currency.currency === country"
+								class="sponsors__tiers-cost"
 							>
-								Select
+								<div class="sponsors__tiers-price">
+									{{ currency.currency + currency.price }}
+								</div>
+								<div class="sponsors__tiers-cycle">
+									{{ "/" + item.cycle }}
+								</div>
 							</div>
-						</div>
-						<div class="sponsors__tiers-description">
-							{{ item.description }}
-						</div>
-						<div class="sponsors__tiers-perks">
-							<div v-for="perk in item.perks" class="sponsors__perks-item">
-								{{ perk }}
+							<div class="sponsors__tiers-title">
+								{{ item.title }}
+							</div>
+							<div class="sponsors__tiers-perks">
+								<div v-for="perk in item.perks" class="sponsors__perks-item">
+									{{ perk }}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -39,6 +53,11 @@
 				<div class="stripe-badge">
 					<stripe-badge />
 				</div>
+				<primary-buttom
+					text="Select"
+					class="sponsors__checkout-button"
+					@click.native="stripeCheckout(plan_id)"
+				/>
 			</container>
 		</div>
 	</Layout>
@@ -46,38 +65,39 @@
 
 <script>
 import Container from "../layouts/Container";
-import SponsorTiers from "../data/sponsor-tiers.yml"
-import StripeBadge from "../../static/images/icon/stripe-badge.svg"
+import SponsorTiers from "../data/sponsor-tiers.yml";
+import PrimaryButtom from "../components/Button/PrimaryButton";
+import StripeBadge from "../../static/images/icon/stripe-badge.svg";
 
 export default {
 	name: "Sponsors",
 	metaInfo: {
 		title: "Sponsor Thermal Development"
 	},
+	data() {
+		return {
+			country: "$",
+			plan_id: ""
+		};
+	},
 	components: {
 		Container,
+		PrimaryButtom,
 		StripeBadge
 	},
 	computed: {
 		sponsorTiers() {
-			return SponsorTiers
+			return SponsorTiers;
 		}
 	},
 	methods: {
-		stripeCheckout(plan_id) {
-			var stripe = Stripe("pk_live_DLEhVwauymdEAIPdN07BsLEx00hNZ8kcwt");
-			stripe
-				.redirectToCheckout({
-					items: [{ plan: plan_id, quantity: 1 }],
-					successUrl: "https://thermal.codecarrot.net/payment/success",
-					cancelUrl: "https://thermal.codecarrot.net/payment/canceled"
-				})
-				.then(function(result) {
-					if (result.error) {
-						var displayError = document.getElementById("error-message");
-						displayError.textContent = result.error.message;
-					}
-				});
+		changeCountry(currency) {
+			this.country = currency;
+		},
+		selectedCurrency(currency) {
+			if (currency === this.country) {
+				return '#f7f7f7';
+			}
 		}
 	}
 };
@@ -86,43 +106,77 @@ export default {
 <style lang='sass'>
 .sponsors
 	margin-top: 3rem
+	text-align: center
 
-	&__tiers
-		border: 1px solid #ddd
-		border-radius: .354rem
+	&__heading
+		text-align: center
+		margin-bottom: 2rem
 
-		&-heading
-			padding: .8rem
-			border-bottom: 1px solid #ddd
-			background-color: lighten(#ddd, 10%)
-			border-top-left-radius: .354rem
-			border-top-right-radius: .354rem
+	&__currency
+		&-switch
+			display: inline-block
+			margin-bottom: .875rem
+			border:
+				width: 1px
+				style: solid
+				color: #ddd
+				radius: .354rem
 
 		&-item
+			display: inline-block
+			cursor: pointer
+			padding: 5px 10px
+
+			&:first-child
+				border-right: 1px solid #ddd
+
+			&:hover
+				background-color: lighten(#ddd, 10%)
+
+				&:nth-child(1)
+					border-top-left-radius: .354rem
+					border-bottom-left-radius: .354rem
+
+				&:nth-child(2)
+					border-top-right-radius: .354rem
+					border-bottom-right-radius: .354rem
+
+	&__tiers
+		&-item
 			padding: .8rem
+			border:
+				width: 1px
+				style: solid
+				color: #ddd
+				radius: .354rem
 
 			&:not(:last-child)
-				border-bottom: 1px solid #ddd
+				margin-bottom: .875rem
 
-		&-content
-			display: flex
-			flex-direction: row
-			align-items: center
-			margin-bottom: .5rem
+			&:hover
+				background-color: lighten(#ddd, 10%)
 
 		&-cost
-			font-weight: 500
+			display: flex
+			flex-direction: row
+			align-items: baseline
+			justify-content: center
 
-		&-button
-			margin-left: auto
-			color: #00ADB5
+		&-price
+			font:
+				size: 2rem
+				weight: 500
 
-		&-description
-			margin-bottom: .5rem
+		&-cycle, &-title
+			font-size: .875rem
+
+		&-title
+			margin-bottom: 1rem
 
 		&-perks
 			display: flex
 			flex-direction: row
+			justify-content: center
 
 	&__perks-item
 		font-size: .85rem
@@ -135,7 +189,16 @@ export default {
 			style: solid
 			color: #ddd
 
+	&__checkout-button
+		margin-top: 2rem
+
 .stripe-badge
 	margin-top: 1.125rem
-	text-align: center
+
+@media (min-width: 768px)
+	.sponsors__tiers-list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-evenly
 </style>
