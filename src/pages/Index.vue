@@ -100,8 +100,8 @@
 					Thermal is an open source project, and we need your contribution to make it better, whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you as part of the community, we also offer free pair programming sessions, come join our Discord server and say hi to our core team.
 				</div>
 				<outline-button
-					text="Join discord server"
-					:link="'https://discordapp.com/invite/KT3nAR5/' + indexUrl"
+					text="Book a calendar"
+					:link="'https://calendly.com/codecarrot/thermal/' + indexUrl"
 					:size="2"
 					:external="true"
 				/>
