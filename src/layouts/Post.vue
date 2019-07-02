@@ -48,6 +48,7 @@ export default {
 
 		&:first-child
 			margin-top: 0
+			font-weight: 300
 
 	h1, h2, h3, h4, h5, h6, ol, ul, p
 		margin-bottom: .8rem
