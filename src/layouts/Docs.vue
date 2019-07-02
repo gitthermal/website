@@ -20,7 +20,11 @@
 				</div>
 				<div class="docs__content">
 					<div class="docs__content-container">
-						<PostLayout>
+						<PostLayout
+							:title="title"
+							:description="description"
+							:titleBorder="titleBorder"
+						>
 							<slot />
 						</PostLayout>
 					</div>
@@ -56,6 +60,9 @@ export default {
 		RightArrow
 	},
 	props: {
+		title: String,
+		description: String,
+		titleBorder: Boolean,
 		links: Array
 	},
 	computed: {
