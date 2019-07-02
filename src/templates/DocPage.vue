@@ -10,6 +10,18 @@ import Links from "../data/doc-links.yml"
 
 export default {
 	name: "Docs",
+	metaInfo() {
+		return {
+			title: this.$page.doc.title,
+			meta: [
+				{
+					key: "description",
+					name: "description",
+					content: this.$page.doc.description
+				}
+			]
+		};
+	},
 	components: {
 		DocsLayout
 	},
