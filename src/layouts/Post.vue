@@ -67,12 +67,12 @@ export default {
 			margin-bottom: .25rem
 
 	a
-		color: darken(#00ADB5, 5%)
+		color: #00ADB5
 		font-weight: 500
-		text-decoration:
-			line: underline
-			style: initial
-			color: rgba(#00ADB5, .18)
+		text-decoration: underline
+
+		&:hover
+			color: darken(#00ADB5, 5%)
 
 	p img
 		display: flex
