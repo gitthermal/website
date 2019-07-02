@@ -1,12 +1,17 @@
 <template>
-	<DocsLayout :links="links" :title="$page.doc.title" :description="$page.doc.description" :titleBorder="$page.doc.titleBorder">
+	<DocsLayout
+		:links="links"
+		:title="$page.doc.title"
+		:description="$page.doc.description"
+		:titleBorder="$page.doc.titleBorder"
+	>
 		<div v-html="$page.doc.content"></div>
 	</DocsLayout>
 </template>
 
 <script>
-import DocsLayout from "../layouts/Docs"
-import Links from "../data/doc-links.yml"
+import DocsLayout from "../layouts/Docs";
+import Links from "../data/doc-links.yml";
 
 export default {
 	name: "Docs",
@@ -27,7 +32,7 @@ export default {
 	},
 	computed: {
 		links() {
-			return Links
+			return Links;
 		}
 	}
 };

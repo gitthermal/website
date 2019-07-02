@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import GitHubIcon from "../../static/images/icon/github.svg"
+import GitHubIcon from "../../static/images/icon/github.svg";
 
 export default {
 	name: "PostLayout",

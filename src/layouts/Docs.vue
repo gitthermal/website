@@ -50,7 +50,7 @@ export default {
 	data() {
 		return {
 			sidebarToggleable: false
-		}
+		};
 	},
 	components: {
 		Header,
@@ -67,16 +67,16 @@ export default {
 	},
 	computed: {
 		sidebar() {
-			return this.sidebarToggleable && (window.innerWidth <= 768)
+			return this.sidebarToggleable && window.innerWidth <= 768;
 		}
 	},
 	methods: {
 		toggleSidebar() {
-			this.sidebarToggleable = !this.sidebarToggleable
+			this.sidebarToggleable = !this.sidebarToggleable;
 		},
 		linkToDocs(link) {
-			this.sidebarToggleable = false
-			this.$router.push(link)
+			this.sidebarToggleable = false;
+			this.$router.push(link);
 		}
 	}
 };
