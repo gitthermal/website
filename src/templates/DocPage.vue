@@ -1,12 +1,12 @@
 <template>
-	<DocsLayout :links="links">
+	<DocsLayout :menu="docsmenu">
 		<div v-html="$page.doc.content"></div>
 	</DocsLayout>
 </template>
 
 <script>
 import DocsLayout from "../layouts/Docs"
-import Links from "../data/doc-links.yml"
+import DocsMenu from "../../data/docs-menu.json"
 
 export default {
 	name: "Docs",
@@ -14,8 +14,8 @@ export default {
 		DocsLayout
 	},
 	computed: {
-		links() {
-			return Links
+		docsmenu() {
+			return DocsMenu
 		}
 	}
 };
