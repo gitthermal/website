@@ -1,6 +1,6 @@
 # Add existing repository
 
-All the magic will happens once you start adding repositories to the application, there are multiple ways how you can add an existing local repository:
+All the magic will happen once you start adding repositories to the application, there are multiple ways how you can add an existing local repository:
 
 - Via the `Add repository` button, where you can select the folder from the dialog box.
 
