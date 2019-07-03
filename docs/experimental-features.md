@@ -1,4 +1,8 @@
-# Experimental features
+---
+title: Experimental features
+description: List of features which are new and unstable.
+titleBorder: true
+---
 
 > Experimental features are projects/features that aren't quite ready. They may break _(or disapper)_ at any time.
 

@@ -1,6 +1,8 @@
-# Contribution guide
-
-> Thermal is an [open source project](https://github.com/gitthermal/thermal) built by core team and contributors. We want to make it easy for anyone to contribute to Thermal.
+---
+title: Contribution guide
+description:
+titleBorder: true
+---
 
 We want to contribute to Thermal to be fun, enjoyable, and educational for anyone and everyone. All contributions are welcome, including issues, new docs as well as updates and tweaks, blog posts, workshops, and more.
 

@@ -1,4 +1,8 @@
-# User interface overview
+---
+title: User interface overview
+description: Here's a quick overview with 8 of the most important views in Thermal.
+titleBorder: true
+---
 
 Here's a quick overview with few of the most important views in Thermal application.
 

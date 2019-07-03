@@ -1,4 +1,8 @@
-# Frequently asked questions
+---
+title: Frequently asked questions
+description:
+titleBorder: true
+---
 
 ## Windows protected your PC
 

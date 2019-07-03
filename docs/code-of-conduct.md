@@ -1,4 +1,8 @@
-# Code of conduct
+---
+title: Code of conduct
+description:
+titleBorder: true
+---
 
 ## Our Pledge
 

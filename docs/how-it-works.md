@@ -1,4 +1,8 @@
-# How it works?
+---
+title: How it works?
+description:
+titleBorder: true
+---
 
 * If you want to know more about Thermal's **most important views**, take a look at our [user interface overview](./user-interface-overview).
 * Finally, we can talk you through a typical, [basic Git workflow](./basic-git-workflow) with Thermal.

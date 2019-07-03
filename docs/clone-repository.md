@@ -1,4 +1,8 @@
-# Clone repository
+---
+title: Clone repository
+description: Download remote repository on your local machine.
+titleBorder: true
+---
 
 You can clone an existing repository from a remote server via `Clone` button.
 
