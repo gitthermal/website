@@ -67,8 +67,8 @@
 		"section": "Remote repositories",
 		"topics": [
 			{
-				"title": "Publishing a Local Repository",
-				"slug": "publishing-local-repository"
+				"title": "Publish local repository",
+				"slug": "publish-local-repository"
 			}
 		]
 	},
