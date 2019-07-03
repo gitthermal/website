@@ -8,8 +8,8 @@ First, please do a search in [open issues](https://github.com/gitthermal/thermal
 
 If you find your issue already exists, make relevant comments and add your reaction. Use a reaction in place of a `+1` comment.
 
-* 👍 - upvote
-* 👎 - downvote
+- 👍 - upvote
+- 👎 - downvote
 
 If your issue is a question then please ask the question in [Thermal discord server](https://discord.gg/KT3nAR5).
 
