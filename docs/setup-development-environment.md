@@ -1,4 +1,8 @@
-# Setup development environment
+---
+title: Setup development environment
+description: Following this checklist to start contributing.
+titleBorder: true
+---
 
 Setting up the Thermal development enviroment is easy as go. At it's core, Thermal is build using [Electron](https://electronjs.org/) & [Vue.js](https://vuejs.org)
 

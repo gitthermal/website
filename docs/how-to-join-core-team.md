@@ -1,4 +1,8 @@
-# How to join core team?
+---
+title: How to join core team?
+description: 
+titleBorder: true
+---
 
 We are glad to hear that you are interesting in joining the Thermal core team.
 

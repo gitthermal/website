@@ -1,4 +1,8 @@
-# Reporting issues
+---
+title: Reporting issues
+description: Found something suspicious? Report it to core team member.
+titleBorder: true
+---
 
 To track issues and feature requests, we use GitHub issue tracker, fill out this form to [submit your issue](https://github.com/gitthermal/thermal/issues/new/choose).
 

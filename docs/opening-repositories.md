@@ -1,4 +1,8 @@
-# Opening repositories
+---
+title: Opening repositories
+description: Work with repository by opening them.
+titleBorder: true
+---
 
 One of the most important actions in the Thermal is opening a repository to work with. Not only can you achieve this in a couple of different ways - you might also want to open a repository in other applications like Explorer or Terminal.
 

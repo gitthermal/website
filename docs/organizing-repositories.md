@@ -1,4 +1,8 @@
-# Organizing repositories
+---
+title: Organizing repositories
+description: Organizing your repository to make them easily accessible.
+titleBorder: true
+---
 
 You can easily organize repositories by adding and removing them.
 

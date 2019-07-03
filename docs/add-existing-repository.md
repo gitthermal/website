@@ -1,4 +1,8 @@
-# Add existing repository
+---
+title: Add existing repository
+description: Add existing local git repository to Thermal
+titleBorder: true
+---
 
 All the magic will happen once you start adding repositories to the application, there are multiple ways how you can add an existing local repository:
 

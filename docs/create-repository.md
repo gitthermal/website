@@ -1,4 +1,8 @@
-# Create repository
+---
+title: Create repository
+description: Starting a new project by initalizing git repository.
+titleBorder: true
+---
 
 Creating a new & empty Git repository is like a breeze in Thermal application.
 

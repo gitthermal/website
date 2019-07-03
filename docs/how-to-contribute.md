@@ -1,4 +1,8 @@
-# How to contribute
+---
+title: How to contribute
+description: Ways in which you can contribute to Thermal.
+titleBorder: true
+---
 
 > Thermal is an [open source project](https://github.com/gitthermal/thermal) built by core team and contributors. We want to make it easy for anyone to contribute to Thermal.
 

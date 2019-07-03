@@ -1,4 +1,8 @@
-# Publishing a local repository
+---
+title: Publishing a local repository
+description: Save your local repository to a remote server.
+titleBorder: true
+---
 
 Projects are often started locally, on a developer's local hard drive. After some time, it might be become interesting to include a remote repository in the workflow - most notably in order to collaborate with others or just becuase sharing is caring.
 
