@@ -8,13 +8,13 @@
 							{{ group.title }}
 						</h6>
 						<template v-for="item in group.items">
-							<div
-								@click="linkToDocs(`/docs${item.link}`)"
+							<g-link
+								:to="`/docs${item.link}`"
 								:key="`item-${item.title}-${item.link}`"
 								class="sidebar__menu-item"
 							>
 								{{ item.title }}
-							</div>
+							</g-link>
 						</template>
 					</template>
 				</div>
@@ -126,11 +126,12 @@ export default {
 .sidebar
 	&__menu
 		&-heading
+			color: rgba(#474C55, .5)
 			font-weight: 600
-			margin-top: .875rem
+			margin-top: 2rem
 			margin-bottom: .5rem
-			border-top: 1px solid rgba(#474C55, .3)
-			padding-top: .875rem
+			border-top: 1px solid rgba(#474C55, .2)
+			padding-top: 2rem
 			text-transform: uppercase
 
 			&:first-child
@@ -140,14 +141,19 @@ export default {
 		&-item
 			display: flex
 			flex-direction: column
-			padding-top: 3px
-			padding-bottom: 3px
+			padding: 3px 10px
+			margin-bottom: 5px
 			color: rgba(#474C55, .8)
 			font-weight: 500
 			cursor: pointer
 
 			&:hover
 				color: #00ADB5
+
+		&-item.active--exact
+			background-color: rgba(#00ADB5, .1)
+			color: #00ADB5
+			border-radius: 1rem
 
 @media (max-width: 768px)
 	.docs
