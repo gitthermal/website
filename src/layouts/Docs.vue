@@ -3,14 +3,17 @@
 		<div class="docs">
 			<div class="docs__container">
 				<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
-					<template v-for="group in links" class="sidebar__menu">
-						<h6 :key="`title-${group.title}`" class="sidebar__menu-heading">
-							{{ group.title }}
+					<template v-for="section in menu" class="sidebar__menu">
+						<h6
+							:key="`section-${section.section}`"
+							class="sidebar__menu-heading"
+						>
+							{{ section.section }}
 						</h6>
-						<template v-for="item in group.items">
+						<template v-for="item in section.topics">
 							<g-link
-								:to="`/docs${item.link}`"
-								:key="`item-${item.title}-${item.link}`"
+								:to="`/docs/${item.slug}`"
+								:key="`${section.section}-item-${item.slug}`"
 								class="sidebar__menu-item"
 							>
 								{{ item.title }}
@@ -63,7 +66,7 @@ export default {
 		title: String,
 		description: String,
 		titleBorder: Boolean,
-		links: Array
+		menu: Array
 	},
 	computed: {
 		sidebar() {

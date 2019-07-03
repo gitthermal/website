@@ -17,7 +17,7 @@
 						Features
 					</g-link>
 
-					<g-link to="/docs" :style="'color: #' + textColor" class="header__navbar-item">
+					<g-link :to="`/docs/${firstDocsLink}`" :style="'color: #' + textColor" class="header__navbar-item">
 						Docs
 					</g-link>
 
@@ -63,6 +63,7 @@
 <script>
 import Container from "../layouts/Container";
 import Logo from "./Logo";
+import DocsMenu from "../../data/docs-menu.json"
 import GitHubIcon from "../../static/images/icon/github.svg"
 import DiscordIcon from "../../static/images/icon/discord.svg"
 import TwitterIcon from "../../static/images/icon/twitter.svg"
@@ -116,6 +117,9 @@ export default {
 				case "light":
 					return "222831"
 			}
+		},
+		firstDocsLink() {
+			return DocsMenu[0].topics[0].slug;
 		}
 	},
 	mixins: [
