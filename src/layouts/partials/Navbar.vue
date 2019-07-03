@@ -4,7 +4,7 @@
 			<StarIcon />
 			<p>Features</p>
 		</g-link>
-		<g-link to="/docs" class="navbar__item">
+		<g-link :to="`/docs/${firstDocsLink}`" class="navbar__item">
 			<DocsIcon />
 			<p>Docs</p>
 		</g-link>
@@ -25,6 +25,7 @@ import DocsIcon from "../../../static/images/icon/docs.svg"
 import DownloadIcon from "../../../static/images/icon/download.svg"
 import DollarIcon from "../../../static/images/icon/dollar-sign.svg"
 import PlatformMixin from "../../mixins/platform"
+import DocsMenu from "../../../data/docs-menu.json"
 
 export default {
 	name: "Navbar",
@@ -37,6 +38,9 @@ export default {
 	computed: {
 		mobileNavUrl() {
 			return "?utm_source=website&utm_medium=mobile_nav"
+		},
+		firstDocsLink() {
+			return DocsMenu[0].topics[0].slug;
 		}
 	},
 	mixins: [
