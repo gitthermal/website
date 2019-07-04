@@ -28,6 +28,7 @@ query {
 				title
 				excerpt
 				image
+				category
 				date (format: "D. MMMM YYYY")
 				author {
 					title

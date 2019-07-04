@@ -5,6 +5,7 @@
 			class="blog__card-image"
 		/>
 		<div class="blog__card-content">
+			<h6 class="blog__card-category">#{{ post.category  }}</h6>
 			<h2 class="blog__card-heading">{{ post.title }}</h2>
 			<p v-html="post.excerpt" class="blog__card-excerpt" />
 			<div class="blog__card-meta">
@@ -58,6 +59,10 @@ export default {
 
 		&-content
 			padding: 1.5rem
+
+		&-category
+			color: darken(#dee0e3, 30%)
+			font-weight: 600
 
 		&-heading
 			color: black
