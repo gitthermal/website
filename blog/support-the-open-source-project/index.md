@@ -35,7 +35,7 @@ There are few perks for each sponsorship tier, let me know if you have any quest
 
 ![Thermal sponsor peaks](./sponsor-perks.png)
 
-> You can post questions in the comment section below or DM me on Discord Yashu Mittal#1475.
+> You can post questions in the comment section below or DM me on Discord **Yashu Mittal#1475**.
 
 Again, you can become a sponsor from [thermal.codecarrot.net/sponsor](https://thermal.codecarrot.net/sponsor/)
 
