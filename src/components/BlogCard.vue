@@ -42,9 +42,10 @@ export default {
 	&__card
 		display: flex
 		flex-direction: column
-		border: 1px solid black
 		border:
 			radius: 1rem
+			width: 1px
+			style: solid
 			color: #dee0e3
 
 		&-image
