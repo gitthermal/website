@@ -1,3 +1,31 @@
+const DocsCollections = [
+	{
+		query: `{
+      allDocPage {
+				edges {
+					node {
+						id
+						path
+						title
+						description
+					}
+				}
+			}
+    }`,
+		transformer: ({ data }) => data.allDocPage.edges.map(({ node }) => node),
+		indexName: 'thermaldocs', // Algolia index name
+		itemFormatter: (item) => {
+			return {
+				objectID: item.id,
+				title: item.title,
+				path: item.path,
+				description: item.description,
+			}
+		}, // optional
+		matchFields: ['title', 'slug']
+	}
+];
+
 module.exports = {
 	siteName: 'Thermal',
 	siteUrl: 'https://thermal.codecarrot.net/',
@@ -33,6 +61,16 @@ module.exports = {
 				typeName: 'ReleasePage',
 				route: '/releases/:slug'
 			}
+		},
+		{
+			use: "gridsome-plugin-algolia",
+			options: {
+				appId: "6RVV3W1P8K",// process.env.ALGOLIA_APP_ID,
+				apiKey: "d1156a160c38c18dceb165537ef8d4fc", // process.env.ALGOLIA_ADMIN_KEY,
+				DocsCollections,
+				chunkSize: 10000, // default: 1000
+				enablePartialUpdates: true, // default: false
+			},
 		}
 	]
 }
