@@ -3,6 +3,15 @@
 		<div class="docs">
 			<div class="docs__container">
 				<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
+					<input
+						ref="search_input"
+						id="search_input"
+						class="header-search__input"
+						placeholder="Search docs..."
+						title="Search docs"
+						type="search"
+						@click="loadDocSearch()"
+					/>
 					<template v-for="section in menu" class="sidebar__menu">
 						<h6
 							:key="`section-${section.section}`"
@@ -47,6 +56,7 @@ import PostLayout from "./Post";
 import Navbar from "./partials/Navbar";
 import LeftArrow from "../assets/images/chevrons-left.svg";
 import RightArrow from "../assets/images/chevrons-right.svg";
+import docsearch from "docsearch.js";
 
 export default {
 	name: "DocsLayout",
@@ -75,12 +85,26 @@ export default {
 		linkToDocs(link) {
 			this.sidebarToggleable = false;
 			this.$router.push(link);
+		},
+		loadDocSearch() {
+			docsearch({
+				apiKey: "951a5443c76379c2aa75205eb62b2f7c",
+				indexName: "codecarrot-thermal",
+				inputSelector: "#search_input",
+				debug: false, // process.env.NODE_ENV === 'development'
+				algoliaOptions: {
+					hitsPerPage: 5
+				}
+			});
+			this.$refs.search_input.focus();
 		}
 	}
 };
 </script>
 
 <style lang='sass'>
+@import '~docsearch.js/dist/cdn/docsearch.min.css';
+
 .docs
 	&__container
 		display: flex
@@ -91,6 +115,7 @@ export default {
 		border-right: 1px solid rgba(#474C55, .3)
 		max-width: 300px
 		overflow-y: scroll
+		overflow-x: hidden
 		top: 69px
 		padding:
 			top: 1rem
@@ -174,4 +199,16 @@ export default {
 @media (min-width: 768px)
 	.docs__sidebar-toggle
 		display: none
+
+#search_input
+	padding: .5rem .8rem
+	font-size: .85rem
+	border-radius: .3rem
+	outline: none
+	border:
+		color: #eeeeee
+		width: 1px
+		style: solid
+	width: 100%
+	font-family: inherit
 </style>
