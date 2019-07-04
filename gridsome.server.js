@@ -1,8 +1,32 @@
 const Octokit = require('@octokit/rest')
 const octokit = new Octokit()
+const path = require('path')
+const fs = require('fs-extra')
 
 function latestRelease(api, options) {
 	api.loadSource(async store => {
+		// authors
+		const authorsPath = path.join(__dirname, 'data/authors.json')
+		const authorsRaw = await fs.readFile(authorsPath, 'utf8')
+		const authorsJson = JSON.parse(authorsRaw)
+		try {
+			const authors = store.addContentType({
+				typeName: 'Authors',
+				route: '/author/:id'
+			})
+			for (let item = 0; item < authorsJson.length; item++) {
+				authors.addNode({
+					id: authorsJson[item].id,
+					title: authorsJson[item].name,
+					bio: authorsJson[item].bio,
+					avatar: authorsJson[item].avatar,
+					twitter: authorsJson[item].twitter
+				})
+			}
+		} catch (error) {
+			console.log(error);
+		}
+
 		const { data } = await octokit.repos.listReleases({
 			owner: "gitthermal",
 			repo: "thermal"
@@ -27,7 +51,7 @@ function latestRelease(api, options) {
 					content: index.body
 				})
 			}
-		} catch(error) {
+		} catch (error) {
 			console.log(error);
 		};
 
