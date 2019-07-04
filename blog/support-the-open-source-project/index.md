@@ -11,7 +11,7 @@ slug: support-the-open-source-project
 
 Hello, 👋🏻
 
-I am building a free and open source developer tool called [Thermal](http://thermal.codecarrot.net/).
+I am building a free and open source developer tool called [Thermal](/).
 
 ![Thermal github repository screenshot](./thermal-github-repository.png)
 
