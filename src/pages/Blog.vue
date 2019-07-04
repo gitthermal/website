@@ -27,7 +27,6 @@ query {
 				slug
 				title
 				excerpt
-				image
 				category
 				date (format: "D. MMMM YYYY")
 				author {

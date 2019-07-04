@@ -1,9 +1,5 @@
 <template>
 	<g-link :to="`/blog/${post.slug}`" class="blog__card">
-		<div
-			:style="`background-image: url(${post.image.src})`"
-			class="blog__card-image"
-		/>
 		<div class="blog__card-content">
 			<h6 class="blog__card-category">#{{ post.category  }}</h6>
 			<h2 class="blog__card-heading">{{ post.title }}</h2>
