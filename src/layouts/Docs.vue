@@ -3,6 +3,23 @@
 		<div class="docs">
 			<div class="docs__container">
 				<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
+					<ais-instant-search
+						:search-client="searchClient"
+						index-name="thermaldocs"
+					>
+						<ais-search-box
+							placeholder="Search docs..."
+							:show-loading-indicator="true"
+						>
+						</ais-search-box>
+						<ais-hits>
+							<template slot="item" slot-scope="{ item }">
+								<h1><ais-highlight :hit="item" attribute="name" /></h1>
+								<p><ais-highlight :hit="item" attribute="description" /></p>
+							</template>
+						</ais-hits>
+					</ais-instant-search>
+					<ais-powered-by />
 					<template v-for="section in menu" class="sidebar__menu">
 						<h6
 							:key="`section-${section.section}`"
@@ -47,12 +64,17 @@ import PostLayout from "./Post";
 import Navbar from "./partials/Navbar";
 import LeftArrow from "../assets/images/chevrons-left.svg";
 import RightArrow from "../assets/images/chevrons-right.svg";
+import algoliasearch from "algoliasearch/lite";
 
 export default {
 	name: "DocsLayout",
 	data() {
 		return {
-			sidebarToggleable: false
+			sidebarToggleable: false,
+			searchClient: algoliasearch(
+				"6RVV3W1P8K",
+				"d1156a160c38c18dceb165537ef8d4fc"
+			)
 		};
 	},
 	components: {
