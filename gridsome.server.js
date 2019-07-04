@@ -3,7 +3,7 @@ const octokit = new Octokit()
 const path = require('path')
 const fs = require('fs-extra')
 
-function latestRelease(api, options) {
+module.exports = function (api, options) {
 	api.loadSource(async store => {
 		// authors
 		const authorsPath = path.join(__dirname, 'data/authors.json')
@@ -57,5 +57,3 @@ function latestRelease(api, options) {
 
 	})
 }
-
-module.exports = latestRelease
