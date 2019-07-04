@@ -19,6 +19,7 @@
 						- {{ $page.blog.timeToRead }} min read
 					</template>
 				</div>
+				<div :style="`background-image: url(${$page.blog.image.src})`" class="blog__image"/>
 				<post-layout :editOnGH="false">
 					<div v-html="$page.blog.content"></div>
 				</post-layout>
@@ -63,6 +64,7 @@ query BlogPage ($path: String!) {
 			path
 		}
 		timeToRead
+		image
 		excerpt
 		content
 	}
@@ -87,6 +89,7 @@ query BlogPage ($path: String!) {
 		flex-direction: row
 		align-items: center
 		justify-content: center
+		margin-bottom: 2rem
 
 	&__author
 		&-avatar
@@ -98,4 +101,18 @@ query BlogPage ($path: String!) {
 		&-name
 			margin-right: 5px
 			color: #00ADB5
+
+	&__image
+		width: 100%
+		height: 370px
+		border-radius: 10px
+		margin-bottom: 2rem
+		background:
+			size: cover
+			position: center
+			repeat: no-repeat
+
+@media (max-width: 768px)
+	.blog__image
+		height: 335px;
 </style>
