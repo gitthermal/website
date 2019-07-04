@@ -1,6 +1,6 @@
 ---
 title: Looking for beta testers
-category: updates
+category: community
 author:
   - mittalyashu
 image: ./banner.png
