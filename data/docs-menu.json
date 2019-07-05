@@ -5,6 +5,10 @@
 			{
 				"title": "Getting started",
 				"slug": "getting-started"
+			},
+			{
+				"title": "Installing Thermal",
+				"slug": "installing-thermal"
 			}
 		]
 	},
