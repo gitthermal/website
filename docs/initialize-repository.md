@@ -8,4 +8,4 @@ Starting a project from scratch with an empty folder? You can add a non-git repo
 
 Thermal will provide you a certain set of option allowing you to initialize a git repository in the same folder.
 
-![](./images/initialize-git-repository.png)
+![Initalize git repository modal](./images/initialize-git-repository.png)
