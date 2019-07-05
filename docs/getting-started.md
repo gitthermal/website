@@ -16,3 +16,11 @@ titleBorder: true
 - Push to a remote repository
 - Create new repository
 - and a lot more...
+
+## Community
+
+Stay up to date on the development of Thermal and reach out to the community with these helpful resources.
+
+- Follow [@gitthermal](https://twitter.com/@gitthermal) on Twitter.
+- Read the [official Thermal Blog](/blog).
+- Join the official [Thermal Discord server](https://discordapp.com/invite/KT3nAR5/).
