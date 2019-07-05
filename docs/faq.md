@@ -4,7 +4,7 @@ description:
 titleBorder: true
 ---
 
-## Windows protected your PC
+## How to resolve windows protected error?
 
 If you're you seeing this warning message, while installing on Windows.
 
