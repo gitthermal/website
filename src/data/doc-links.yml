@@ -2,6 +2,8 @@
   items:
     - title: Getting started
       link: /
+    - title: Keyboard shortcuts
+      link: /keyboard-shortcuts
 
 - title: First step with Thermal
   items:
@@ -49,5 +51,3 @@
   items:
     - title: FAQ
       link: /faq
-    - title: Keyboard shortcuts
-      link: /keyboard-shortcuts
