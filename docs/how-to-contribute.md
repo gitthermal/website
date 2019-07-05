@@ -18,19 +18,19 @@ Have you identified a reproducible problem inside the application? Have a featur
 
 Check out our [Contributing Guide](/docs/contribution-guide/) for ideas on contributing and setup steps for getting our repositories up and running on your local machine.
 
-*Once your pull request is accepted, you will alos get a contributor badge [in discord](https://discord.gg/spyxbGt).*
+_Once your pull request is accepted, you will alos get a contributor badge [in discord](https://discord.gg/spyxbGt)._
 
 ## Bug hunter
 
 We'll be releasing a canary build soon, which can be downloaded from the [GitHub repository](https://github.com/gitthermal/thermal/).
 
-*You will also get a bug hunter badge [in discord](https://discord.gg/spyxbGt).*
+_You will also get a bug hunter badge [in discord](https://discord.gg/spyxbGt)._
 
 ## Join core team
 
 Joining the Thermal core team has it's own fun and few perks.
 
-* Discord `core-team` badge
-* Member of Thermal orgnization on GitHub
+- Discord `core-team` badge
+- Member of Thermal orgnization on GitHub
 
 Learn, [how to join core team?](/docs/how-to-join-core-team/)
