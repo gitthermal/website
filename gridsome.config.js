@@ -15,7 +15,10 @@ module.exports = {
 		{
 			use: '@gridsome/plugin-google-analytics',
 			options: {
-				id: 'UA-131193769-3'
+				id: 'UA-131193769-3',
+				debug: {
+					sendHitTask: process.env.NODE_ENV === 'production'
+				}
 			}
 		},
 		{
