@@ -71,6 +71,10 @@
 		"section": "Remote repositories",
 		"topics": [
 			{
+				"title": "Connect your account",
+				"slug": "connect-your-account"
+			},
+			{
 				"title": "Publish local repository",
 				"slug": "publish-local-repository"
 			}
