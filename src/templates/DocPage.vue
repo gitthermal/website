@@ -1,7 +1,7 @@
 <template>
 	<layout :headerSize="1" :footer="false">
 		<div style="display: flex; flex-direction: row;">
-			<sidebar :menu="docsmenu" />
+			<sidebar type="docs" :menu="docsmenu" />
 			<div class="docs__content">
 				<div class="docs__content-container">
 					<post-layout

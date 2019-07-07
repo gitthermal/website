@@ -7,7 +7,7 @@
 				</h6>
 				<template v-for="item in section.topics">
 					<g-link
-						:to="`/docs/${item.slug}`"
+						:to="`/${type}/${item.slug}`"
 						:key="`${section.section}-item-${item.slug}`"
 						class="sidebar__menu-item"
 						@click.native="toggleSidebar()"
@@ -36,6 +36,7 @@ export default {
 		}
 	},
 	props: {
+		type: String,
 		menu: Array
 	},
 	components: {
