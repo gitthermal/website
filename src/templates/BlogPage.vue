@@ -57,7 +57,7 @@ export default {
 query BlogPage ($path: String!) {
 	blog: blogPage (path: $path) {
 		title
-		date (format: "D. MMMM YYYY")
+		date (format: "MMMM DD, YYYY")
 		author {
 			title
 			avatar
