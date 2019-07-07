@@ -1,20 +1,21 @@
 <template>
-	<DocsLayout
-		:menu="docsmenu"
-		:title="$page.doc.title"
-		:description="$page.doc.description"
-		:titleBorder="$page.doc.titleBorder"
-	>
-		<div v-html="$page.doc.content"></div>
-	</DocsLayout>
+	<layout :headerSize="1" :footer="false">
+		<div style="display: flex; flex-direction: row;">
+			<sidebar :menu="docsmenu" />
+			<div class="docs__content">
+				<div class="docs__content-container">
+				</div>
+			</div>
+		</div>
+	</layout>
 </template>
 
 <script>
-import DocsLayout from "../layouts/Docs";
-import DocsMenu from "../../data/docs-menu.json"
+import DocsMenu from "../../data/docs-menu.json";
+import Sidebar from "../components/Sidebar";
 
 export default {
-	name: "Docs",
+	name: "DocsPage",
 	metaInfo() {
 		return {
 			title: this.$page.doc.title,
@@ -28,7 +29,7 @@ export default {
 		};
 	},
 	components: {
-		DocsLayout
+		Sidebar,
 	},
 	computed: {
 		docsmenu() {
@@ -50,5 +51,16 @@ query DocPage ($path: String!) {
 </page-query>
 
 <style lang='sass'>
+.docs
+	&__content
+		padding-top: 2rem
+		padding-bottom: 2rem
+		flex: 1
 
+		&-container
+			max-width: 760px
+			margin-left: auto
+			margin-right: auto
+			padding-left: 20px
+			padding-right: 20px
 </style>
