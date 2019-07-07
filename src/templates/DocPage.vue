@@ -4,6 +4,12 @@
 			<sidebar :menu="docsmenu" />
 			<div class="docs__content">
 				<div class="docs__content-container">
+					<post-layout
+						:title="$page.doc.title"
+						:description="$page.doc.description"
+						:titleBorder="$page.doc.titleBorder"
+						:content="$page.doc.content"
+					/>
 				</div>
 			</div>
 		</div>
@@ -13,6 +19,7 @@
 <script>
 import DocsMenu from "../../data/docs-menu.json";
 import Sidebar from "../components/Sidebar";
+import PostLayout from "../layouts/Post";
 
 export default {
 	name: "DocsPage",
@@ -30,6 +37,7 @@ export default {
 	},
 	components: {
 		Sidebar,
+		PostLayout
 	},
 	computed: {
 		docsmenu() {
