@@ -1,13 +1,11 @@
 <template>
 	<div class="post">
 		<div class="post__meta">
-			<h1 class="post__heading">{{ title }}</h1>
-			<div class="post__description">{{ description }}</div>
+			<h1 v-html="title" class="post__heading" />
+			<div v-html="description" class="post__description" />
 			<hr v-if="titleBorder" class="post__titleBorder" />
 		</div>
-		<div class="post__content">
-			<slot />
-		</div>
+		<div v-html="content" class="post__content" />
 		<a :href="editLink" v-if="editOnGH" target="_blank" class="edit-link">
 			<GitHubIcon />
 			<span>Edit this page on GitHub</span>
@@ -38,6 +36,7 @@ export default {
 		title: String,
 		description: String,
 		titleBorder: Boolean,
+		content: String,
 		editOnGH: {
 			type: Boolean,
 			default: true
