@@ -12,7 +12,7 @@ There are many ways in which you can contribute, beyond writing code, by logging
 
 ## Reporting Issues
 
-Have you identified a reproducible problem inside the application? Have a feature request? Or a suggestion. We want to hear about it! Read more about [reporting issues](/docs/reporting-issues/) to know more about it.
+Have you identified a reproducible problem inside the application? Have a feature request? Or a suggestion. We want to hear about it! Read more about [reporting issues](/docs/reporting-issue/) to know more about it.
 
 ## Pull requests
 
