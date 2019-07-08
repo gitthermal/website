@@ -46,7 +46,49 @@ export default {
 					key: "description",
 					name: "description",
 					content: this.$page.blog.excerpt
-				}
+				},
+				{
+					name: 'url',
+					content: this.$page.blog.path
+				},
+
+				// Google
+				{
+					itemprop: 'description',
+					content: this.$page.blog.excerpt
+				},
+				{
+					itemprop: 'image',
+					content: this.$page.blog.image.src
+				},
+
+				// Facebook
+				{
+					name: 'og:description',
+					content: this.$page.blog.excerpt
+				},
+				{
+					name: 'og:image',
+					content: this.$page.blog.image.src
+				},
+				{
+					name: 'og:url',
+					content: this.$page.blog.path
+				},
+
+				// Twitter
+				{
+					name: 'twitter:description',
+					content: this.$page.blog.excerpt
+				},
+				{
+					name: 'twitter:image',
+					content: this.$page.blog.image.src
+				},
+				{
+					name: 'twitter:url',
+					content: this.$page.blog.path
+				},
 			]
 		};
 	}
@@ -63,6 +105,7 @@ query BlogPage ($path: String!) {
 			avatar
 			path
 		}
+		path
 		timeToRead
 		image
 		excerpt
