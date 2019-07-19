@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Introduction
 description: Quick start guide for using Thermal.
 titleBorder: true
 ---

@@ -1,10 +1,10 @@
 [
 	{
-		"section": "Introduction",
+		"section": "Getting started",
 		"topics": [
 			{
-				"title": "Getting started",
-				"slug": "getting-started"
+				"title": "Introduction",
+				"slug": "introduction"
 			},
 			{
 				"title": "Why Thermal?",
