@@ -7,6 +7,10 @@
 				"slug": "getting-started"
 			},
 			{
+				"title": "Why Thermal?",
+				"slug": "why-thermal"
+			},
+			{
 				"title": "Installing Thermal",
 				"slug": "installing-thermal"
 			}
