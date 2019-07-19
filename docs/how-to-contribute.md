@@ -31,6 +31,6 @@ _You will also get a bug hunter badge [in discord](https://discord.gg/spyxbGt)._
 Joining the Thermal core team has it's own fun and few perks.
 
 - Discord `core-team` badge
-- Member of Thermal orgnization on GitHub
+- Member of Thermal organization on GitHub
 
 Learn, [how to join core team?](/docs/how-to-join-core-team/)
