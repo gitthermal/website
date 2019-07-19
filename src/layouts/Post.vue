@@ -93,6 +93,11 @@ export default {
 		&:hover
 			color: darken(#00ADB5, 5%)
 
+	hr
+		margin-top: 4rem
+		margin-bottom: 4rem
+		border-color: rgba(#474C55, .2)
+
 	p img
 		display: flex
 

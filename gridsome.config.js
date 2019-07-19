@@ -15,7 +15,10 @@ module.exports = {
 		{
 			use: '@gridsome/plugin-google-analytics',
 			options: {
-				id: 'UA-131193769-3'
+				id: 'UA-131193769-3',
+				debug: {
+					sendHitTask: process.env.NODE_ENV === 'production'
+				}
 			}
 		},
 		{
@@ -24,6 +27,17 @@ module.exports = {
 				index: ['readme'],
 				path: "docs/**/*.md",
 				typeName: 'DocPage'
+			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
+				path: "blog/*/index.md",
+				typeName: 'BlogPage',
+				slug: '/blog/:slug',
+				refs: {
+					author: 'Authors'
+				}
 			}
 		},
 		{
