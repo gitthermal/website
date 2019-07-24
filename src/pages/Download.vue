@@ -95,7 +95,7 @@ import OutlineButton from "../components/Button/OutlineButton";
 export default {
 	name: "Download",
 	metaInfo: {
-		title: "Download application"
+		title: "Download windows, mac & linux"
 	},
 	data() {
 		return {
