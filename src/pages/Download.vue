@@ -95,7 +95,13 @@ import OutlineButton from "../components/Button/OutlineButton";
 export default {
 	name: "Download",
 	metaInfo: {
-		title: "Download windows, mac & linux"
+		title: "Download windows, mac & linux",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/download"
+			}
+		]
 	},
 	data() {
 		return {

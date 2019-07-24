@@ -89,6 +89,12 @@ export default {
 					name: 'twitter:url',
 					content: this.$page.blog.path
 				},
+			],
+			link: [
+				{
+					rel: "canonical",
+					href: `https://thermal.codecarrot.net${this.$page.blog.path}`
+				}
 			]
 		};
 	}

@@ -24,6 +24,12 @@ export default {
 					name: "description",
 					content: this.$page.doc.description
 				}
+			],
+			link: [
+				{
+					rel: "canonical",
+					href: `https://thermal.codecarrot.net${this.$page.doc.path}`
+				}
 			]
 		};
 	},

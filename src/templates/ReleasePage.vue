@@ -34,6 +34,16 @@ export default {
 		Container,
 		PostLayout,
 		LeftArrow
+	},
+	metaInfo() {
+		return {
+			link: [
+				{
+					rel: "canonical",
+					href: `https://thermal.codecarrot.net${this.$page.releases.path}`
+				}
+			]
+		};
 	}
 };
 </script>
