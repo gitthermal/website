@@ -30,6 +30,7 @@ import PostLayout from "../layouts/Post";
 import LeftArrow from "../../static/images/icon/arrow-left.svg"
 
 export default {
+	name: "Release",
 	components: {
 		Container,
 		PostLayout,
@@ -37,6 +38,7 @@ export default {
 	},
 	metaInfo() {
 		return {
+			title: "Release Notes",
 			link: [
 				{
 					rel: "canonical",
