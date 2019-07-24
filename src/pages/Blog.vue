@@ -51,10 +51,14 @@ export default {
 		Container,
 		BlogCard
 	},
-	metaInfo() {
-		return {
-			title: "Blogs"
-		};
+	metaInfo: {
+		title: "Updates, Insight, Changelog, Features and more",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/blog"
+			}
+		]
 	}
 };
 </script>

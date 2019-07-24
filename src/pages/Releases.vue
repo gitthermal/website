@@ -48,7 +48,13 @@ import Container from "../layouts/Container";
 export default {
 	name: "Releases",
 	metaInfo: {
-		title: "Release notes"
+		title: "Release notes",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/releases"
+			}
+		]
 	},
 	components: {
 		Container

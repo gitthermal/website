@@ -22,7 +22,13 @@ import Container from "../layouts/Container";
 export default {
 	name: "Stats",
 	metaInfo: {
-		title: "Stats"
+		title: "Stats",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/stats"
+			}
+		]
 	},
 	data() {
 		return {

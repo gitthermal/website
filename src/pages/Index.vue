@@ -164,6 +164,12 @@ export default {
 				name: 'twitter:url',
 				content: 'https://thermal.codecarrot.net/'
 			}
+		],
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/"
+			}
 		]
 	},
 	components: {

@@ -60,6 +60,12 @@ export default {
 				name: "description",
 				content: "List of most awesome features of Thermal application."
 			}
+		],
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/features"
+			}
 		]
 	},
 	components: {

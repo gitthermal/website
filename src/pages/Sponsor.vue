@@ -52,7 +52,13 @@ import StripeBadge from "../../static/images/icon/stripe-badge.svg"
 export default {
 	name: "Sponsors",
 	metaInfo: {
-		title: "Sponsor Thermal Development"
+		title: "Sponsor Thermal Development",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/sponsor"
+			}
+		]
 	},
 	components: {
 		Container,

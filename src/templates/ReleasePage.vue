@@ -27,13 +27,25 @@ query releasePage ($path: String!) {
 <script>
 import Container from "../layouts/Container";
 import PostLayout from "../layouts/Post";
-import LeftArrow from "../../static/images/icon/arrow-left.svg"
+import LeftArrow from "../../static/images/icon/arrow-left.svg";
 
 export default {
+	name: "Release",
 	components: {
 		Container,
 		PostLayout,
 		LeftArrow
+	},
+	metaInfo() {
+		return {
+			title: "Release Notes",
+			link: [
+				{
+					rel: "canonical",
+					href: `https://thermal.codecarrot.net${this.$page.releases.path}`
+				}
+			]
+		};
 	}
 };
 </script>
