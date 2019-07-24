@@ -11,7 +11,7 @@
 
 <script>
 import DocsLayout from "../layouts/Docs";
-import DocsMenu from "../../data/docs-menu.json"
+import DocsMenu from "../../data/docs-menu.json";
 
 export default {
 	name: "Docs",

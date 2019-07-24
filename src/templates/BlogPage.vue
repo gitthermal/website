@@ -19,7 +19,10 @@
 						- {{ $page.blog.timeToRead }} min read
 					</template>
 				</div>
-				<div :style="`background-image: url(${$page.blog.image.src})`" class="blog__image"/>
+				<div
+					:style="`background-image: url(${$page.blog.image.src})`"
+					class="blog__image"
+				/>
 				<post-layout :editOnGH="false">
 					<div v-html="$page.blog.content"></div>
 				</post-layout>
@@ -48,47 +51,47 @@ export default {
 					content: this.$page.blog.excerpt
 				},
 				{
-					name: 'url',
+					name: "url",
 					content: this.$page.blog.path
 				},
 
 				// Google
 				{
-					itemprop: 'description',
+					itemprop: "description",
 					content: this.$page.blog.excerpt
 				},
 				{
-					itemprop: 'image',
+					itemprop: "image",
 					content: this.$page.blog.image.src
 				},
 
 				// Facebook
 				{
-					name: 'og:description',
+					name: "og:description",
 					content: this.$page.blog.excerpt
 				},
 				{
-					name: 'og:image',
+					name: "og:image",
 					content: this.$page.blog.image.src
 				},
 				{
-					name: 'og:url',
+					name: "og:url",
 					content: this.$page.blog.path
 				},
 
 				// Twitter
 				{
-					name: 'twitter:description',
+					name: "twitter:description",
 					content: this.$page.blog.excerpt
 				},
 				{
-					name: 'twitter:image',
+					name: "twitter:image",
 					content: this.$page.blog.image.src
 				},
 				{
-					name: 'twitter:url',
+					name: "twitter:url",
 					content: this.$page.blog.path
-				},
+				}
 			],
 			link: [
 				{
@@ -96,7 +99,7 @@ export default {
 					href: `https://thermal.codecarrot.net${this.$page.blog.path}`
 				}
 			]
-		};
+		}
 	}
 };
 </script>

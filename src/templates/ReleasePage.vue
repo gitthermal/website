@@ -27,7 +27,7 @@ query releasePage ($path: String!) {
 <script>
 import Container from "../layouts/Container";
 import PostLayout from "../layouts/Post";
-import LeftArrow from "../../static/images/icon/arrow-left.svg"
+import LeftArrow from "../../static/images/icon/arrow-left.svg";
 
 export default {
 	name: "Release",
