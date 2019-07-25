@@ -1,5 +1,6 @@
 <template>
 	<div class="layout">
+		<notification-banner text="Help us! Support the development of Project" cta="Become a Patron" link="http://patreon.com/mittalyashu" color="e85b46" />
 		<Header :theme="headerTheme" :size="headerSize" />
 		<slot />
 		<Footer v-if="footer" />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import NotificationBanner from "../components/NotificationBanner";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Navbar from "./partials/Navbar"
@@ -122,6 +124,7 @@ export default {
 		]
 	},
 	components: {
+		NotificationBanner,
 		Header,
 		Footer,
 		Navbar
