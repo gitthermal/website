@@ -16,9 +16,9 @@ You can also read out to Yashu Mittal on Discord `Yashu Mittal#1475`.
 
 You'll need the following tools to download and build Code locally:
 
-- Git
-- Node.js, version `>=10`
-- Yarn
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org), version `>=10`
+- [Yarn](https://yarnpkg.com)
 
 ## Build and Run
 
