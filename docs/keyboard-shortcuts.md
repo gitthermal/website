@@ -9,11 +9,11 @@ We know keyboard shortcuts help get things done faster. Thermal provides keyboar
 ### General
 
 | Description | Windows/Linux | Mac |
-| --- | --- | --- |
+| :--- | :---: | :---: |
 | Open keyboard shortcuts | `ctrl` `shift` `/` | `⌘` `shift` `/` |
 
 ### Repository
 
 | Description | Windows/Linux | Mac |
-| --- | --- | --- |
+| :--- | :---: | :---: |
 | Add repository | `ctrl` `n` | `⌘` `n` |
