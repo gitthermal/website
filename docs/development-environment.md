@@ -27,4 +27,4 @@ _You can combine multiple script commands by `&&`, for example: `yarn lint:fix &
 - `yarn lint:fix`: Eslint lint and fixes the issues
 - `yarn dev`: Run Thermal application locally.
 
-> It's required but recommended to run `yarn lint:fix` command along with `yarn dev` command.
+> It's not required but recommended to run `yarn lint:fix` command along with `yarn dev` command.
