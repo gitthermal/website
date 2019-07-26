@@ -132,6 +132,21 @@ export default {
 		-ms-hyphens: none
 		hyphens: none
 
+	table
+		width: 100%
+
+		thead
+			th
+				border-bottom: 2px solid #00ADB5
+				margin-bottom: .2rem
+				padding: .4rem
+
+		tbody
+			td
+				border-bottom: 1px solid rgba(71, 76, 85, 0.2)
+				margin-bottom: .2rem
+				padding: .4rem
+
 .edit-link
 	display: flex
 	flex-direction: row
