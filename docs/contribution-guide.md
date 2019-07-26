@@ -6,6 +6,8 @@ titleBorder: true
 
 We want contributing to Thermal to be fun, enjoyable, and educational for anyone and everyone. All contributions are welcome, including issues, new docs as well as updates and tweaks, blog posts, workshops, and more.
 
+This project is a labor of love, and we appreciate all of the users that catch bugs, make performance improvements, and help with documentation. Every contribution is meaningful, so thank you for participating. That being said, here are a few guidelines that we ask you to follow so we can successfully address your issue.
+
 ## Not sure how to start contributing?
 
 If you are worried or don’t know where to start, check out the [issues list](http://github.com/gitthermal/thermal/issues/). Issues labeled [help wanted](https://github.com/gitthermal/thermal/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) are good issues to submit a PR for. Issues labeled [good first issue](https://github.com/gitthermal/thermal/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) are great candidates to pick up if you are in the code for the first time. If you are contributing significant changes, please discuss with the assignee of the issue first before starting to work on the issue.
