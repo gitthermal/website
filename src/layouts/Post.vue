@@ -104,6 +104,9 @@ export default {
 	img
 		margin: 0 auto
 		max-width: 100%
+		padding: 5px
+		border: 1px solid #eeeeee
+		box-shadow: 1px 1px 5px rgba(0, 0, 0, .1)
 
 	blockquote
 		margin: 0 0 2rem
