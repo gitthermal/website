@@ -18,7 +18,7 @@ If you have initalize a new Git repository or it doesn't have a remote url, inst
 
 With the local repository open in Thermal, connect the newly created remote repository. To do so, **click on Publish button** in the Thermal's navbar.
 
-![Publishing to remote repository](./images/publish-repository-icon.png)
+![Publishing to remote repository](./images/remote-buttons.png)
 
 **NOTE:** If you have created a new Git repository, you need atleast one commit before you pushing your changes to a remote repository.
 

@@ -77,6 +77,10 @@
 			{
 				"title": "Publish local repository",
 				"slug": "publish-local-repository"
+			},
+			{
+				"title": "Push to remote repository",
+				"slug": "push-to-remote"
 			}
 		]
 	},
