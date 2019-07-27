@@ -1,5 +1,5 @@
 ---
-title: Pushing to a remote
+title: Pushing to a remote repository
 description: Save your changes to remote repository.
 titleBorder: true
 ---
