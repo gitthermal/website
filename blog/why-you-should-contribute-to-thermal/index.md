@@ -11,7 +11,7 @@ slug: why-you-should-contribute-to-thermal
 
 Hey open-source enthusiastic 👋🏻,
 
-Are you looking for contributing to a new open source project? Or want to get started with *UI technologies like Node.js or SQLite*?
+Are you looking for contributing to a new open source project? Or want to get started with _UI technologies like Node.js or SQLite_?
 
 We are developing [Thermal](https://thermal.codecarrot.net) git graphical user interface; a free, open-source, cross-platform, desktop application, and would love to **count on you as a contributor** to improve our application 🙏.
 
@@ -21,23 +21,23 @@ Contributions to Thermal is not just limited to a single language or technology,
 
 ![Long list gif](https://media.giphy.com/media/YLHwkqayc1j7a/giphy.gif)
 
-* [Node.js](https://nodejs.org/en/)
-* [Electron](https://electronjs.org/)
-* [Nodegit](https://www.nodegit.org/) _(soon)_
-* [Vue.js](https://vuejs.org)
-* [SQLite](https://www.sqlite.org/) _(soon)_
-* [TypeScript](https://www.typescriptlang.org/) _(planning)_
-* JavaScript
-* [Sentry](https://sentry.io/)
-* [Azure Pipelines](https://dev.azure.com/codecarrot/Thermal/_build)
-* [Gridsome](https://gridsome.org)
-* and more...
+- [Node.js](https://nodejs.org/en/)
+- [Electron](https://electronjs.org/)
+- [Nodegit](https://www.nodegit.org/) _(soon)_
+- [Vue.js](https://vuejs.org)
+- [SQLite](https://www.sqlite.org/) _(soon)_
+- [TypeScript](https://www.typescriptlang.org/) _(planning)_
+- JavaScript
+- [Sentry](https://sentry.io/)
+- [Azure Pipelines](https://dev.azure.com/codecarrot/Thermal/_build)
+- [Gridsome](https://gridsome.org)
+- and more...
 
 ### Get started
 
 As the project size grows with each passing day, you might ask yourself, where to get started 🤔? and that a very common question for every newcomer.
 
-There are many ways you can get started by *writing code*, *logging bugs*, *submitting pull requests*, *reporting issues*, *creating suggestions*, *testing the application*, *improving documentation/blog/release notes*, *spreading a word*.
+There are many ways you can get started by _writing code_, _logging bugs_, _submitting pull requests_, _reporting issues_, _creating suggestions_, _testing the application_, _improving documentation/blog/release notes_, _spreading a word_.
 
 But before that, I suggest you [download the application](https://thermal.codecarrot.net/download/), **give it a test drive** it will help you to understand, how the application works.
 
@@ -47,7 +47,7 @@ Here's a list of issues and PR with the label **good first issue**
 
 ### Pair programming
 
-We also offer 💻 [pair programming sessions](https://thermal.codecarrot.net/docs/pair-programming) to the newcomers and community members,  if there's something you'd like to work on together.
+We also offer 💻 [pair programming sessions](https://thermal.codecarrot.net/docs/pair-programming) to the newcomers and community members, if there's something you'd like to work on together.
 
 ![Pair programming gif](https://media.giphy.com/media/v7kRrukQCKCFa/source.gif)
 
