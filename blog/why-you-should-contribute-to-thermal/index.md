@@ -1,5 +1,5 @@
 ---
-title: why-you-should-contribute-to-thermal
+title: Why you should contribute to Thermal?
 category: community
 author:
   - mittalyashu
