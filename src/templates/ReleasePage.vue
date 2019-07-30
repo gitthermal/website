@@ -19,6 +19,7 @@ query releasePage ($path: String!) {
 		date
 		version
 		build_type
+		path
 		content
 	}
 }

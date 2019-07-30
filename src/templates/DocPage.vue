@@ -50,6 +50,7 @@ query DocPage ($path: String!) {
 		title
 		description
 		titleBorder
+		path
 		content
 	}
 }
