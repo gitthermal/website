@@ -114,7 +114,6 @@ query BlogPage ($path: String!) {
 			avatar
 			path
 		}
-		path
 		timeToRead
 		image
 		content
