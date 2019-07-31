@@ -4,6 +4,7 @@
 			<container :width="760">
 				<h1 class="blog__heading">Thermal Blog</h1>
 				<blog-card
+					v-if="node.published"
 					:post="node"
 					v-for="{ node } in $page.blog.edges"
 					:key="node.id"
@@ -27,6 +28,7 @@ query {
 				slug
 				title
 				description
+				published
 				category
 				date (format: "MMMM DD, YYYY")
 				author {
