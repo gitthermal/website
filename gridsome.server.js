@@ -45,7 +45,17 @@ module.exports = function (api, options) {
 			// This function (`page`) will get called for each page of records.
 
 			records.forEach(record => {
-				console.log(record.fields);
+				blog.addNode({
+					title: record.fields.title,
+					description: record.fields.description,
+					image: record.fields.image,
+					date: record.fields.date,
+					published: record.fields.published,
+					author: record.fields.author,
+					category: record.fields.url,
+					slug: record.fields.slug,
+					content: record.fields.content
+				})
 			});
 
 			// To fetch the next page of records, call `fetchNextPage`.
