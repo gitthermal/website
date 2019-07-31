@@ -35,6 +35,10 @@ module.exports = function (api, options) {
 		});
 		const base = Airtable.base('appD1NB7tyuqXBGtc');
 
+		const blog = store.addContentType({
+			typeName: 'blog'
+		});
+
 		base('blog').select({
 			sort: [{ field: "date", direction: "desc" }]
 		}).eachPage(function page(records, fetchNextPage) {
