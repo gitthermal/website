@@ -116,6 +116,7 @@ query BlogPage ($path: String!) {
 		}
 		timeToRead
 		image
+		canonical
 		content
 	}
 }

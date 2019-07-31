@@ -55,7 +55,9 @@ module.exports = function (api, options) {
 					author: record.fields.author,
 					category: record.fields.url,
 					slug: record.fields.slug,
-					content: record.fields.content
+					canonical: record.fields.canonical,
+					content: record.fields.content,
+					timeToRead: record.fields.timeToRead
 				})
 			});
 
