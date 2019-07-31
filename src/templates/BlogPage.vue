@@ -48,7 +48,7 @@ export default {
 				{
 					key: "description",
 					name: "description",
-					content: this.$page.blog.excerpt
+					content: this.$page.blog.description
 				},
 				{
 					name: "url",
@@ -58,7 +58,7 @@ export default {
 				// Google
 				{
 					itemprop: "description",
-					content: this.$page.blog.excerpt
+					content: this.$page.blog.description
 				},
 				{
 					itemprop: "image",
@@ -68,7 +68,7 @@ export default {
 				// Facebook
 				{
 					name: "og:description",
-					content: this.$page.blog.excerpt
+					content: this.$page.blog.description
 				},
 				{
 					name: "og:image",
@@ -82,7 +82,7 @@ export default {
 				// Twitter
 				{
 					name: "twitter:description",
-					content: this.$page.blog.excerpt
+					content: this.$page.blog.description
 				},
 				{
 					name: "twitter:image",
