@@ -3,7 +3,7 @@
 		<div class="blog__card-content">
 			<h6 class="blog__card-category">#{{ post.category  }}</h6>
 			<h2 class="blog__card-heading">{{ post.title }}</h2>
-			<p v-html="post.excerpt" class="blog__card-excerpt" />
+			<p v-html="post.description" class="blog__card-description" />
 			<div class="blog__card-meta">
 				Posted {{ post.date }}
 				<div v-for="(author, i) in post.author" :key="author.id">
@@ -66,7 +66,7 @@ export default {
 			font-weight: 600
 			color: #222831
 
-		&-excerpt
+		&-description
 			color: rgba(#222831, .8)
 			margin-bottom: .875rem
 

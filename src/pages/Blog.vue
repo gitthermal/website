@@ -26,7 +26,7 @@ query {
 				id
 				slug
 				title
-				excerpt
+				description
 				category
 				date (format: "MMMM DD, YYYY")
 				author {

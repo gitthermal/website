@@ -117,7 +117,6 @@ query BlogPage ($path: String!) {
 		path
 		timeToRead
 		image
-		excerpt
 		content
 	}
 }
