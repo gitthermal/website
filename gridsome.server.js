@@ -47,6 +47,7 @@ module.exports = function (api, options) {
 
 			records.forEach(record => {
 				blog.addNode({
+					id: record.id,
 					title: record.fields.title,
 					description: record.fields.description,
 					image: record.fields.image,
