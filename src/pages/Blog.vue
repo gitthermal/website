@@ -31,11 +31,6 @@ query {
 				published
 				category
 				date (format: "MMMM DD, YYYY")
-				author {
-					title
-					avatar
-					path
-				}
 				timeToRead
 			}
 		}

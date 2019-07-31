@@ -109,11 +109,6 @@ query BlogPage ($path: String!) {
 	blog: blogPage (path: $path) {
 		title
 		date (format: "MMMM DD, YYYY")
-		author {
-			title
-			avatar
-			path
-		}
 		timeToRead
 		image {
 			url
