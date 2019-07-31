@@ -36,7 +36,7 @@ module.exports = function (api, options) {
 		const base = Airtable.base('appD1NB7tyuqXBGtc');
 
 		const blog = store.addContentType({
-			typeName: 'blog',
+			typeName: 'BlogPage',
 			route: '/blog/:slug'
 		});
 
