@@ -20,7 +20,7 @@
 					</template>
 				</div>
 				<div
-					:style="`background-image: url(${$page.blog.image.src})`"
+					:style="`background-image: url(${$page.blog.image.url})`"
 					class="blog__image"
 				/>
 				<post-layout :editOnGH="false">
@@ -62,7 +62,7 @@ export default {
 				},
 				{
 					itemprop: "image",
-					content: this.$page.blog.image.src
+					content: this.$page.blog.image.url
 				},
 
 				// Facebook
@@ -72,7 +72,7 @@ export default {
 				},
 				{
 					name: "og:image",
-					content: this.$page.blog.image.src
+					content: this.$page.blog.image.url
 				},
 				{
 					name: "og:url",
@@ -86,7 +86,7 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: this.$page.blog.image.src
+					content: this.$page.blog.image.url
 				},
 				{
 					name: "twitter:url",
@@ -115,7 +115,9 @@ query BlogPage ($path: String!) {
 			path
 		}
 		timeToRead
-		image
+		image {
+			url
+		}
 		canonical
 		content
 	}
