@@ -35,7 +35,7 @@ module.exports = function (api, options) {
 		});
 		const base = Airtable.base('appD1NB7tyuqXBGtc');
 
-		const blog = store.addContentType({
+		const blogPost = store.addContentType({
 			typeName: 'BlogPage',
 			route: '/blog/:slug'
 		});
@@ -47,7 +47,7 @@ module.exports = function (api, options) {
 
 			records.forEach(record => {
 				console.log(record);
-				blog.addNode({
+				blogPost.addNode({
 					id: record.id,
 					title: record.fields.title,
 					description: record.fields.description,
