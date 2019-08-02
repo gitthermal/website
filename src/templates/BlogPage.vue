@@ -20,7 +20,7 @@
 					</template>
 				</div>
 				<div
-					:style="`background-image: url(${$page.blog.image[0].url})`"
+					:style="`background-image: url(${$page.blogPost.image[0].url})`"
 					class="blog__image"
 				/>
 				<post-layout :editOnGH="false">
@@ -82,7 +82,7 @@ export default {
 				// Twitter
 				{
 					name: "twitter:description",
-					content: this.$page.blog.description
+					content: this.$page.blogPost.description
 				},
 				{
 					name: "twitter:image",
