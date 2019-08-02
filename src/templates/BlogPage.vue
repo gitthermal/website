@@ -2,10 +2,10 @@
 	<Layout :headerSize="1">
 		<div class="blog">
 			<container :width="760">
-				<h1 class="blog__heading">{{ $page.blog.title }}</h1>
+				<h1 class="blog__heading">{{ $page.blogPost.title }}</h1>
 				<div class="blog__meta">
-					Posted {{ $page.blog.date }}
-					<div v-for="(author, i) in $page.blog.author" :key="author.id">
+					Posted {{ $page.blogPost.date }}
+					<div v-for="(author, i) in $page.blogPost.author" :key="author.id">
 						<g-image
 							class="blog__author-avatar"
 							:alt="author.title"
@@ -15,8 +15,8 @@
 							author.title
 						}}</g-link>
 					</div>
-					<template v-if="$page.blog.timeToRead">
-						- {{ $page.blog.timeToRead }} min read
+					<template v-if="$page.blogPost.timeToRead">
+						- {{ $page.blogPost.timeToRead }} min read
 					</template>
 				</div>
 				<div
@@ -24,7 +24,7 @@
 					class="blog__image"
 				/>
 				<post-layout :editOnGH="false">
-					<div v-html="$page.blog.content"></div>
+					<div v-html="$page.blogPost.content"></div>
 				</post-layout>
 			</container>
 		</div>
@@ -43,40 +43,40 @@ export default {
 	},
 	metaInfo() {
 		return {
-			title: this.$page.blog.title,
+			title: this.$page.blogPost.title,
 			meta: [
 				{
 					key: "description",
 					name: "description",
-					content: this.$page.blog.description
+					content: this.$page.blogPost.description
 				},
 				{
 					name: "url",
-					content: this.$page.blog.path
+					content: `https://thermal.codecarrot.net${this.$page.blogPost.path}`
 				},
 
 				// Google
 				{
 					itemprop: "description",
-					content: this.$page.blog.description
+					content: this.$page.blogPost.description
 				},
 				{
 					itemprop: "image",
-					content: this.$page.blog.image[0].url
+					content: this.$page.blogPost.image[0].url
 				},
 
 				// Facebook
 				{
 					name: "og:description",
-					content: this.$page.blog.description
+					content: this.$page.blogPost.description
 				},
 				{
 					name: "og:image",
-					content: this.$page.blog.image[0].url
+					content: this.$page.blogPost.image[0].url
 				},
 				{
 					name: "og:url",
-					content: this.$page.blog.path
+					content: `https://thermal.codecarrot.net${this.$page.blogPost.path}`
 				},
 
 				// Twitter
@@ -86,11 +86,11 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: this.$page.blog.image[0].url
+					content: this.$page.blogPost.image[0].url
 				},
 				{
 					name: "twitter:url",
-					content: this.$page.blog.path
+					content: `https://thermal.codecarrot.net${this.$page.blogPost.path}`
 				}
 			],
 			link: [
@@ -106,7 +106,7 @@ export default {
 
 <page-query>
 query BlogPage ($path: String!) {
-	blog: blogPage (path: $path) {
+	blogPost: blogPage (path: $path) {
 		title
 		date (format: "MMMM DD, YYYY")
 		timeToRead
@@ -114,6 +114,7 @@ query BlogPage ($path: String!) {
 			url
 		}
 		canonical
+		path
 		canonical
 		content
 	}
