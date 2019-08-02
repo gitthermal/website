@@ -47,20 +47,22 @@ module.exports = function (api, options) {
 
 			records.forEach(record => {
 				console.log(record);
-				blogPost.addNode({
-					id: record.id,
-					title: record.fields.title,
-					description: record.fields.description,
-					image: record.fields.image,
-					date: record.fields.date,
-					published: record.fields.published,
-					author: record.fields.author,
-					category: record.fields.category,
-					slug: record.fields.slug,
-					canonical: record.fields.canonical || "",
-					content: record.fields.content,
-					timeToRead: record.fields.timeToRead
-				})
+				if (record.fields.published) {
+					blogPost.addNode({
+						id: record.id,
+						title: record.fields.title,
+						description: record.fields.description,
+						image: record.fields.image,
+						date: record.fields.date,
+						published: record.fields.published,
+						author: record.fields.author,
+						category: record.fields.category,
+						slug: record.fields.slug,
+						canonical: record.fields.canonical || "",
+						content: record.fields.content,
+						timeToRead: record.fields.timeToRead
+					})
+				}
 			});
 
 			// To fetch the next page of records, call `fetchNextPage`.
