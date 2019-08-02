@@ -25,9 +25,9 @@ query {
 		edges {
 			node {
 				id
-				slug
 				title
 				description
+				path
 				published
 				category
 				date (format: "MMMM DD, YYYY")

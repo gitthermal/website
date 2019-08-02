@@ -1,5 +1,5 @@
 <template>
-	<g-link :to="`/blog/${post.slug}`" class="blog__card">
+	<g-link :to="post.path" class="blog__card">
 		<div class="blog__card-content">
 			<h6 class="blog__card-category">#{{ post.category  }}</h6>
 			<h2 class="blog__card-heading">{{ post.title }}</h2>
