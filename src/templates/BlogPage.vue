@@ -113,7 +113,7 @@ query BlogPage ($path: String!) {
 		image {
 			url
 		}
-		canonical
+		description
 		path
 		canonical
 		content
