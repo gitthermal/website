@@ -46,7 +46,6 @@ export default {
 			title: this.$page.blog.title,
 			meta: [
 				{
-					key: "description",
 					name: "description",
 					content: this.$page.blog.excerpt
 				},
