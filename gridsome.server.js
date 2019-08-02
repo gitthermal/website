@@ -46,6 +46,7 @@ module.exports = function (api, options) {
 			// This function (`page`) will get called for each page of records.
 
 			records.forEach(record => {
+				console.log(record);
 				blog.addNode({
 					id: record.id,
 					title: record.fields.title,
