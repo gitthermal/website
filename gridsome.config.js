@@ -1,5 +1,6 @@
 module.exports = {
 	siteName: 'Thermal',
+	siteDescription: 'One stop to all Git repository',
 	siteUrl: 'https://thermal.codecarrot.net/',
 	titleTemplate: "%s | Thermal",
 
