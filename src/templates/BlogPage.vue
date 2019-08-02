@@ -96,7 +96,7 @@ export default {
 			link: [
 				{
 					rel: "canonical",
-					href: `https://thermal.codecarrot.net${this.$page.blog.path}`
+					href: this.$page.blogPost.canonical
 				}
 			]
 		}
@@ -113,6 +113,7 @@ query BlogPage ($path: String!) {
 		image {
 			url
 		}
+		canonical
 		canonical
 		content
 	}
