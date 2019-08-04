@@ -2,8 +2,6 @@ const Octokit = require('@octokit/rest')
 const octokit = new Octokit()
 const path = require('path')
 const fs = require('fs-extra')
-const Airtable = require('airtable');
-require('dotenv').config()
 
 module.exports = function (api, options) {
 	api.loadSource(async store => {
@@ -28,50 +26,6 @@ module.exports = function (api, options) {
 		} catch (error) {
 			console.log(error);
 		}
-
-		Airtable.configure({
-			endpointUrl: 'https://api.airtable.com',
-			apiKey: process.env.AIRTABLE_API_KEY
-		});
-		const base = Airtable.base('appD1NB7tyuqXBGtc');
-
-		const blogPost = store.addContentType({
-			typeName: 'BlogPage',
-			route: '/blog/:slug'
-		});
-
-		base('blog').select({
-			sort: [{ field: "date", direction: "desc" }]
-		}).eachPage(function page(records, fetchNextPage) {
-			// This function (`page`) will get called for each page of records.
-
-			records.forEach(record => {
-				if (record.fields.published) {
-					blogPost.addNode({
-						id: record.id,
-						title: record.fields.title,
-						description: record.fields.description,
-						image: record.fields.image,
-						date: record.fields.date,
-						published: record.fields.published,
-						author: record.fields.author,
-						category: record.fields.category,
-						slug: record.fields.slug,
-						canonical: record.fields.canonical,
-						content: record.fields.content,
-						timeToRead: record.fields.timeToRead
-					})
-				}
-			});
-
-			// To fetch the next page of records, call `fetchNextPage`.
-			// If there are more records, `page` will get called again.
-			// If there are no more records, `done` will get called.
-			fetchNextPage();
-
-		}, function done(err) {
-			if (err) { console.error(err); return; }
-		});
 
 		const { data } = await octokit.repos.listReleases({
 			owner: "gitthermal",
