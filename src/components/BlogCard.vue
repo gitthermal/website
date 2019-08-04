@@ -1,21 +1,18 @@
 <template>
-	<g-link :to="`/blog/${post.slug}`" class="blog__card">
+	<g-link :to="post.path" class="blog__card">
+		<div v-if="post.image[0]" :style="`background-image: url(${ post.image[0].url })`" class="blog__card-image"></div>
 		<div class="blog__card-content">
 			<h6 class="blog__card-category">#{{ post.category  }}</h6>
-			<div class="blog__card-heading">{{ post.title }}</div>
-			<p v-html="post.excerpt" class="blog__card-excerpt" />
+			<h2 class="blog__card-heading">{{ post.title }}</h2>
+			<p v-html="post.description" class="blog__card-description" />
 			<div class="blog__card-meta">
 				Posted {{ post.date }}
-				<div v-for="(author, i) in post.author" :key="author.id">
-					<g-image
-						class="blog__card-avatar"
-						:alt="author.title"
-						:src="author.avatar"
-					/>
-					<g-link :to="author.path" class="blog__card-name">{{
-						author.title
-					}}</g-link>
-				</div>
+				<author-profile-name
+					v-for="author in post.author"
+					:key="author.id"
+					:name="author.name"
+					:image="author.image[0].url"
+				/>
 				<template v-if="post.timeToRead">
 					- {{ post.timeToRead }} min read
 				</template>
@@ -25,8 +22,13 @@
 </template>
 
 <script>
+import AuthorProfileName from "./AuthorProfileName"
+
 export default {
 	name: "BlogCard",
+	components: {
+		AuthorProfileName
+	},
 	props: {
 		post: Object
 	}
@@ -69,7 +71,7 @@ export default {
 			font-weight: 600
 			color: #222831
 
-		&-excerpt
+		&-description
 			color: rgba(#222831, .8)
 			margin-bottom: .875rem
 
@@ -79,18 +81,13 @@ export default {
 			font-size: .875rem
 			display: flex
 			flex-direction: row
+			flex-wrap: wrap
 			vertical-align: middle
 			align-items: center
 
-		&-avatar
-			width: 30px
-			border-radius: 99px
-			vertical-align: middle
-			margin: 0 6px
-
-		&-name
-			margin-right: 5px
-			color: #00ADB5
+@media (min-width: 768px)
+	.blog__card-image
+		min-height: 320px
 
 @media (min-width: 768px)
 	.blog__card-heading

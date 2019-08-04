@@ -2,30 +2,55 @@ const Octokit = require('@octokit/rest')
 const octokit = new Octokit()
 const path = require('path')
 const fs = require('fs-extra')
+const Airtable = require('airtable')
 
 module.exports = function (api, options) {
 	api.loadSource(async store => {
-		// authors
-		const authorsPath = path.join(__dirname, 'data/authors.json')
-		const authorsRaw = await fs.readFile(authorsPath, 'utf8')
-		const authorsJson = JSON.parse(authorsRaw)
-		try {
-			const authors = store.addContentType({
-				typeName: 'Authors',
-				route: '/author/:id'
-			})
-			for (let item = 0; item < authorsJson.length; item++) {
-				authors.addNode({
-					id: authorsJson[item].id,
-					title: authorsJson[item].name,
-					bio: authorsJson[item].bio,
-					avatar: authorsJson[item].avatar,
-					twitter: authorsJson[item].twitter
+		const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID)
+
+		const authorContentType = store.addContentType({
+			typeName: 'Author'
+		})
+
+		const blogContentType = store.addContentType({
+			camelCasedFieldNames: true,
+			typeName: 'BlogPage',
+			route: '/blog/:slug'
+		})
+
+		// fetch author data
+		await base(process.env.AIRTABLE_AUTHOR_TABLE).select().eachPage((records, fetchNextPage) => {
+			records.forEach((record) => {
+				const item = record._rawJson
+				authorContentType.addNode({
+					id: item.id,
+					...item.fields
 				})
-			}
-		} catch (error) {
-			console.log(error);
-		}
+			})
+			fetchNextPage()
+		})
+
+		await base(process.env.AIRTABLE_BLOG_TABLE).select().eachPage((records, fetchNextPage) => {
+			records.forEach((record) => {
+				const item = record._rawJson
+				if (item.fields.published) {
+					blogContentType.addNode({
+						id: item.id,
+						title: item.fields.title,
+						description: item.fields.description,
+						image: item.fields.image,
+						category: item.fields.category,
+						author: store.createReference('Author', item.fields.author),
+						slug: item.fields.slug,
+						date: item.fields.date,
+						canonical: item.fields.canonical,
+						timeToRead: item.fields.timeToRead,
+						content: item.fields.content
+					})
+				}
+			})
+			fetchNextPage()
+		})
 
 		const { data } = await octokit.repos.listReleases({
 			owner: "gitthermal",

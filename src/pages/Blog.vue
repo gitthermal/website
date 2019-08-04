@@ -5,7 +5,7 @@
 				<h1 class="blog__heading">Thermal Blog</h1>
 				<blog-card
 					:post="node"
-					v-for="{ node } in $page.blog.edges"
+					v-for="{ node } in $page.blogs.edges"
 					:key="node.id"
 					class="blog__section"
 				/>
@@ -19,21 +19,26 @@
 </template>
 
 <page-query>
-query {
-	blog: allBlogPage(order: DESC) {
+query Blog {
+	blogs: allBlogPage(order: DESC) {
 		edges {
 			node {
 				id
-				slug
 				title
-				excerpt
+				description
+				image {
+					url
+				}
+				author {
+					id
+					name
+					image {
+						url
+					}
+				}
+				path
 				category
 				date (format: "MMMM DD, YYYY")
-				author {
-					title
-					avatar
-					path
-				}
 				timeToRead
 			}
 		}
