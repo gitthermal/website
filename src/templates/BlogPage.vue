@@ -130,7 +130,9 @@ query BlogPage ($path: String!) {
 	&__heading
 		margin-bottom: 2.5rem
 		text-align: center
+		font-size: 1.5rem
 		font-weight: 300
+		line-height: 1.4
 
 	&__meta
 		color: #393E46
