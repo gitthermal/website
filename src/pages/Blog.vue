@@ -4,7 +4,6 @@
 			<container :width="760">
 				<h1 class="blog__heading">Thermal Blog</h1>
 				<blog-card
-					v-if="node.published"
 					:post="node"
 					v-for="{ node } in $page.blogs.edges"
 					:key="node.id"
@@ -28,7 +27,6 @@ query Blog {
 				title
 				description
 				path
-				published
 				category
 				date (format: "MMMM DD, YYYY")
 				timeToRead
