@@ -2,7 +2,7 @@
 	<g-link :to="`/blog/${post.slug}`" class="blog__card">
 		<div class="blog__card-content">
 			<h6 class="blog__card-category">#{{ post.category  }}</h6>
-			<h2 class="blog__card-heading">{{ post.title }}</h2>
+			<div class="blog__card-heading">{{ post.title }}</div>
 			<p v-html="post.excerpt" class="blog__card-excerpt" />
 			<div class="blog__card-meta">
 				Posted {{ post.date }}
@@ -48,7 +48,7 @@ export default {
 			border-top-left-radius: 1rem
 			border-top-right-radius: 1rem
 			width: 100%
-			min-height: 300px
+			min-height: 180px
 			background:
 				size: cover
 				position: center
@@ -63,6 +63,8 @@ export default {
 
 		&-heading
 			color: black
+			font-size: 1.5rem
+			margin-bottom: .5rem
 			font-weight: 600
 			color: #222831
 
@@ -88,4 +90,8 @@ export default {
 		&-name
 			margin-right: 5px
 			color: #00ADB5
+
+@media (min-width: 768px)
+	.blog__card-heading
+		font-size: 2rem
 </style>

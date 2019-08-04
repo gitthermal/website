@@ -2,7 +2,7 @@
 	<Layout :headerSize="1">
 		<div class="blog">
 			<container :width="760">
-				<h1 class="blog__heading">{{ $page.blog.title }}</h1>
+				<div class="blog__heading">{{ $page.blog.title }}</div>
 				<div class="blog__meta">
 					Posted {{ $page.blog.date }}
 					<div v-for="(author, i) in $page.blog.author" :key="author.id">
@@ -163,7 +163,9 @@ query BlogPage ($path: String!) {
 			position: center
 			repeat: no-repeat
 
-@media (max-width: 768px)
+@media (min-width: 768px)
+	.blog__heading
+		font-size: 2.5rem
 	.blog__image
 		height: 335px;
 </style>
