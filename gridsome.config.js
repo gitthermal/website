@@ -30,6 +30,16 @@ module.exports = {
 			}
 		},
 		{
+			use: '@gridsome/source-airtable',
+			options: {
+				apiKey: process.env.AIRTABLE_API_KEY,
+				baseId: process.env.AIRTABLE_BASE_ID,
+				tableName: process.env.AIRTABLE_TABLE_NAME,
+				typeName: 'BlogPage',
+				route: '/blog/:slug'
+			}
+		},
+		{
 			use: "@gridsome/source-filesystem",
 			options: {
 				path: "releases/**/*.md",
