@@ -168,6 +168,4 @@ query BlogPage ($path: String!) {
 @media (min-width: 768px)
 	.blog__heading
 		font-size: 2.5rem
-	.blog__image
-		height: 335px;
 </style>
