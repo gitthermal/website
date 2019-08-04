@@ -100,7 +100,7 @@ export default {
 			link: [
 				{
 					rel: "canonical",
-					href: this.$page.blog.canonical
+					href: this.canonicalURL
 				}
 			]
 		};
@@ -108,6 +108,9 @@ export default {
 	computed: {
 		coverImage() {
 			return !!this.$page.blog.image[0] ? this.$page.blog.image[0].url : "/images/meta-image.png"
+		},
+		canonicalURL() {
+			return this.$page.blog.canonical === "" ? `https://thermal.codecarrot.net${this.$page.blog.path}` : this.$page.blog.canonical;
 		},
 		blogContent() {
 			let content;
