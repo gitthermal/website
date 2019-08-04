@@ -2,7 +2,7 @@
 	<Layout :headerSize="1">
 		<div class="blog">
 			<container :width="760">
-				<h1 class="blog__heading">{{ $page.blog.title }}</h1>
+				<div class="blog__heading">{{ $page.blog.title }}</div>
 				<div class="blog__meta">
 					Posted {{ $page.blog.date }}
 					<author-profile-name
@@ -48,7 +48,6 @@ export default {
 			title: this.$page.blog.title,
 			meta: [
 				{
-					key: "description",
 					name: "description",
 					content: this.$page.blog.description
 				},
@@ -161,7 +160,9 @@ query Blog ($path: String!) {
 	&__heading
 		margin-bottom: 2.5rem
 		text-align: center
+		font-size: 1.5rem
 		font-weight: 300
+		line-height: 1.4
 
 	&__meta
 		color: #393E46
@@ -190,4 +191,7 @@ query Blog ($path: String!) {
 @media (min-width: 992px)
 	.blog__image
 		min-height: 370px
+
+	.blog__heading
+		font-size: 2.5rem
 </style>

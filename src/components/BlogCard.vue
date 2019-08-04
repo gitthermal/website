@@ -40,6 +40,7 @@ export default {
 	&__card
 		display: flex
 		flex-direction: column
+		cursor: pointer
 		border:
 			radius: 1rem
 			width: 1px
@@ -65,6 +66,8 @@ export default {
 
 		&-heading
 			color: black
+			font-size: 1.5rem
+			margin-bottom: .5rem
 			font-weight: 600
 			color: #222831
 
@@ -85,4 +88,8 @@ export default {
 @media (min-width: 768px)
 	.blog__card-image
 		min-height: 320px
+
+@media (min-width: 768px)
+	.blog__card-heading
+		font-size: 2rem
 </style>
