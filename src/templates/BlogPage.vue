@@ -141,6 +141,13 @@ query Blog ($path: String!) {
 			url
 		}
 		description
+		author {
+			id
+			name
+			image {
+				url
+			}
+		}
 		path
 		canonical
 		content

@@ -29,6 +29,13 @@ query Blog {
 				image {
 					url
 				}
+				author {
+					id
+					name
+					image {
+						url
+					}
+				}
 				path
 				category
 				date (format: "MMMM DD, YYYY")
