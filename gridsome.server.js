@@ -14,7 +14,7 @@ module.exports = function (api, options) {
 			route: '/blog/:slug'
 		})
 
-		await base(process.env.AIRTABLE_TABLE_NAME).select().eachPage((records, fetchNextPage) => {
+		await base(process.env.AIRTABLE_BLOG_TABLE).select().eachPage((records, fetchNextPage) => {
 			records.forEach((record) => {
 				const item = record._rawJson
 				if (item.fields.published) {
