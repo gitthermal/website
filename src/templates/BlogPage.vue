@@ -66,7 +66,7 @@ export default {
 				},
 				{
 					itemprop: "image",
-					content: this.$page.blog.image[0].url
+					content: this.coverImage
 				},
 
 				// Facebook
@@ -76,7 +76,7 @@ export default {
 				},
 				{
 					name: "og:image",
-					content: this.$page.blog.image[0].url
+					content: this.coverImage
 				},
 				{
 					name: "og:url",
@@ -90,7 +90,7 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: this.$page.blog.image[0].url
+					content: this.coverImage
 				},
 				{
 					name: "twitter:url",
@@ -106,6 +106,9 @@ export default {
 		};
 	},
 	computed: {
+		coverImage() {
+			return !!this.$page.blog.image[0] ? this.$page.blog.image[0].url : "/images/meta-image.png"
+		},
 		blogContent() {
 			let content;
 			remark()
