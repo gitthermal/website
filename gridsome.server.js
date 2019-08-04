@@ -6,28 +6,6 @@ const Airtable = require('airtable')
 
 module.exports = function (api, options) {
 	api.loadSource(async store => {
-		// authors
-		const authorsPath = path.join(__dirname, 'data/authors.json')
-		const authorsRaw = await fs.readFile(authorsPath, 'utf8')
-		const authorsJson = JSON.parse(authorsRaw)
-		try {
-			const authors = store.addContentType({
-				typeName: 'Authors',
-				route: '/author/:id'
-			})
-			for (let item = 0; item < authorsJson.length; item++) {
-				authors.addNode({
-					id: authorsJson[item].id,
-					title: authorsJson[item].name,
-					bio: authorsJson[item].bio,
-					avatar: authorsJson[item].avatar,
-					twitter: authorsJson[item].twitter
-				})
-			}
-		} catch (error) {
-			console.log(error);
-		}
-
 		const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID)
 
 		const blogContentType = store.addContentType({
