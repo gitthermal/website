@@ -8,10 +8,26 @@ module.exports = function (api, options) {
 	api.loadSource(async store => {
 		const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID)
 
+		const authorContentType = store.addContentType({
+			typeName: 'Author'
+		})
+
 		const blogContentType = store.addContentType({
 			camelCasedFieldNames: true,
 			typeName: 'BlogPage',
 			route: '/blog/:slug'
+		})
+
+		// fetch author data
+		await base(process.env.AIRTABLE_AUTHOR_TABLE).select().eachPage((records, fetchNextPage) => {
+			records.forEach((record) => {
+				const item = record._rawJson
+				authorContentType.addNode({
+					id: item.id,
+					...item.fields
+				})
+			})
+			fetchNextPage()
 		})
 
 		await base(process.env.AIRTABLE_BLOG_TABLE).select().eachPage((records, fetchNextPage) => {
