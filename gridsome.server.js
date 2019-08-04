@@ -2,6 +2,7 @@ const Octokit = require('@octokit/rest')
 const octokit = new Octokit()
 const path = require('path')
 const fs = require('fs-extra')
+const Airtable = require('airtable')
 
 module.exports = function (api, options) {
 	api.loadSource(async store => {
@@ -26,6 +27,27 @@ module.exports = function (api, options) {
 		} catch (error) {
 			console.log(error);
 		}
+
+		const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID)
+
+		const contentType = store.addContentType({
+			camelCasedFieldNames: true,
+			typeName: 'BlogPage',
+			route: '/blog/:slug'
+		})
+
+		await base(process.env.AIRTABLE_TABLE_NAME).select().eachPage((records, fetchNextPage) => {
+			records.forEach((record) => {
+				const item = record._rawJson
+				if (item.fields.published) {
+					contentType.addNode({
+						id: item.id,
+						...item.fields
+					})
+				}
+			})
+			fetchNextPage()
+		})
 
 		const { data } = await octokit.repos.listReleases({
 			owner: "gitthermal",

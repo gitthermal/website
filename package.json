@@ -22,8 +22,8 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@gridsome/source-airtable": "^0.1.0",
     "@octokit/rest": "^16.28.6",
+    "airtable": "^0.7.0",
     "gridsome": "0.6.7"
   },
   "devDependencies": {
