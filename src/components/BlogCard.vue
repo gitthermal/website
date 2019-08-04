@@ -38,6 +38,7 @@ export default {
 	&__card
 		display: flex
 		flex-direction: column
+		cursor: pointer
 		border:
 			radius: 1rem
 			width: 1px
