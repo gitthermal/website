@@ -20,6 +20,7 @@
 					</template>
 				</div>
 				<div
+					v-if="$page.blog.image[0]"
 					:style="`background-image: url(${$page.blog.image[0].url})`"
 					class="blog__image"
 				/>
