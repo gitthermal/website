@@ -42,7 +42,16 @@ module.exports = function (api, options) {
 				if (item.fields.published) {
 					contentType.addNode({
 						id: item.id,
-						...item.fields
+						title: item.fields.title,
+						description: item.fields.description,
+						image: item.fields.image,
+						category: item.fields.category,
+						author: store.createReference('Author', item.fields.author),
+						slug: item.fields.slug,
+						date: item.fields.date,
+						canonical: item.fields.canonical,
+						timeToRead: item.fields.timeToRead,
+						content: item.fields.content
 					})
 				}
 			})
