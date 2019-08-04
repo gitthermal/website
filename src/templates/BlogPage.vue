@@ -177,7 +177,7 @@ query Blog ($path: String!) {
 
 	&__image
 		width: 100%
-		height: 370px
+		min-height: 200px
 		border-radius: 10px
 		margin-bottom: 2rem
 		background:
@@ -185,7 +185,11 @@ query Blog ($path: String!) {
 			position: center
 			repeat: no-repeat
 
-@media (max-width: 768px)
+@media (min-width: 768px)
 	.blog__image
-		height: 335px;
+		min-height: 335px
+
+@media (min-width: 992px)
+	.blog__image
+		min-height: 370px
 </style>

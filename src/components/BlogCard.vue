@@ -49,7 +49,7 @@ export default {
 			border-top-left-radius: 1rem
 			border-top-right-radius: 1rem
 			width: 100%
-			min-height: 300px
+			min-height: 180px
 			background:
 				size: cover
 				position: center
@@ -89,4 +89,8 @@ export default {
 		&-name
 			margin-right: 5px
 			color: #00ADB5
+
+@media (min-width: 768px)
+	.blog__card-image
+		min-height: 320px
 </style>
