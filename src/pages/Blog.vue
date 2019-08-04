@@ -6,7 +6,7 @@
 				<blog-card
 					v-if="node.published"
 					:post="node"
-					v-for="{ node } in $page.blog.edges"
+					v-for="{ node } in $page.blogs.edges"
 					:key="node.id"
 					class="blog__section"
 				/>
@@ -20,8 +20,8 @@
 </template>
 
 <page-query>
-query {
-	blog: allBlogPage(order: DESC) {
+query Blog {
+	blogs: allBlogPage(order: DESC) {
 		edges {
 			node {
 				id
