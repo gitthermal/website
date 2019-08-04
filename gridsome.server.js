@@ -30,7 +30,7 @@ module.exports = function (api, options) {
 
 		const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID)
 
-		const contentType = store.addContentType({
+		const blogContentType = store.addContentType({
 			camelCasedFieldNames: true,
 			typeName: 'BlogPage',
 			route: '/blog/:slug'
@@ -40,7 +40,7 @@ module.exports = function (api, options) {
 			records.forEach((record) => {
 				const item = record._rawJson
 				if (item.fields.published) {
-					contentType.addNode({
+					blogContentType.addNode({
 						id: item.id,
 						title: item.fields.title,
 						description: item.fields.description,
