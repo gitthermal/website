@@ -107,10 +107,14 @@ export default {
 	},
 	computed: {
 		coverImage() {
-			return !!this.$page.blog.image[0] ? this.$page.blog.image[0].url : "/images/meta-image.png"
+			return !!this.$page.blog.image[0]
+				? this.$page.blog.image[0].url
+				: "/images/meta-image.png";
 		},
 		canonicalURL() {
-			return this.$page.blog.canonical === "" ? `https://thermal.codecarrot.net${this.$page.blog.path}` : this.$page.blog.canonical;
+			return this.$page.blog.canonical === ""
+				? `https://thermal.codecarrot.net${this.$page.blog.path}`
+				: this.$page.blog.canonical;
 		},
 		blogContent() {
 			let content;
@@ -121,7 +125,7 @@ export default {
 					if (err) console.error(err);
 					content = file.contents;
 				});
-				return content;
+			return content;
 		}
 	}
 };
