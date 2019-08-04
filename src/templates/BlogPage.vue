@@ -5,16 +5,12 @@
 				<h1 class="blog__heading">{{ $page.blog.title }}</h1>
 				<div class="blog__meta">
 					Posted {{ $page.blog.date }}
-					<div v-for="(author, i) in $page.blog.author" :key="author.id">
-						<g-image
-							class="blog__author-avatar"
-							:alt="author.title"
-							:src="author.avatar"
-						/>
-						<g-link :to="author.path" class="blog__author-name">{{
-							author.title
-						}}</g-link>
-					</div>
+					<author-profile-name
+						v-for="author in $page.blog.author"
+						:key="author.id"
+						:name="author.name"
+						:image="author.image[0].url"
+					/>
 					<template v-if="$page.blog.timeToRead">
 						- {{ $page.blog.timeToRead }} min read
 					</template>
@@ -35,6 +31,7 @@
 <script>
 import Container from "../layouts/Container";
 import PostLayout from "../layouts/Post";
+import AuthorProfileName from "../components/AuthorProfileName";
 const remark = require("remark");
 const recommended = require("remark-preset-lint-recommended");
 const html = require("remark-html");
@@ -43,7 +40,8 @@ export default {
 	name: "Blogs",
 	components: {
 		Container,
-		PostLayout
+		PostLayout,
+		AuthorProfileName
 	},
 	metaInfo() {
 		return {
@@ -174,17 +172,6 @@ query Blog ($path: String!) {
 		align-items: center
 		justify-content: center
 		margin-bottom: 2rem
-
-	&__author
-		&-avatar
-			width: 30px
-			border-radius: 99px
-			vertical-align: middle
-			margin: 0 6px
-
-		&-name
-			margin-right: 5px
-			color: #00ADB5
 
 	&__image
 		width: 100%
