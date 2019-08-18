@@ -14,6 +14,18 @@ export default function (Vue, { router, head, isClient }) {
 		href: "/manifest.json"
 	})
 
+	// SEO Organization schema
+	head.script.push({
+		type: "application/ld+json",
+		src: "/js/organization_schema.js"
+	})
+
+	// SEO SoftwareApplication schema
+	head.script.push({
+		type: "application/ld+json",
+		src: "/js/softwareapplication_schema.js"
+	})
+
 	// stripe checkout
 	head.script.push({
 		src: "https://js.stripe.com/v3"
