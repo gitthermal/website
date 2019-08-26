@@ -24,7 +24,7 @@ You'll need the following tools to download and build Code locally:
 
 ## Build and Run
 
-If you want to understand how Code works or want to debug an issue, you'll want to, get the source, [setup the development environment](/docs/development-environment), build it, and run the tool locally.
+If you want to understand how Code works or want to debug an issue, you'll want to, get the source, [setup the development environment](./development-environment), build it, and run the tool locally.
 
 ### Getting the sources
 
