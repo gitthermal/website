@@ -9,6 +9,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
       - name: Curl request
         run: curl -X POST -d {} $NETLIFY_BUILD_HOOK
