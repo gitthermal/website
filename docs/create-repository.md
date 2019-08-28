@@ -1,6 +1,6 @@
 ---
 title: Create repository
-description: Starting a new project by initalizing git repository.
+description: Starting a new project by initializing git repository.
 titleBorder: true
 ---
 

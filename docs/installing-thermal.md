@@ -15,4 +15,3 @@ You can download application for any operating system of your choice.
 - It works directly with your repositories with no dependencies — you don’t even need to have Git installed on your system.
 
 ![Download page screenshot](./images/download-page.png)
-

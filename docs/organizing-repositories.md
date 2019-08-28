@@ -10,7 +10,7 @@ You can easily organize repositories by adding and removing them.
 
 ## Add a repository
 
-To add a repository, click on `Add repository` button on home screen. To learn different ways to add repository, go to [Add an existing repositroy](./add-existing-repository).
+To add a repository, click on `Add repository` button on home screen. To learn different ways to add repository, go to [Add an existing repositroy](/docs/add-existing-repository).
 
 ## Remove a repository
 
