@@ -10,4 +10,6 @@ jobs:
 
     steps:
       - name: Curl request
-        run: curl -X POST -d '{}' ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: curl -X POST -d '{}' NETLIFY_BUILD_HOOK
+        with:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
