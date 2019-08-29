@@ -12,7 +12,7 @@
 						</h6>
 						<template v-for="item in section.topics">
 							<g-link
-								:to="`/docs/${item.slug}`"
+								:to="`/docs/${item.slug}/`"
 								:key="`${section.section}-item-${item.slug}`"
 								class="sidebar__menu-item"
 							>

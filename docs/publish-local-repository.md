@@ -10,7 +10,7 @@ With a couple of steps, you can easily publish your formerly local project on a 
 
 ### 1. Add the local repository to Thermal
 
-Firstly, make sure you've already **added the respective local repository to Thermal** _(see [Add an existing repository](./add-existing-repository) for more information)_.
+Firstly, make sure you've already **added the respective local repository to Thermal** _(see [Add an existing repository](/docs/add-existing-repository) for more information)_.
 
 If you have initalize a new Git repository or it doesn't have a remote url, instead of Pull, Push & Fetch, it will show you Publish.
 
