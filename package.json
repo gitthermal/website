@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@octokit/rest": "^16.28.7",
+    "@octokit/rest": "^16.28.9",
     "airtable": "^0.7.1",
     "gridsome": "0.6.9"
   },
