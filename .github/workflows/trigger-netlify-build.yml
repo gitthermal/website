@@ -1,8 +1,5 @@
 name: Trigger netlify build
 
-on:
-  schedule:
-    - cron: '*/30 * * * *'
 jobs:
   build:
     name: Build request netlify
