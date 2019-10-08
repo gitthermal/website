@@ -12,6 +12,11 @@ module.exports = {
 			.loader('vue-svg-loader')
 	},
 
+	templates: {
+		BlogPage: "/blog/:slug",
+		ReleasePage: "/releases/:slug"
+	},
+
 	plugins: [
 		{
 			use: '@gridsome/plugin-google-analytics',
@@ -34,8 +39,7 @@ module.exports = {
 			use: "@gridsome/source-filesystem",
 			options: {
 				path: "releases/**/*.md",
-				typeName: 'ReleasePage',
-				route: '/releases/:slug'
+				typeName: 'ReleasePage'
 			}
 		}
 	]

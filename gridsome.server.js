@@ -1,21 +1,18 @@
 const Octokit = require('@octokit/rest')
 const octokit = new Octokit()
-const path = require('path')
-const fs = require('fs-extra')
 const Airtable = require('airtable')
 
 module.exports = function (api, options) {
-	api.loadSource(async store => {
+	api.loadSource(async actions => {
 		const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID)
 
-		const authorContentType = store.addContentType({
+		const authorContentType = actions.addCollection({
 			typeName: 'Author'
 		})
 
-		const blogContentType = store.addContentType({
+		const blogContentType = actions.addCollection({
 			camelCasedFieldNames: true,
-			typeName: 'BlogPage',
-			route: '/blog/:slug'
+			typeName: 'BlogPage'
 		})
 
 		// fetch author data
@@ -40,7 +37,7 @@ module.exports = function (api, options) {
 						description: item.fields.description,
 						image: item.fields.image,
 						category: item.fields.category,
-						author: store.createReference('Author', item.fields.author),
+						author: actions.createReference('Author', item.fields.author),
 						slug: item.fields.slug,
 						date: item.fields.date,
 						canonical: item.fields.canonical,
@@ -57,7 +54,7 @@ module.exports = function (api, options) {
 			repo: "thermal"
 		})
 		try {
-			const github = store.addContentType({
+			const github = actions.addCollection({
 				typeName: 'github'
 			})
 			for (let index of data) {
