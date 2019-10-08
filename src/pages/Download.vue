@@ -186,7 +186,7 @@ export default {
 		}
 	},
 	mounted() {
-		this.osReleasesAssets(this.$page.allgithub.edges[0].node.assets);
+		this.osReleasesAssets(this.$page.allGithub.edges[0].node.assets);
 		for (let i = 0; i < this.osBuild.length; i++) {
 			if (this.$router.history.current.query.os === this.osBuild[i].os) {
 				for (let j = 0; j < this.osBuild[i].ext.length; j++) {
@@ -204,7 +204,7 @@ export default {
 
 <page-query>
 	query GitHub {
-		allgithub (sort: [{ by: "published_at" }]) {
+		allGithub (sort: [{ by: "published_at" }]) {
 			edges {
 				node {
 					id

@@ -76,8 +76,8 @@ export default {
 		let win = 0;
 		let mac = 0;
 		let linux = 0;
-		for (let i = 0; i < this.$page.allgithub.edges.length; i++) {
-			let releaseAssets = this.$page.allgithub.edges[i].node.assets;
+		for (let i = 0; i < this.$page.allGithub.edges.length; i++) {
+			let releaseAssets = this.$page.allGithub.edges[i].node.assets;
 			for (let j = 0; j < releaseAssets.length; j++) {
 				if (releaseAssets[j].name.includes("win")) {
 					win += releaseAssets[j].download_count;
@@ -97,7 +97,7 @@ export default {
 
 <page-query>
 	query GitHub {
-		allgithub {
+		allGithub {
 			edges {
 				node {
 					id
