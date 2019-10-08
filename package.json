@@ -24,7 +24,7 @@
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@octokit/rest": "^16.30.1",
     "airtable": "^0.7.1",
-    "gridsome": "0.6.9"
+    "gridsome": "0.7.7"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.0",
