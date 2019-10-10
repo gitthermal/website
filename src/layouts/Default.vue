@@ -1,6 +1,8 @@
 <template>
 	<div class="layout">
-		<notification-banner text="Support the development of Thermal" cta="Become a Patron" link="http://patreon.com/mittalyashu" color="e85b46" />
+		<notification-banner cta="Become a Patron" link="http://patreon.com/mittalyashu" color="e85b46">
+			Support the development of Thermal
+		</notification-banner>
 		<Header :theme="headerTheme" :size="headerSize" />
 		<slot />
 		<Footer v-if="footer" />
