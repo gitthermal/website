@@ -42,21 +42,9 @@ export default {
 			}
 		}
 	},
-	methods: {
-		discordWebhook(url, data) {
-			var xmlhttp = new XMLHttpRequest()
-			xmlhttp.open("POST", url, true);
-			xmlhttp.setRequestHeader(
-				"Content-type",
-				"application/json; charset=UTF-8"
-			);
-			xmlhttp.send(JSON.stringify(data));
-		}
-	},
 	mounted() {
 		let data = {
 			content: JSON.stringify(platform)
 		}
-		this.discordWebhook("https://discordapp.com/api/webhooks/583885674550132789/1ri31hpoO3QQMvsRXyObkz7YvDaCDVR87rP2hJG4JutWsPqTh3-Gbjthr9OtW7wxkGPA", data)
 	}
 }
