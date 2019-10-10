@@ -11,7 +11,7 @@
 <script>
 import NotificationBanner from "../components/NotificationBanner";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "./partials/Footer";
 import Navbar from "./partials/Navbar"
 
 export default {

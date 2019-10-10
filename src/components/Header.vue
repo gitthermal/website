@@ -138,7 +138,10 @@ export default {
 	z-index: 10
 
 	&__logo
-		cursor: pointer
+		display: flex
+		flex-shrink: 0
+		align-items: center
+		margin-left: -15px
 
 	&__container
 		align-items: center
