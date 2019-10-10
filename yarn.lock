@@ -4102,6 +4102,11 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
+github-buttons@^2.3.0:
+  version "2.3.6"
+  resolved "http://npm.purple.is/github-buttons/-/github-buttons-2.3.6.tgz#87c8095bdf4ff146a947a5195ac06156c527f68c"
+  integrity sha512-awj34E4hvX8fBWRG7v71/Gq9zLrDekCvXdDEHZZJRqtRb+YnXJ5pw1ujCAtYTqAtACYKZJb2m4Nz8JvX++UrOg==
+
 github-from-package@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
@@ -10019,6 +10024,13 @@ vue-eslint-parser@^5.0.0:
     espree "^4.1.0"
     esquery "^1.0.1"
     lodash "^4.17.11"
+
+vue-github-button@^1.1.0:
+  version "1.1.0"
+  resolved "http://npm.purple.is/vue-github-button/-/vue-github-button-1.1.0.tgz#bc04eca9be8306ef47153ddf28daa1f8e1f5613e"
+  integrity sha512-X1PxiJTWiKruqRL6AqSDkqgTBkqsfxnPYB4l9zufA1KXZDw36W9lsFLwItLwzoO7ZELTmEk4u0TnVVyBFNclrA==
+  dependencies:
+    github-buttons "^2.3.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
