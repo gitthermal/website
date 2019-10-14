@@ -10025,10 +10025,10 @@ vue-eslint-parser@^5.0.0:
     esquery "^1.0.1"
     lodash "^4.17.11"
 
-vue-github-button@^1.1.0:
-  version "1.1.0"
-  resolved "http://npm.purple.is/vue-github-button/-/vue-github-button-1.1.0.tgz#bc04eca9be8306ef47153ddf28daa1f8e1f5613e"
-  integrity sha512-X1PxiJTWiKruqRL6AqSDkqgTBkqsfxnPYB4l9zufA1KXZDw36W9lsFLwItLwzoO7ZELTmEk4u0TnVVyBFNclrA==
+vue-github-button@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vue-github-button/-/vue-github-button-1.1.2.tgz#318518c3a31d0fbd278ebcc80fbc5f88d68836e6"
+  integrity sha512-VukmgRy1wU0Ec8L8Qti4OOojQSfLRunf/In8bMqEJMXCZAz9BEgF4P+loAMBDoUqLYfyak4VJ2O7NTsZH2GLvQ==
   dependencies:
     github-buttons "^2.3.0"
 
