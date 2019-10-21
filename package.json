@@ -28,7 +28,7 @@
     "vue-github-button": "^1.1.0"
   },
   "devDependencies": {
-    "@gridsome/source-filesystem": "^0.6.1",
+    "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.3.4",
     "apexcharts": "^3.8.6",
     "dotenv": "^8.1.0",
