@@ -11,6 +11,10 @@ sections:
   label: Blogs
   create: all
   match: "**/*"
+- type: document
+  path: data/author.json
+  label: Author
+  match: "**/*"
 - type: heading
   label: Documentation
 - type: document
