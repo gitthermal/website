@@ -34,3 +34,5 @@ fields:
       required: false
     label: Twitter
     description: Your twitter handle @gitthermal
+pages:
+- data/author.json
