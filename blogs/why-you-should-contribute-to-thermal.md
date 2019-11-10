@@ -2,7 +2,7 @@
 author: data/author.json
 category: community
 draft: false
-date: 2019-11-10T13:36:52+05:30
+date: 2019-07-30T13:36:52+05:30
 title: Why you should contribute to Thermal?
 description: Are you looking for contributing to a new open source project? Or want
   to get started with UI technologies like Node.js or SQLite?
