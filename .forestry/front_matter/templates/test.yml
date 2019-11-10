@@ -5,7 +5,8 @@ fields:
 - name: author
   type: blocks
   label: Author
-  template_types: []
+  template_types:
+  - test-2
   config:
     min: 
     max: 
