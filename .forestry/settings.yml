@@ -4,11 +4,11 @@ auto_deploy: false
 admin_path: static/admin
 webhook_url: 
 sections:
-- type: heading
-  label: Blog
 - type: document
   path: data/author.json
   label: Author
+- type: heading
+  label: Blog
 - type: directory
   path: blogs
   label: Blogs
