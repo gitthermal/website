@@ -33,5 +33,3 @@ fields:
     max: 
     labelField: 
   label: Menu
-pages:
-- data/docs-menu.json

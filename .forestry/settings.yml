@@ -16,9 +16,6 @@ sections:
   label: Author
 - type: heading
   label: Documentation
-- type: document
-  path: data/docs-menu.json
-  label: Docs menu
 - type: directory
   path: docs
   label: Documentation
