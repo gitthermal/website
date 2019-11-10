@@ -1,137 +1,137 @@
 [
-	{
-		"section": "Getting started",
-		"topics": [
-			{
-				"title": "Introduction",
-				"slug": "introduction"
-			},
-			{
-				"title": "Why Thermal?",
-				"slug": "why-thermal"
-			},
-			{
-				"title": "Installing Thermal",
-				"slug": "installing-thermal"
-			}
-		]
-	},
-	{
-		"section": "First step with Thermal",
-		"topics": [
-			{
-				"title": "How it works",
-				"slug": "how-it-works"
-			},
-			{
-				"title": "User interface overview",
-				"slug": "user-interface-overview"
-			}
-		]
-	},
-	{
-		"section": "Adding repositories",
-		"topics": [
-			{
-				"title": "Add existing repository",
-				"slug": "add-existing-repository"
-			},
-			{
-				"title": "Initialize repository",
-				"slug": "initialize-repository"
-			},
-			{
-				"title": "Clone repository",
-				"slug": "clone-repository"
-			},
-			{
-				"title": "Create repository",
-				"slug": "create-repository"
-			}
-		]
-	},
-	{
-		"section": "Managing repositories",
-		"topics": [
-			{
-				"title": "Overview",
-				"slug": "manage-repository-overview"
-			},
-			{
-				"title": "Organizing repositories",
-				"slug": "organizing-repositories"
-			},
-			{
-				"title": "Opening repository",
-				"slug": "opening-repository"
-			},
-			{
-				"title": "Repository settings",
-				"slug": "repository-settings"
-			}
-		]
-	},
-	{
-		"section": "Remote repositories",
-		"topics": [
-			{
-				"title": "Publish local repository",
-				"slug": "publish-local-repository"
-			},
-			{
-				"title": "Push to remote",
-				"slug": "push-to-remote"
-			}
-		]
-	},
-	{
-		"section": "Contribute",
-		"topics": [
-			{
-				"title": "How to contribute",
-				"slug": "how-to-contribute"
-			},
-			{
-				"title": "Contribution guide",
-				"slug": "contribution-guide"
-			},
-			{
-				"title": "Development environment",
-				"slug": "development-environment"
-			},
-			{
-				"title": "Experimental features",
-				"slug": "experimental-features"
-			},
-			{
-				"title": "Reporting issues",
-				"slug": "reporting-issue"
-			},
-			{
-				"title": "Pair programming",
-				"slug": "pair-programming"
-			},
-			{
-				"title": "How to join core team?",
-				"slug": "how-to-join-core-team"
-			},
-			{
-				"title": "Code of conduct",
-				"slug": "code-of-conduct"
-			}
-		]
-	},
-	{
-		"section": "FAQ & Help",
-		"topics": [
-			{
-				"title": "How to upgrade?",
-				"slug": "how-to-upgrade"
-			},
-			{
-				"title": "FAQ",
-				"slug": "faq"
-			}
-		]
-	}
+  {
+    "section": "Getting started",
+    "topics": [
+      {
+        "title": "Introduction",
+        "slug": "introduction"
+      },
+      {
+        "title": "Why Thermal?",
+        "slug": "why-thermal"
+      },
+      {
+        "title": "Installing Thermal",
+        "slug": "installing-thermal"
+      }
+    ]
+  },
+  {
+    "section": "First step with Thermal",
+    "topics": [
+      {
+        "title": "How it works",
+        "slug": "how-it-works"
+      },
+      {
+        "title": "User interface overview",
+        "slug": "user-interface-overview"
+      }
+    ]
+  },
+  {
+    "section": "Adding repositories",
+    "topics": [
+      {
+        "title": "Add existing repository",
+        "slug": "add-existing-repository"
+      },
+      {
+        "title": "Initialize repository",
+        "slug": "initialize-repository"
+      },
+      {
+        "title": "Clone repository",
+        "slug": "clone-repository"
+      },
+      {
+        "title": "Create repository",
+        "slug": "create-repository"
+      }
+    ]
+  },
+  {
+    "section": "Managing repositories",
+    "topics": [
+      {
+        "title": "Overview",
+        "slug": "manage-repository-overview"
+      },
+      {
+        "title": "Organizing repositories",
+        "slug": "organizing-repositories"
+      },
+      {
+        "title": "Opening repository",
+        "slug": "opening-repository"
+      },
+      {
+        "title": "Repository settings",
+        "slug": "repository-settings"
+      }
+    ]
+  },
+  {
+    "section": "Remote repositories",
+    "topics": [
+      {
+        "title": "Publish local repository",
+        "slug": "publish-local-repository"
+      },
+      {
+        "title": "Push to remote",
+        "slug": "push-to-remote"
+      }
+    ]
+  },
+  {
+    "section": "Contribute",
+    "topics": [
+      {
+        "title": "How to contribute",
+        "slug": "how-to-contribute"
+      },
+      {
+        "title": "Contribution guide",
+        "slug": "contribution-guide"
+      },
+      {
+        "title": "Development environment",
+        "slug": "development-environment"
+      },
+      {
+        "title": "Experimental features",
+        "slug": "experimental-features"
+      },
+      {
+        "title": "Reporting issues",
+        "slug": "reporting-issue"
+      },
+      {
+        "title": "Pair programming",
+        "slug": "pair-programming"
+      },
+      {
+        "title": "How to join core team?",
+        "slug": "how-to-join-core-team"
+      },
+      {
+        "title": "Code of conduct",
+        "slug": "code-of-conduct"
+      }
+    ]
+  },
+  {
+    "section": "FAQ & Help",
+    "topics": [
+      {
+        "title": "How to upgrade?",
+        "slug": "how-to-upgrade"
+      },
+      {
+        "title": "FAQ",
+        "slug": "faq"
+      }
+    ]
+  }
 ]
