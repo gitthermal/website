@@ -2,35 +2,35 @@
 label: Author
 hide_body: true
 fields:
-- type: field_group_list
-  name: authors
-  label: Authors
+- name: author
+  type: field_group_list
   fields:
-  - type: text
-    name: name
-    label: Name
-    description: Your name
+  - name: name
+    type: text
     config:
-      required: true
+      required: false
+    label: Name
   - name: bio
     type: textarea
     default: ''
     config:
-      required: true
+      required: false
       wysiwyg: false
       schema:
         format: markdown
     label: Bio
-    description: About you
   - name: image
     type: file
     config:
       maxSize: '2'
     label: Image
-    description: Your profile picture
   - name: twitter
     type: text
     config:
       required: false
     label: Twitter
-    description: Your twitter handle @gitthermal
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Author
