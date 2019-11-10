@@ -73,5 +73,5 @@ fields:
     display_utc: false
   default: now
 pages:
-- blogs/which-theme-do-you-like-light-mode-dark-mode-atom-dark-mode-which-theme-do-you-like-light-mode-dark-mode-atom-dark-mode.md
+- blogs/which-theme-do-you-like-light-dark-atom-dark-mode.md
 - blogs/why-you-should-contribute-to-thermal.md
