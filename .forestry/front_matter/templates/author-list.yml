@@ -1,4 +1,11 @@
 ---
 label: Author list
 hide_body: true
-fields: []
+fields:
+- name: author
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Author
