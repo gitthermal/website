@@ -6,6 +6,10 @@ webhook_url:
 sections:
 - type: heading
   label: Blog
+- type: document
+  path: data/author.json
+  label: Author
+  match: "**/*"
 - type: directory
   path: blogs
   label: Blogs
