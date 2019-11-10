@@ -5,7 +5,12 @@ admin_path: static/admin
 webhook_url: 
 sections:
 - type: heading
+  label: Blog
+- type: directory
+  path: blogs
   label: Blogs
+  create: all
+  match: "**/*"
 - type: heading
   label: Documentation
 - type: document
@@ -16,6 +21,8 @@ sections:
   label: Documentation
   create: all
   match: "**/*"
+- type: heading
+  label: Release notes
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
