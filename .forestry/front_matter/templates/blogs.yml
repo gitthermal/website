@@ -1,13 +1,76 @@
 ---
 label: Blogs
 hide_body: false
+display_field: title
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: text
   name: description
-  label: description
-- type: boolean
-  name: titleBorder
-  label: titleBorder
+  label: Description
+  config:
+    required: true
+- name: cover_image
+  type: file
+  config:
+    maxSize: '5'
+  label: Cover image
+- name: author
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: author
+      file: 
+      path: 
+  label: Author
+- name: category
+  type: select
+  default: features
+  config:
+    required: true
+    options:
+    - features
+    - community
+    - education
+    - updates
+    - insights
+    - changelog
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
+- name: draft
+  type: boolean
+  label: Draft
+  default: true
+  showOnly:
+    value: features
+- name: slug
+  type: text
+  config:
+    required: true
+  label: Slug
+- name: canonical
+  type: text
+  config:
+    required: false
+  label: Canonical
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
