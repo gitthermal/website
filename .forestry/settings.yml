@@ -29,12 +29,6 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  preview_env:
-  - AIRTABLE_API_KEY=keyZK6U6U4RUBHENh
-  - AIRTABLE_AUTHOR_TABLE=author
-  - AIRTABLE_BASE_ID=appP3wGL6qGpzB3mj
-  - AIRTABLE_BLOG_TABLE=blog
-  - AIRTABLE_PAIR_PROGRAMMING=pair programming
   preview_output_directory: dist
   install_dependencies_command: npm install
   preview_docker_image: node:10
