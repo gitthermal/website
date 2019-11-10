@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.3.4",
+    "@gridsome/transformer-remark": "^0.4.0",
     "apexcharts": "^3.8.6",
     "dotenv": "^8.2.0",
     "eslint": "^6.5.0",
