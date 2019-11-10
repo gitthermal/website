@@ -9,7 +9,6 @@ sections:
 - type: document
   path: data/author.json
   label: Author
-  match: "**/*"
 - type: directory
   path: blogs
   label: Blogs
@@ -27,8 +26,8 @@ sections:
   match: "**/*"
 - type: heading
   label: Release notes
-upload_dir: static/uploads
-public_path: "/uploads"
+upload_dir: static
+public_path: ''
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
