@@ -1,5 +1,5 @@
 ---
-label: Author list
+label: Author
 hide_body: true
 fields:
 - name: authors
