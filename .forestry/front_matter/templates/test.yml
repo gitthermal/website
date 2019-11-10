@@ -2,22 +2,10 @@
 label: test
 hide_body: true
 fields:
-- name: f
-  type: field_group
-  config: {}
-  fields:
-  - name: d
-    type: list
-    config:
-      use_select: false
-      min: 
-      max: 
-    label: d
-  label: f
 - name: author
-  type: list
+  type: blocks
+  label: Author
+  template_types: []
   config:
-    use_select: false
     min: 
     max: 
-  label: Author
