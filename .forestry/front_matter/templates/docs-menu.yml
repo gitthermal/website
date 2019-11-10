@@ -1,4 +1,35 @@
 ---
-label: Docs menu
+label: Menu
 hide_body: true
-fields: []
+fields:
+- name: menu
+  type: field_group_list
+  fields:
+  - name: section
+    type: text
+    config:
+      required: true
+    label: Section
+  - name: topics
+    type: field_group_list
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: Title
+    - name: slug
+      type: text
+      config:
+        required: false
+      label: Slug
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Topics
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Menu
