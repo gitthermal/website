@@ -74,3 +74,5 @@ fields:
     time_format: 
     display_utc: false
   default: now
+pages:
+- blogs/why-you-should-contribute-to-thermal.md
