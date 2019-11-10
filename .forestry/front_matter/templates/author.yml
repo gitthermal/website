@@ -1,4 +1,32 @@
 ---
 label: Author
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: bio
+  type: textarea
+  default: Thermal guest writer
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Bio
+  description: Few words about yourself.
+- name: image
+  type: file
+  config:
+    maxSize: '2'
+  label: Image
+  description: Upload your profile picture.
+- name: twitter
+  type: text
+  config:
+    required: true
+  label: Twitter
+  description: Your twitter handle
+  default: ''
