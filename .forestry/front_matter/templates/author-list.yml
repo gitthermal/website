@@ -15,3 +15,5 @@ fields:
     max: 
     labelField: 
   label: Authors
+pages:
+- data/author.json
