@@ -2,13 +2,14 @@
 author: data/author.json
 category: community
 draft: false
-date: 2019-07-30T13:36:52+05:30
+date: 2019-07-30T08:06:52.000+00:00
 title: Why you should contribute to Thermal?
 description: Are you looking for contributing to a new open source project? Or want
   to get started with UI technologies like Node.js or SQLite?
 cover_image: "/uploads/why-contribute-to-thermal.png"
 slug: why-you-should-contribute-to-thermal
 canonical: ''
+image: "/images/blog/why-you-should-contribute-to-thermal/why-contribute-to-thermal.png"
 
 ---
 Hey open-source enthusiastic 👋🏻,
