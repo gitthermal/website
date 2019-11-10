@@ -3,9 +3,7 @@ label: Author list
 hide_body: true
 fields:
 - name: author
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
+  type: include
+  config: {}
+  template: author
   label: Author
