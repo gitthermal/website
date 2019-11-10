@@ -18,11 +18,11 @@ fields:
       format: markdown
   label: Description
   description: Enter short description of the article.
-- name: cover_image
+- name: image
   type: file
   config:
     maxSize: '5'
-  label: Cover image
+  label: Image
 - name: author
   type: select
   default: []
