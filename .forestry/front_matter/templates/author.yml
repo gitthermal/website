@@ -5,6 +5,11 @@ fields:
 - name: author
   type: field_group_list
   fields:
+  - name: username
+    type: text
+    config:
+      required: false
+    label: Username
   - name: name
     type: text
     config:
