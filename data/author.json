@@ -1,6 +1,13 @@
 {
   "author": [
     {
+      "username": "thermal",
+      "name": "Thermal",
+      "bio": "Happy commits :)",
+      "image": "/images/author/gitthermal.png",
+      "twitter": "@gitthermal"
+    },
+    {
       "name": "Yashu Mittal",
       "bio": "Creator of Thermal",
       "image": "/images/author/mittalyashu.jpg",
