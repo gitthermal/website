@@ -1,0 +1,13 @@
+{
+  "menu": [
+    {
+      "section": "Getting started",
+      "topics": [
+        {
+          "slug": "introduction",
+          "title": "Introduction"
+        }
+      ]
+    }
+  ]
+}

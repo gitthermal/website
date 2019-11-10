@@ -19,7 +19,6 @@ sections:
 - type: document
   path: data/docs-menu.json
   label: Docs menu
-  match: "**/*"
 - type: directory
   path: docs
   label: Documentation
