@@ -24,16 +24,9 @@ fields:
     maxSize: '5'
   label: Image
 - name: author
-  type: select
-  default: []
+  type: text
   config:
     required: false
-    options: []
-    source:
-      type: documents
-      section: author
-      file: data/author.json
-      path: 
   label: Author
 - name: category
   type: select
