@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: static/admin
 webhook_url: 
 sections:
-- type: document
-  path: data/author.json
-  label: Author
 - type: heading
   label: Blog
 - type: directory
@@ -14,6 +11,9 @@ sections:
   label: Blogs
   create: all
   match: "**/*"
+- type: document
+  path: data/author.json
+  label: Author
 - type: heading
   label: Documentation
 - type: document
