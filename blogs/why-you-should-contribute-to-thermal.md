@@ -1,5 +1,5 @@
 ---
-author: data/author.json
+author: mittalyashu
 category: community
 draft: false
 date: 2019-07-30T08:06:52.000+00:00
