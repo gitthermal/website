@@ -1,9 +1,8 @@
 ---
 category: community
 draft: true
-date: 2019-07-30T21:58:49+05:30
-title: Which theme do you like? (Light mode, Dark mode, Atom dark mode)Which theme
-  do you like? (Light mode, Dark mode, Atom dark mode)
+date: 2019-07-30T16:28:49.000+00:00
+title: Which theme do you like? (Light mode, Dark mode, Atom dark mode)
 description: Which one of the following theme you would like to use in Thermal?
 image: "/which theme_.png"
 author: mittalyashu
