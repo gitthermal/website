@@ -34,5 +34,3 @@ fields:
     max: 
     labelField: 
   label: Author
-pages:
-- data/author.json
