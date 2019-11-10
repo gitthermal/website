@@ -1,6 +1,12 @@
 {
   "authors": [
     {
+      "name": "Yashu Mittal",
+      "bio": "Creator of Thermal",
+      "twitter": "@mittalyashu",
+      "image": "/uploads/mittalyashu.jpg"
+    },
+    {
       "image": "/uploads/gitthermal.png",
       "twitter": "@gitthermal",
       "name": "Thermal",
