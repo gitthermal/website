@@ -12,5 +12,12 @@
       "name": "Thermal",
       "bio": "Happy commits"
     }
+  ],
+  "name": "",
+  "author": [
+    {
+      "template": "test-2",
+      "name": "yh"
+    }
   ]
 }
