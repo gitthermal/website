@@ -8,11 +8,16 @@ fields:
   label: Title
   config:
     required: true
-- type: text
-  name: description
-  label: Description
+- name: description
+  type: textarea
+  default: ''
   config:
     required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Enter short description of the article.
 - name: cover_image
   type: file
   config:
