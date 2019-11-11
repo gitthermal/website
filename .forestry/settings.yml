@@ -7,7 +7,6 @@ sections:
 - type: document
   path: data/notification.json
   label: Notification
-  match: "**/*"
 - type: heading
   label: Blog
 - type: directory
