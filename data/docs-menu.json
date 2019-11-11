@@ -6,6 +6,14 @@
         {
           "slug": "introduction",
           "title": "Introduction"
+        },
+        {
+          "title": "Why Thermal?",
+          "slug": "why-thermal"
+        },
+        {
+          "title": "Installing Thermal",
+          "slug": "installing-thermal"
         }
       ]
     }
