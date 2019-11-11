@@ -29,3 +29,5 @@ fields:
     max: 
     labelField: 
   label: Item
+pages:
+- data/notification.json
