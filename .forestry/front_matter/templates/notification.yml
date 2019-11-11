@@ -1,4 +1,31 @@
 ---
 label: Notification
 hide_body: true
-fields: []
+fields:
+- name: item
+  type: field_group_list
+  fields:
+  - name: call_to_action
+    type: text
+    config:
+      required: false
+    label: Call to Action
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  - name: color
+    type: color
+    label: Color
+    config:
+      required: false
+      color_format: Hex
+  - name: visible
+    type: boolean
+    label: Visible
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Item
