@@ -23,11 +23,6 @@ fields:
   config:
     maxSize: '5'
   label: Image
-- name: author
-  type: text
-  config:
-    required: false
-  label: Author
 - name: category
   type: select
   default: features
@@ -46,6 +41,13 @@ fields:
       file: 
       path: 
   label: Category
+- name: author
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Author
 - name: draft
   type: boolean
   label: Draft
