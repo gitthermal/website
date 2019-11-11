@@ -25,9 +25,17 @@ fields:
         format: markdown
     label: Bio
   - name: image
-    type: file
+    type: field_group_list
+    fields:
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
     config:
-      maxSize: '2'
+      min: 
+      max: 
+      labelField: 
     label: Image
   - name: twitter
     type: text
