@@ -120,8 +120,8 @@ export default {
 	},
 	computed: {
 		coverImage() {
-			return !!this.$page.blog.image[0]
-				? this.$page.blog.image[0].url
+			return !!this.$page.blog.image
+				? this.$page.blog.image.src
 				: "/images/meta-image.png";
 		},
 		canonicalURL() {
