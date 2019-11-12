@@ -79,6 +79,9 @@ export default {
 		color: #474C55
 		line-height: 1.7
 
+	p
+		margin-bottom: 1.125rem
+
 	ol, ul
 		padding-left: 1.2rem
 
@@ -96,13 +99,15 @@ export default {
 	hr
 		margin-top: 4rem
 		margin-bottom: 4rem
-		border-color: rgba(#474C55, .2)
+		border:
+			width: 1px
+			color: rgba(#474C55, .2)
 
 	p img
 		display: flex
 
 	img
-		margin: 0 auto
+		margin: 0 auto 1.5rem
 		max-width: 100%
 		padding: 5px
 		border: 1px solid #eeeeee
