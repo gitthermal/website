@@ -1,0 +1,16 @@
+[
+	{
+		"cta": "Donate via Open Collective",
+		"link": "https://opencollective.com/gitthermal",
+		"color": "#3385ff",
+		"visible": true,
+		"closable": false
+	},
+	{
+		"cta": "Become a Patron",
+		"link": "https://patreon.com/mittalyashu",
+		"color": "#e85b46",
+		"visible": false,
+		"closable": true
+	}
+]
