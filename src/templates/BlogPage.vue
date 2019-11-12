@@ -9,15 +9,15 @@
 						v-for="author in $page.blog.author"
 						:key="author.id"
 						:name="author.name"
-						:image="author.image[0].url"
+						:image="author.image"
 					/>
 					<template v-if="$page.blog.timeToRead">
 						- {{ $page.blog.timeToRead }} min read
 					</template>
 				</div>
 				<div
-					v-if="$page.blog.image[0]"
-					:style="`background-image: url(${$page.blog.image[0].url})`"
+					v-if="$page.blog.image"
+					:style="`background-image: url(${$page.blog.image.src})`"
 					class="blog__image"
 				/>
 				<post-layout :editOnGH="false">
@@ -63,7 +63,7 @@ export default {
 				},
 				{
 					itemprop: "image",
-					content: this.coverImage
+					content: this.metaCoverImage
 				},
 
 				// Facebook
@@ -73,7 +73,7 @@ export default {
 				},
 				{
 					name: "og:image",
-					content: this.coverImage
+					content: this.metaCoverImage
 				},
 				{
 					name: "og:url",
@@ -87,7 +87,7 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: this.coverImage
+					content: this.metaCoverImage
 				},
 				{
 					name: "twitter:url",
@@ -103,9 +103,9 @@ export default {
 		};
 	},
 	computed: {
-		coverImage() {
-			return !!this.$page.blog.image[0]
-				? this.$page.blog.image[0].url
+		metaCoverImage() {
+			return !!this.$page.blog.image
+				? this.$page.blog.image.src
 				: "/images/meta-image.png";
 		},
 		canonicalURL() {
@@ -134,16 +134,12 @@ query Blog ($path: String!) {
 		title
 		date (format: "MMMM DD, YYYY")
 		timeToRead
-		image {
-			url
-		}
+		image
 		description
 		author {
 			id
 			name
-			image {
-				url
-			}
+			image
 		}
 		path
 		canonical

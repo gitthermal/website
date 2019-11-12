@@ -1,52 +1,25 @@
+const path = require('path')
+const fs = require('fs-extra')
 const Octokit = require('@octokit/rest')
 const octokit = new Octokit()
-const Airtable = require('airtable')
 
 module.exports = function (api, options) {
 	api.loadSource(async actions => {
-		const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID)
 
-		const authorContentType = actions.addCollection({
-			typeName: 'Author'
-		})
+		// authors
+		const authorsPath = path.join(__dirname, 'data/author.json')
+		const authorsRaw = await fs.readFile(authorsPath, 'utf8')
+		const authorsJson = JSON.parse(authorsRaw);
+		const authors = actions.addCollection('Author')
 
-		const blogContentType = actions.addCollection({
-			camelCasedFieldNames: true,
-			typeName: 'BlogPage'
-		})
-
-		// fetch author data
-		await base(process.env.AIRTABLE_AUTHOR_TABLE).select().eachPage((records, fetchNextPage) => {
-			records.forEach((record) => {
-				const item = record._rawJson
-				authorContentType.addNode({
-					id: item.id,
-					...item.fields
-				})
+		authorsJson.forEach((author) => {
+			authors.addNode({
+				id: author.id,
+				name: author.name,
+				twitter: author.twitter,
+				bio: author.bio,
+				image: author.image
 			})
-			fetchNextPage()
-		})
-
-		await base(process.env.AIRTABLE_BLOG_TABLE).select().eachPage((records, fetchNextPage) => {
-			records.forEach((record) => {
-				const item = record._rawJson
-				if (item.fields.published) {
-					blogContentType.addNode({
-						id: item.id,
-						title: item.fields.title,
-						description: item.fields.description,
-						image: item.fields.image,
-						category: item.fields.category,
-						author: actions.createReference('Author', item.fields.author),
-						slug: item.fields.slug,
-						date: item.fields.date,
-						canonical: item.fields.canonical,
-						timeToRead: item.fields.timeToRead,
-						content: item.fields.content
-					})
-				}
-			})
-			fetchNextPage()
 		})
 
 		const { data } = await octokit.repos.listReleases({

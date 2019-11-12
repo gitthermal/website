@@ -20,21 +20,17 @@
 
 <page-query>
 query Blog {
-	blogs: allBlogPage(order: DESC) {
+	blogs: allBlogPage(order: DESC, filter: { draft: { eq: false } }) {
 		edges {
 			node {
 				id
 				title
 				description
-				image {
-					url
-				}
+				image
 				author {
 					id
 					name
-					image {
-						url
-					}
+					image
 				}
 				path
 				category

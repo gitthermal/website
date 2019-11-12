@@ -30,6 +30,16 @@ module.exports = {
 		{
 			use: "@gridsome/source-filesystem",
 			options: {
+				path: "blogs/**/*.md",
+				typeName: 'BlogPage',
+				refs: {
+					author: 'Author'
+				}
+			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
 				index: ['readme'],
 				path: "docs/**/*.md",
 				typeName: 'DocPage'
