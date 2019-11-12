@@ -21,7 +21,7 @@
 					class="blog__image"
 				/>
 				<post-layout :editOnGH="false">
-					<div v-html="blogContent"></div>
+					<div v-html="$page.blog.content"></div>
 				</post-layout>
 			</container>
 		</div>
@@ -32,9 +32,6 @@
 import Container from "../layouts/Container";
 import PostLayout from "../layouts/Post";
 import AuthorProfileName from "../components/AuthorProfileName";
-const remark = require("remark");
-const recommended = require("remark-preset-lint-recommended");
-const html = require("remark-html");
 
 export default {
 	name: "Blogs",
@@ -112,17 +109,6 @@ export default {
 			return this.$page.blog.canonical === ""
 				? `https://thermal.codecarrot.net${this.$page.blog.path}`
 				: this.$page.blog.canonical;
-		},
-		blogContent() {
-			let content;
-			remark()
-				.use(recommended)
-				.use(html)
-				.process(this.$page.blog.content, function(err, file) {
-					if (err) console.error(err);
-					content = file.contents;
-				});
-			return content;
 		}
 	}
 };
