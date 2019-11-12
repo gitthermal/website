@@ -23,7 +23,7 @@
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@octokit/rest": "^16.30.1",
-    "airtable": "^0.7.1",
+    "airtable": "^0.7.2",
     "gridsome": "0.7.10",
     "vue-github-button": "^1.1.2"
   },
