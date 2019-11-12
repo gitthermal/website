@@ -5,7 +5,7 @@ category: updates
 date: 2019-07-20
 image: ./image/thermal-app-design.png
 author:
-  - mittalyahsu
+  - mittalyashu
 draft: false
 canonical: https://mittalyashu.hashnode.dev/free-open-source-cross-platform-git-gui-application-for-you-cjyaz47en00066vs1lnd1jnsa
 slug: free-open-source-cross-platform-git-gui-application
