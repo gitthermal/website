@@ -35,7 +35,6 @@ query Blog {
 				path
 				category
 				date (format: "MMMM DD, YYYY")
-				timeToRead
 			}
 		}
 	}
