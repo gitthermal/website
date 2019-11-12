@@ -4,6 +4,13 @@ const Octokit = require('@octokit/rest')
 const octokit = new Octokit()
 
 module.exports = function (api, options) {
+
+	api.onCreateNode(options => {
+		if (options.internal.typeName === 'BlogPage' && options.draft) {
+			return null
+		}
+	})
+
 	api.loadSource(async actions => {
 
 		// authors
