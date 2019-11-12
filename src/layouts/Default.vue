@@ -21,81 +21,80 @@ export default {
 	metaInfo: {
 		meta: [
 			{
-				name: 'description',
-				content: 'One stop to manage all Git repository at one place.'
+				name: "description",
+				content: "One stop to manage all Git repository at one place."
 			},
 			{
-				name: 'keywords',
-				content: 'thermal, git thermal, git gui, free git gui'
+				name: "keywords",
+				content: "thermal, git thermal, git gui, free git gui"
 			},
 			{
-				name: 'url',
-				content: 'https://thermal.codecarrot.net/'
+				name: "url",
+				content: "https://thermal.codecarrot.net/"
 			},
 			{
-				name: 'copyright',
-				content: '© Copyright. CodeCarrot, Inc.'
+				name: "copyright",
+				content: "© Copyright. CodeCarrot, Inc."
 			},
 			{
-				name: 'language',
-				content: 'en'
+				name: "language",
+				content: "en"
 			},
 			{
-				name: 'robots',
-				content: 'index, follow'
+				name: "robots",
+				content: "index, follow"
 			},
 			{
-				name: 'classification',
-				content: 'project'
+				name: "classification",
+				content: "project"
 			},
 			{
-				name: 'author',
-				content: 'Yashu Mittal, yashu@codecarrot.net'
+				name: "author",
+				content: "Yashu Mittal, yashu@codecarrot.net"
 			},
 			{
-				name: 'owner',
-				content: 'CodeCarrot, contact@codecarrot.net'
+				name: "owner",
+				content: "CodeCarrot, contact@codecarrot.net"
 			},
 			{
 				name: "theme-color",
 				content: "#222831"
 			},
 
-
 			// Google
 			{
-				itemprop: 'name',
-				content: 'Thermal'
+				itemprop: "name",
+				content: "Thermal"
 			},
 			{
-				itemprop: 'description',
-				content: 'One stop to manage all Git repository at one place.'
+				itemprop: "description",
+				content: "One stop to manage all Git repository at one place."
 			},
 			{
-				itemprop: 'image',
-				content: '/images/meta-image.png'
+				itemprop: "image",
+				content: "/images/meta-image.png"
 			},
 
 			// Facebook
 			{
-				name: 'og:type',
-				content: 'website'
+				name: "og:type",
+				content: "website"
 			},
 			{
-				name: 'og:image',
-				content: '/images/meta-image.png'
+				name: "og:image",
+				content: "/images/meta-image.png"
 			},
 			{
-				name: 'og:url',
-				content: 'https://thermal.codecarrot.net/'
+				name: "og:url",
+				content: "https://thermal.codecarrot.net/"
 			},
 			{
-				name: 'og:site_name',
-				content: 'Thermal'
+				name: "og:site_name",
+				content: "Thermal"
 			},
 			{
-				name: 'og:description',
-				content: 'One stop to manage all Git repository at one place.'
+				name: "og:description",
+				content: "One stop to manage all Git repository at one place."
 			},
 			{
 				name: "fb:page_id",
@@ -108,20 +107,20 @@ export default {
 
 			// Twitter
 			{
-				name: 'twitter:description',
-				content: 'One stop to manage all Git repository at one place.'
+				name: "twitter:description",
+				content: "One stop to manage all Git repository at one place."
 			},
 			{
-				name: 'twitter:image',
-				content: '/images/meta-image.png'
+				name: "twitter:image",
+				content: "/images/meta-image.png"
 			},
 			{
-				name: 'twitter:url',
-				content: 'https://thermal.codecarrot.net/'
+				name: "twitter:url",
+				content: "https://thermal.codecarrot.net/"
 			},
 			{
-				name: 'twitter:site',
-				content: '@gitthermal'
+				name: "twitter:site",
+				content: "@gitthermal"
 			}
 		]
 	},
