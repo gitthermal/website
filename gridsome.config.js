@@ -13,7 +13,6 @@ module.exports = {
 	},
 
 	templates: {
-		BlogPage: "/blog/:slug",
 		ReleasePage: "/releases/:slug"
 	},
 
@@ -28,10 +27,13 @@ module.exports = {
 			}
 		},
 		{
-			use: "@gridsome/source-filesystem",
+			use: "@gridsome/vue-remark",
 			options: {
-				path: "blogs/**/*.md",
-				typeName: 'BlogPage',
+				typeName: 'Blog',
+				baseDir: "./blogs",
+				pathPrefix: '/blog',
+				template: "./src/templates/Blog.vue",
+				route: "/blog/:slug",
 				refs: {
 					author: 'Author'
 				}
