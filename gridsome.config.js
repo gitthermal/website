@@ -14,6 +14,7 @@ module.exports = {
 
 	templates: {
 		BlogPage: "/blog/:slug",
+		Tutorials: "tutorials/:slug",
 		ReleasePage: "/releases/:slug"
 	},
 
@@ -33,6 +34,14 @@ module.exports = {
 				index: ['readme'],
 				path: "docs/**/*.md",
 				typeName: 'DocPage'
+			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
+				index: ['readme'],
+				path: "tutorials/**/*.md",
+				typeName: 'Tutorials'
 			}
 		},
 		{
