@@ -20,9 +20,6 @@
 				<a :href="'https://github.com/gitthermal/thermal/issues/new/choose' + footerUrl" target="_blank" class="footer__navbar-item">
 					Feedback
 				</a>
-				<g-link to="/blog" class="footer__navbar-item">
-					Blog
-				</g-link>
 				<!-- <div class="footer__navbar-item">
 					Privacy
 				</div>
