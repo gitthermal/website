@@ -21,12 +21,31 @@
 					class="blog__image"
 				/>
 				<post-layout :editOnGH="false">
-					<div v-html="$page.blog.content"></div>
+					<VueRemarkContent />
 				</post-layout>
 			</container>
 		</div>
 	</Layout>
 </template>
+
+<page-query>
+query Blog ($path: String!) {
+	blog: blogPage (path: $path) {
+		title
+		date (format: "MMMM DD, YYYY")
+		image
+		description
+		author {
+			id
+			name
+			image
+		}
+		path
+		canonical
+		content
+	}
+}
+</page-query>
 
 <script>
 import Container from "../layouts/Container";
@@ -60,7 +79,7 @@ export default {
 				},
 				{
 					itemprop: "image",
-					content: this.metaCoverImage
+					content: this.coverImage
 				},
 
 				// Facebook
@@ -70,7 +89,7 @@ export default {
 				},
 				{
 					name: "og:image",
-					content: this.metaCoverImage
+					content: this.coverImage
 				},
 				{
 					name: "og:url",
@@ -84,7 +103,7 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: this.metaCoverImage
+					content: this.coverImage
 				},
 				{
 					name: "twitter:url",
@@ -100,9 +119,9 @@ export default {
 		};
 	},
 	computed: {
-		metaCoverImage() {
-			return !!this.$page.blog.image
-				? this.$page.blog.image.src
+		coverImage() {
+			return !!this.$page.blog.image[0]
+				? this.$page.blog.image[0].url
 				: "/images/meta-image.png";
 		},
 		canonicalURL() {
@@ -113,26 +132,6 @@ export default {
 	}
 };
 </script>
-
-<page-query>
-query Blog ($path: String!) {
-	blog: blogPage (path: $path) {
-		title
-		date (format: "MMMM DD, YYYY")
-		timeToRead
-		image
-		description
-		author {
-			id
-			name
-			image
-		}
-		path
-		canonical
-		content
-	}
-}
-</page-query>
 
 <style lang='sass'>
 .blog
