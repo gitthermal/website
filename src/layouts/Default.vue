@@ -1,6 +1,14 @@
 <template>
 	<div class="layout">
-		<notification-banner cta="Become a Patron" link="http://patreon.com/mittalyashu" color="e85b46">
+		<notification-banner
+			v-for="notification in notifications"
+			v-if="notification.visible"
+			:key="notification.cta"
+			:cta="notification.cta"
+			:link="notification.link"
+			:color="notification.color"
+			:closable="notification.closable"
+		>
 			Support the development of Thermal
 		</notification-banner>
 		<Header :theme="headerTheme" :size="headerSize" />
@@ -14,7 +22,8 @@
 import NotificationBanner from "../components/NotificationBanner";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Navbar from "./partials/Navbar"
+import Navbar from "./partials/Navbar";
+import Notifications from "../../data/notification.json";
 
 export default {
 	name: "Default",
@@ -129,6 +138,11 @@ export default {
 		Header,
 		Footer,
 		Navbar
+	},
+	computed: {
+		notifications() {
+			return Notifications;
+		}
 	},
 	props: {
 		headerTheme: {

@@ -1,9 +1,23 @@
 <template>
-	<div class="notification__banner" :style="`background-color: #${color}`">
+	<div
+		@mouseenter="hoverState"
+		@mouseleave="normalState"
+		class="notification__banner"
+		:style="`background-color: ${color}`"
+	>
 		<div class="notification__banner-content">
-			<slot/>
+			<slot />
 		</div>
-		<a v-if="!!link" :href="link" class="notification__banner-download">{{ cta }}</a>
+		<a
+			v-if="!!link"
+			:href="link"
+			:style="{
+				backgroundColor: button.background.color,
+				color: button.text.color
+			}"
+			class="notification__banner-button"
+			>{{ cta }}</a
+		>
 		<div v-if="closable" class="notification__banner-close">
 			<CloseIcon />
 		</div>
@@ -15,6 +29,18 @@ import CloseIcon from "../../static/images/icon/close.svg";
 
 export default {
 	name: "NotificationBanner",
+	data() {
+		return {
+			button: {
+				text: {
+					color: "white"
+				},
+				background: {
+					color: this.color
+				}
+			}
+		};
+	},
 	components: {
 		CloseIcon
 	},
@@ -24,6 +50,16 @@ export default {
 		link: String,
 		color: String,
 		closable: Boolean
+	},
+	methods: {
+		normalState() {
+			this.button.text.color = "white";
+			this.button.background.color = this.color;
+		},
+		hoverState() {
+			this.button.text.color = this.color;
+			this.button.background.color = "white";
+		}
 	}
 };
 </script>
@@ -45,9 +81,9 @@ export default {
 	&-content
 		text-align: center
 
-	&-download
+	&-button
 		border: 1px solid hsla(0,0%,100%,.25);
-		border-radius: 3px
+		border-radius: 10px
 		padding-left: 10px
 		padding-right: 10px
 		color: white
@@ -74,6 +110,6 @@ export default {
 	.notification__banner
 		flex-direction: row
 
-		&-download
+		&-button
 			margin-left: 10px
 </style>
