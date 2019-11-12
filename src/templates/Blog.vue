@@ -30,7 +30,7 @@
 
 <page-query>
 query Blog ($path: String!) {
-	blog: blogPage (path: $path) {
+	blog: blog (path: $path) {
 		title
 		date (format: "MMMM DD, YYYY")
 		image

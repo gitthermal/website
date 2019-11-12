@@ -20,7 +20,7 @@
 
 <page-query>
 query Blog {
-	blogs: allBlogPage(order: DESC, filter: { draft: { eq: false } }) {
+	blogs: allBlog(order: DESC, filter: { draft: { eq: false } }) {
 		edges {
 			node {
 				id
