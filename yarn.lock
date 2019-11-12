@@ -9996,10 +9996,10 @@ vue-analytics@^5.16.1:
   resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.4.tgz#7f9e197cbc64afac96884a05214b17efaf8e9d09"
   integrity sha512-M67cUqpPeyk2rftrvlx2uU+BQ/C4E8SkF2Ct9LizOYUoTccZtCCJwhMJfQ3XL8xep6p3K8KYz58FzRWvx5zlPw==
 
-vue-apexcharts@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/vue-apexcharts/-/vue-apexcharts-1.5.0.tgz#55209d87f389a4929f888fb3a21ef3ddd7f8177d"
-  integrity sha512-BhwhC45vQkhcsYwDGXjVczGL1KReedu/4lNH+hr0SzKNL8FgK4BQZgE+BJHwBQ5gt1Bd9JYnwe/DPWumC7O3bg==
+vue-apexcharts@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/vue-apexcharts/-/vue-apexcharts-1.5.1.tgz#f235d3c8047690f598864b70bd389081efff7576"
+  integrity sha512-faMfIj7g4MEceWjh5Aux7NfEdJYiSvMK6ml6UA2oeQH444kU4z532zR8P6AvCj0x6LzV2fgv2POzt0poMaoIjg==
 
 vue-eslint-parser@^6.0.4:
   version "6.0.5"
