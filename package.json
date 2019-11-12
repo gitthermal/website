@@ -30,7 +30,7 @@
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
-    "apexcharts": "^3.8.6",
+    "apexcharts": "^3.10.1",
     "dotenv": "^8.2.0",
     "eslint": "^6.5.0",
     "eslint-config-prettier": "^6.5.0",
