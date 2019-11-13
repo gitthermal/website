@@ -11,13 +11,17 @@ canonical:
 slug: looking-for-beta-testers
 ---
 
+import CalloutBlock from "../../src/components/CalloutBlock.vue"
+
 Hi guys 👋🏻!
 
 I'm creating a new open-source cross-platform desktop application allowing developers to manage their Git repositories at one place by providing a simple to use graphical interface.
 
 ![Thermal application design](../../static/images/app-screenshot-2x.png)
 
-_All features are not available as shown above, they are still under development._
+<callout-block type="warning">
+All features are not available as shown above, they are still under development.
+</callout-block>
 
 I would love to get some user feedback and know what you guys think. You can download it from [Thermal website](https://thermal.codecarrot.net/) or click on the link [https://thermal.codecarrot.net/download/](https://thermal.codecarrot.net/download/)
 
