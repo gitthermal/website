@@ -11,7 +11,7 @@ canonical:
 slug: looking-for-beta-testers
 ---
 
-import CalloutBlock from "../../src/components/CalloutBlock.vue"
+import CalloutBlock from "~/components/CalloutBlock.vue"
 
 Hi guys 👋🏻!
 

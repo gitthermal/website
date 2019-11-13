@@ -11,7 +11,7 @@ canonical: https://mittalyashu.hashnode.dev/free-open-source-cross-platform-git-
 slug: free-open-source-cross-platform-git-gui-application
 ---
 
-import CalloutBlock from "../../src/components/CalloutBlock.vue"
+import CalloutBlock from "~/components/CalloutBlock.vue"
 
 Hello Git users,
 

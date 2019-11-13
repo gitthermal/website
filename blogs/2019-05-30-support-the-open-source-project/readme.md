@@ -11,7 +11,7 @@ canonical:
 slug: support-the-open-source-project
 ---
 
-import CalloutBlock from "../../src/components/CalloutBlock.vue"
+import CalloutBlock from "~/components/CalloutBlock.vue"
 
 Hello, 👋🏻
 
