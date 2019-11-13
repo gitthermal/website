@@ -11,6 +11,8 @@ canonical:
 slug: support-the-open-source-project
 ---
 
+import CalloutBlock from "../../src/components/CalloutBlock.vue"
+
 Hello, 👋🏻
 
 I am building a free and open source developer tool called [Thermal](/).
@@ -23,23 +25,23 @@ Thermal is a desktop application allows you to manage all Git repository at one 
 
 ---
 
-Few stats to show the number of downloads for Windows, Mac, and Linux platform.
+Here are some stats to show the number of downloads for Windows, Mac, and Linux.
 
 ![Thermal app download stats of May 30, 2019](./image/download-stats.png)
 
-> MacOS downloads are low since it was released with v0.0.2.
+<callout-block type="warning">
+MacOS downloads are low since it was released with v0.0.2
+</callout-block>
 
-You are most welcome 🙏🏻, to [download the application](https://thermal.codecarrot.net/) and share your feedback in [Thermal Discord community](https://discord.gg/vEVccH7).
+You are most welcome to [download the app](https://thermal.codecarrot.net/) and do share your valuable feedback in [Thermal Discord community](https://discord.gg/vEVccH7).
 
-Even though I am just getting started with it, there are a lot more features planned and yet to build and it can't be done without your help. [Becoming my sponsor](https://thermal.codecarrot.net/sponsor/) will help me a lot by keeping my ☕coffee mug full and encouraging me more that someone got my back 😉.
+Even though we're just getting started with it, there are a lot more features planned and yet to build and it can't be done without your help.
 
-There are few perks for each sponsorship tier, let me know if you have any questions regarding the same.
+[Becoming a backer](https://opencollective.com/gitthermal) will help me a lot by keeping my ☕ coffee mug full and a constant reminder that you got my back 😉.
 
-![Thermal sponsor peaks](https://i.imgur.com/jLXUzaS.png)
+![Open collective Thermal page](./image/opencollective-thermal-page.png)
 
-> You can post questions in the comment section below or DM me on Discord **Yashu Mittal#1475**.
-
-Again, you can become a sponsor from [thermal.codecarrot.net/sponsor](https://thermal.codecarrot.net/sponsor/)/
+Each sponsorship tier has it's own perks, let me know if you have any questions regarding the same.
 
 Thank you so much for reading until the end.
 
