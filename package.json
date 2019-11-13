@@ -1,5 +1,5 @@
 {
-  "name": "therma-website",
+  "name": "thermal-website",
   "description": "Thermal website",
   "main": "src/main.js",
   "private": true,
