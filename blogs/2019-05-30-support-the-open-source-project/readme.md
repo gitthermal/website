@@ -11,8 +11,6 @@ canonical:
 slug: support-the-open-source-project
 ---
 
-import CalloutBlock from "~/components/CalloutBlock.vue"
-
 Hello, 👋🏻
 
 I am building a free and open source developer tool called [Thermal](/).
@@ -28,10 +26,6 @@ Thermal is a desktop application allows you to manage all Git repository at one 
 Here are some stats to show the number of downloads for Windows, Mac, and Linux.
 
 ![Thermal app download stats of May 30, 2019](./image/download-stats.png)
-
-<callout-block type="warning">
-MacOS downloads are low since it was released with v0.0.2
-</callout-block>
 
 You are most welcome to [download the app](https://thermal.codecarrot.net/) and do share your valuable feedback in [Thermal Discord community](https://discord.gg/vEVccH7).
 

@@ -11,8 +11,6 @@ canonical: https://mittalyashu.hashnode.dev/free-open-source-cross-platform-git-
 slug: free-open-source-cross-platform-git-gui-application
 ---
 
-import CalloutBlock from "~/components/CalloutBlock.vue"
-
 Hello Git users,
 
 Today, I want to share about a very new Git GUI application which will blow your mind 🤯.
@@ -41,10 +39,6 @@ There are a lot of awesome features which comes _out of the box_.
 - and more.
 
 Now... 🤔
-
-<callout-block type="warning">
-Thermal is under active development and there are a lot of features yet to build. All of the feature shown in the image might not be available yet.
-</callout-block>
 
 But, worry not...
 
