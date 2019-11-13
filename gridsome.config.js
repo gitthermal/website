@@ -13,7 +13,6 @@ module.exports = {
 	},
 
 	templates: {
-		BlogPage: "/blog/:slug",
 		ReleasePage: "/releases/:slug"
 	},
 
@@ -24,6 +23,19 @@ module.exports = {
 				id: 'UA-131193769-3',
 				debug: {
 					sendHitTask: process.env.NODE_ENV === 'production'
+				}
+			}
+		},
+		{
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: 'Blog',
+				baseDir: "./blogs",
+				pathPrefix: '/blog',
+				template: "./src/templates/Blog.vue",
+				route: "/blog/:slug",
+				refs: {
+					author: 'Author'
 				}
 			}
 		},

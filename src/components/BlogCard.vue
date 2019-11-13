@@ -1,6 +1,6 @@
 <template>
 	<g-link :to="post.path" class="blog__card">
-		<div v-if="post.image[0]" :style="`background-image: url(${ post.image[0].url })`" class="blog__card-image"></div>
+		<div v-if="post.image" :style="`background-image: url(${ post.image.src })`" class="blog__card-image"></div>
 		<div class="blog__card-content">
 			<h6 class="blog__card-category">#{{ post.category  }}</h6>
 			<h2 class="blog__card-heading">{{ post.title }}</h2>
@@ -11,7 +11,7 @@
 					v-for="author in post.author"
 					:key="author.id"
 					:name="author.name"
-					:image="author.image[0].url"
+					:image="author.image"
 				/>
 				<template v-if="post.timeToRead">
 					- {{ post.timeToRead }} min read

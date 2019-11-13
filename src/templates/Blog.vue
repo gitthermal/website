@@ -9,32 +9,48 @@
 						v-for="author in $page.blog.author"
 						:key="author.id"
 						:name="author.name"
-						:image="author.image[0].url"
+						:image="author.image"
 					/>
 					<template v-if="$page.blog.timeToRead">
 						- {{ $page.blog.timeToRead }} min read
 					</template>
 				</div>
 				<div
-					v-if="$page.blog.image[0]"
-					:style="`background-image: url(${$page.blog.image[0].url})`"
+					v-if="$page.blog.image"
+					:style="`background-image: url(${$page.blog.image.src})`"
 					class="blog__image"
 				/>
 				<post-layout :editOnGH="false">
-					<div v-html="blogContent"></div>
+					<VueRemarkContent />
 				</post-layout>
 			</container>
 		</div>
 	</Layout>
 </template>
 
+<page-query>
+query Blog ($path: String!) {
+	blog: blog (path: $path) {
+		title
+		date (format: "MMMM DD, YYYY")
+		image
+		description
+		author {
+			id
+			name
+			image
+		}
+		path
+		canonical
+		content
+	}
+}
+</page-query>
+
 <script>
 import Container from "../layouts/Container";
 import PostLayout from "../layouts/Post";
 import AuthorProfileName from "../components/AuthorProfileName";
-const remark = require("remark");
-const recommended = require("remark-preset-lint-recommended");
-const html = require("remark-html");
 
 export default {
 	name: "Blogs",
@@ -104,53 +120,18 @@ export default {
 	},
 	computed: {
 		coverImage() {
-			return !!this.$page.blog.image[0]
-				? this.$page.blog.image[0].url
+			return !!this.$page.blog.image
+				? this.$page.blog.image.src
 				: "/images/meta-image.png";
 		},
 		canonicalURL() {
 			return this.$page.blog.canonical === ""
 				? `https://thermal.codecarrot.net${this.$page.blog.path}`
 				: this.$page.blog.canonical;
-		},
-		blogContent() {
-			let content;
-			remark()
-				.use(recommended)
-				.use(html)
-				.process(this.$page.blog.content, function(err, file) {
-					if (err) console.error(err);
-					content = file.contents;
-				});
-			return content;
 		}
 	}
 };
 </script>
-
-<page-query>
-query Blog ($path: String!) {
-	blog: blogPage (path: $path) {
-		title
-		date (format: "MMMM DD, YYYY")
-		timeToRead
-		image {
-			url
-		}
-		description
-		author {
-			id
-			name
-			image {
-				url
-			}
-		}
-		path
-		canonical
-		content
-	}
-}
-</page-query>
 
 <style lang='sass'>
 .blog

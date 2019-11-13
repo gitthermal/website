@@ -11,8 +11,7 @@
   "scripts": {
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "build": "gridsome build",
-    "now-build": "gridsome build"
+    "build": "gridsome build"
   },
   "bugs": {
     "url": "https://github.com/gitthermal/website/issues"
@@ -23,13 +22,13 @@
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@octokit/rest": "^16.30.1",
-    "airtable": "^0.7.1",
     "gridsome": "0.7.10",
     "vue-github-button": "^1.1.2"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
+    "@gridsome/vue-remark": "^0.1.8",
     "apexcharts": "^3.8.6",
     "dotenv": "^8.2.0",
     "eslint": "^6.5.0",
