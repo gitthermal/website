@@ -25,12 +25,9 @@
 								/>
 								<h4>Windows</h4>
 								<div>
-									<select v-model="winBuild" name="download__os-win">
-										<option value="exe">Exe</option>
-									</select>
 									<outline-button
 										text="Download"
-										:link="downloadBuild(0, winBuild)"
+										:link="assets.windows.exe"
 										:size="1"
 										theme="dark"
 										:external="true"
@@ -44,13 +41,9 @@
 								/>
 								<h4>MacOS</h4>
 								<div>
-									<select v-model="macBuild" name="download__os-mac">
-										<option value="dmg">Dmg</option>
-										<option value="zip">Zip</option>
-									</select>
 									<outline-button
 										text="Download"
-										:link="downloadBuild(1, macBuild)"
+										:link="assets.mac.dmg"
 										:size="1"
 										theme="dark"
 										:external="true"
@@ -63,17 +56,29 @@
 									class="download__other-image"
 								/>
 								<h4>Linux</h4>
-								<div>
-									<select v-model="linuxBuild" name="download__os-linux">
-										<option value="deb">Deb</option>
-										<option value="snap">Snap</option>
-										<option value="zip">Zip</option>
-										<option value="AppImage">AppImage</option>
-									</select>
+
+								<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+									<div style="position: relative; margin-right: 10px;">
+										<dropdown-parent
+											@click.native="linuxToggle = !linuxToggle"
+											:toggle="linuxToggle"
+											:text="linuxBuild"
+										/>
+										<dropdown-list v-if="linuxToggle" style="top: calc(37px + 5px);">
+											<dropdown-item @click.native="selectAsset('appimage')">
+												AppImage
+											</dropdown-item>
+											<dropdown-item @click.native="selectAsset('deb')">
+												Deb
+											</dropdown-item>
+										</dropdown-list>
+									</div>
+
 									<outline-button
 										text="Download"
-										:link="downloadBuild(2, linuxBuild)"
+										:link="assets.linux[linuxBuild]"
 										:size="1"
+										:disabled="linuxBuild ? false : true"
 										theme="dark"
 										:external="true"
 									/>
@@ -92,6 +97,10 @@ import container from "../layouts/Container";
 import PlatformMixin from "../mixins/platform";
 import OutlineButton from "../components/Button/OutlineButton";
 
+import DropdownParent from "../components/Dropdown/DropdownParent";
+import DropdownList from "../components/Dropdown/DropdownList";
+import DropdownItem from "../components/Dropdown/DropdownItem";
+
 export default {
 	name: "Download",
 	metaInfo: {
@@ -105,114 +114,73 @@ export default {
 	},
 	data() {
 		return {
-			currentOSDownloadURL: "",
-			winBuild: "",
+			linuxToggle: false,
 			linuxBuild: "",
-			macBuild: "",
-			osBuild: [
-				{
-					os: "windows",
-					ext: []
+			assets: {
+				linux: {
+					deb: "",
+					appimage: ""
 				},
-				{
-					os: "mac",
-					ext: []
+				mac: {
+					dmg: ""
 				},
-				{
-					os: "linux",
-					ext: []
+				windows: {
+					exe: ""
 				}
-			]
+			}
 		};
 	},
 	components: {
 		container,
-		OutlineButton
-	},
-	computed: {
-		downloadLink() {
-			return this.currentOSDownloadURL;
-		}
+		OutlineButton,
+		DropdownParent,
+		DropdownList,
+		DropdownItem
 	},
 	methods: {
-		osDownloadRedirect(url) {
-			setTimeout(function() {
-				window.open(url);
-			}, 1500);
+		selectAsset(format) {
+			this.linuxBuild = format;
+			this.linuxToggle = false;
 		},
-		osReleasesAssets(assets) {
-			for (let i = 0; i < assets.length; i++) {
-				let downloadUrl = assets[i].browser_download_url;
-				if (downloadUrl.includes("linux")) {
-					if (downloadUrl.includes("deb")) {
-						this.addBuildType(2, "deb", downloadUrl);
+		organizeAssets() {
+			const releases = this.$page.allLatestRelease.edges
+			releases.forEach(({ node }) => {
+				if (node.browser_download_url.includes("linux")) {
+					if (node.browser_download_url.includes("deb")) {
+						this.assets.linux.deb = node.browser_download_url
 					}
-					if (downloadUrl.includes("snap")) {
-						this.addBuildType(2, "snap", downloadUrl);
-					}
-					if (downloadUrl.includes("zip")) {
-						this.addBuildType(2, "zip", downloadUrl);
-					}
-					if (downloadUrl.includes("AppImage")) {
-						this.addBuildType(2, "AppImage", downloadUrl);
+					if (node.browser_download_url.includes("AppImage")) {
+						this.assets.linux.appimage = node.browser_download_url
 					}
 				}
-				if (downloadUrl.includes("mac")) {
-					if (downloadUrl.includes("dmg")) {
-						this.addBuildType(1, "dmg", downloadUrl);
-					}
-					if (downloadUrl.includes("zip")) {
-						this.addBuildType(1, "zip", downloadUrl);
+				if (node.browser_download_url.includes("mac")) {
+					if (node.browser_download_url.includes("dmg")) {
+						this.assets.mac.dmg = node.browser_download_url
 					}
 				}
-				if (downloadUrl.includes("win")) {
-					this.addBuildType(0, "exe", downloadUrl);
+				if (node.browser_download_url.includes("win")) {
+					if (node.browser_download_url.includes("exe")) {
+						this.assets.windows.exe = node.browser_download_url
+					}
 				}
-			}
-		},
-		addBuildType(index, type, downloadUrl) {
-			let data = {
-				name: type,
-				browser_download_url: downloadUrl
-			};
-			this.osBuild[index].ext.push(data);
-		},
-		downloadBuild(index, build) {
-			for (let i = 0; i < this.osBuild[index].ext.length; i++) {
-				if (this.osBuild[index].ext[i].name === build) {
-					return this.osBuild[index].ext[i].browser_download_url;
-				}
-			}
+			})
 		}
 	},
 	mounted() {
-		this.osReleasesAssets(this.$page.allGithub.edges[0].node.assets);
-		for (let i = 0; i < this.osBuild.length; i++) {
-			if (this.$router.history.current.query.os === this.osBuild[i].os) {
-				for (let j = 0; j < this.osBuild[i].ext.length; j++) {
-					this.currentOSDownloadURL = this.osBuild[i].ext[
-						j
-					].browser_download_url;
-					this.osDownloadRedirect(this.currentOSDownloadURL);
-				}
-			}
-		}
+		this.organizeAssets()
 	},
 	mixins: [PlatformMixin]
 };
 </script>
 
 <page-query>
-	query GitHub {
-		allGithub (sort: [{ by: "published_at" }]) {
+	query {
+		allLatestRelease {
 			edges {
 				node {
-					id
 					name
-					assets {
-						url
-						browser_download_url
-					}
+					id
+					browser_download_url
 				}
 			}
 		}
