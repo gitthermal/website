@@ -5,7 +5,8 @@
 			'button__outline-light': theme === 'light',
 			'button__outline-dark': theme === 'dark',
 			'button__size-1': size === 1,
-			'button__size-2': size === 2
+			'button__size-2': size === 2,
+			'button__disabled': disabled
 		}"
 		:link="link"
 		:external="external"
@@ -41,6 +42,10 @@ export default {
 		external: {
 			type: Boolean,
 			default: false
+		},
+		disabled: {
+			type: Boolean,
+			default: false
 		}
 	}
 };
@@ -63,4 +68,15 @@ export default {
 
 			&:hover
 				color: #00ADB5
+
+	&__disabled
+		border: none
+		background-color: rgba(#222831, .2)
+		cursor: not-allowed
+		color: rgba(#222831, .5)
+
+		&:hover
+			color: rgba(#222831, .5)
+
+
 </style>
