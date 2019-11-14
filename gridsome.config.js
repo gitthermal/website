@@ -13,7 +13,7 @@ module.exports = {
 	},
 
 	templates: {
-		ReleasePage: "/releases/:slug"
+		Releases: "/release/:slug"
 	},
 
 	plugins: [
