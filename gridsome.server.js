@@ -29,10 +29,34 @@ module.exports = function (api, options) {
 			})
 		})
 
-		const { data } = await octokit.repos.listReleases({
+		const thermalRepository = {
 			owner: "gitthermal",
 			repo: "thermal"
-		})
+		}
+
+		// latest release artifacts
+		const getLatestRelease = await octokit.repos.getLatestRelease(thermalRepository)
+		try {
+			const latestRelease = actions.addCollection({
+				typeName: "latestRelease"
+			})
+
+			getLatestRelease.data.assets.forEach((item) => {
+				latestRelease.addNode({
+					id: item.id,
+					url: item.url,
+					name: item.name,
+					label: item.label,
+					size: item.size,
+					download_count: item.download_count,
+					created_at: item.created_at,
+					updated_at: item.updated_at,
+					browser_download_url: item.browser_download_url
+				})
+			})
+		} catch (error) {
+			console.log(error)
+		}
 		try {
 			const github = actions.addCollection({
 				typeName: 'github'
