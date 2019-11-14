@@ -14,9 +14,9 @@
 				<a :href="'https://discordapp.com/invite/KT3nAR5/' + footerUrl" target="_blank" class="footer__navbar-item">
 					Help
 				</a>
-				<a :href="'https://patreon.com/mittalyashu' + footerUrl" target="_blank" class="footer__navbar-item">
-					Patron
-				</a>
+				<g-link to="/release" class="footer__navbar-item">
+					Release notes
+				</g-link>
 				<a :href="'https://github.com/gitthermal/thermal/issues/new/choose' + footerUrl" target="_blank" class="footer__navbar-item">
 					Feedback
 				</a>
