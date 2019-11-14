@@ -10,7 +10,7 @@
 		"cta": "Become a Patron",
 		"link": "https://patreon.com/mittalyashu",
 		"color": "#e85b46",
-		"visible": false,
+		"visible": true,
 		"closable": true
 	}
 ]

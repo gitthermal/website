@@ -1,13 +1,12 @@
 <template>
 	<div class="layout">
 		<notification-banner
-			v-for="notification in notifications"
-			v-if="notification.visible"
-			:key="notification.cta"
-			:cta="notification.cta"
-			:link="notification.link"
-			:color="notification.color"
-			:closable="notification.closable"
+			v-if="notifications[randomNumberForNotifications].visible"
+			:key="notifications[randomNumberForNotifications].cta"
+			:cta="notifications[randomNumberForNotifications].cta"
+			:link="notifications[randomNumberForNotifications].link"
+			:color="notifications[randomNumberForNotifications].color"
+			:closable="notifications[randomNumberForNotifications].closable"
 		>
 			Support the development of Thermal
 		</notification-banner>
@@ -142,6 +141,9 @@ export default {
 	computed: {
 		notifications() {
 			return Notifications;
+		},
+		randomNumberForNotifications() {
+			return Math.floor((Math.random() * this.notifications.length));
 		}
 	},
 	props: {
