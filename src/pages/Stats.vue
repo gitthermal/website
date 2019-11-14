@@ -96,16 +96,13 @@ export default {
 </script>
 
 <page-query>
-	query GitHub {
-		allGithub {
+	query {
+		allLatestRelease {
 			edges {
 				node {
-					id
 					name
-					assets {
-						download_count
-						name
-					}
+					id
+					download_count
 				}
 			}
 		}
