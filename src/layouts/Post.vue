@@ -81,12 +81,14 @@ export default {
 
 	p
 		margin-bottom: 1.125rem
+		word-wrap: break-word
 
 	ol, ul
 		padding-left: 1.2rem
 
 		li
 			margin-bottom: .25rem
+			word-wrap: break-word
 
 	a
 		color: #00ADB5
