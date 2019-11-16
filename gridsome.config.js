@@ -12,10 +12,6 @@ module.exports = {
 			.loader('vue-svg-loader')
 	},
 
-	templates: {
-		Releases: "/release/:slug"
-	},
-
 	plugins: [
 		{
 			use: '@gridsome/plugin-google-analytics',
@@ -45,6 +41,19 @@ module.exports = {
 				index: ['readme'],
 				path: "docs/**/*.md",
 				typeName: 'DocPage'
+			}
+		},
+		{
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: 'Releases',
+				baseDir: "./releases",
+				pathPrefix: '/releases',
+				template: "./src/templates/Releases.vue",
+				route: "/release/v:slug",
+				refs: {
+					release: 'releasesData'
+				}
 			}
 		}
 	]
