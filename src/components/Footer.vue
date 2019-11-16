@@ -14,9 +14,9 @@
 				<a :href="'https://discordapp.com/invite/KT3nAR5/' + footerUrl" target="_blank" class="footer__navbar-item">
 					Help
 				</a>
-				<a :href="'https://patreon.com/mittalyashu' + footerUrl" target="_blank" class="footer__navbar-item">
-					Patron
-				</a>
+				<g-link :to="releases" class="footer__navbar-item">
+					Release notes
+				</g-link>
 				<a :href="'https://github.com/gitthermal/thermal/issues/new/choose' + footerUrl" target="_blank" class="footer__navbar-item">
 					Feedback
 				</a>
@@ -60,10 +60,25 @@ export default {
 	computed: {
 		footerUrl() {
 			return "?utm_source=website&utm_medium=footer"
-		}
+		},
+		releases() {
+			return `/release/v${this.$static.allReleases.edges[0].node.slug}`
+		},
 	}
 }
 </script>
+
+<static-query>
+query {
+  allReleases (limit:1) {
+    edges {
+      node {
+        slug
+      }
+    }
+  }
+}
+</static-query>
 
 <style lang='sass'>
 .footer

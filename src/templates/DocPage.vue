@@ -1,6 +1,7 @@
 <template>
 	<DocsLayout
 		:menu="docsmenu"
+		route="docs"
 		:title="$page.doc.title"
 		:description="$page.doc.description"
 		:titleBorder="$page.doc.titleBorder"
