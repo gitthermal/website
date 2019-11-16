@@ -62,28 +62,25 @@ module.exports = function (api, options) {
 		const listReleases = await octokit.repos.listReleases({ ...thermalRepository, per_page: 100 })
 		try {
 			const releases = actions.addCollection({
-				typeName: 'Releases'
+				typeName: 'releasesData'
 			})
 			listReleases.data.forEach(item => {
-
-				const slug = item.name.replace(/\./gm, "-")
 				releases.addNode({
 					id: item.id,
-					slug,
-					name: `v${item.name}`,
+					name: item.name,
 					html_url: item.html_url,
 					draft: item.draft,
 					prerelease: item.prerelease,
 					tag_name: item.tag_name,
 					target_commitish: item.target_commitish,
+					assets: item.assets,
 					author: {
 						id: item.author.id,
 						avatar_url: item.author.avatar_url,
 						url: item.author.url
 					},
 					created_at: item.created_at,
-					published_at: item.published_at,
-					content: item.body
+					published_at: item.published_at
 				})
 			})
 		} catch (error) {
