@@ -5,11 +5,12 @@
 				<doc-sidebar :menu="menu" :route="route" />
 				<div class="docs__content">
 					<div class="docs__content-container">
-						<post-layout
-							:title="title"
-							:description="description"
-							:titleBorder="titleBorder"
-						>
+						<div class="docs__meta">
+							<h1 class="docs__meta-heading">{{ title }}</h1>
+							<div class="docs__meta-description">{{ description }}</div>
+							<hr v-if="titleBorder" class="docs__meta-titleBorder" />
+						</div>
+						<post-layout>
 							<slot />
 						</post-layout>
 					</div>
@@ -54,6 +55,24 @@ export default {
 	&__container
 		display: flex
 		flex-direction: row
+
+	&__meta
+		margin-bottom: 1.5rem
+
+		&-heading
+			margin-top: 0
+			font-weight: 300
+
+		&-description
+			color: lighten(#000, 40%)
+			font-size: 1.05rem
+			margin-bottom: 1rem
+
+		&-titleBorder
+			border:
+				color: #dee0e3
+				width: 1px
+				style: solid
 
 	&__content
 		padding-top: 2rem
