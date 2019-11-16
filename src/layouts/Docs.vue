@@ -10,7 +10,7 @@
 							<div class="docs__meta-description">{{ description }}</div>
 							<hr v-if="titleBorder" class="docs__meta-titleBorder" />
 						</div>
-						<release-assets v-if="assets.length > 0" :releases="assets" />
+						<release-assets v-if="route === 'release' && assets.length > 0" :releases="assets" />
 						<post-layout>
 							<slot />
 						</post-layout>
