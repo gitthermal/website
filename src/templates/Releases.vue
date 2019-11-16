@@ -1,6 +1,12 @@
 <template>
-	<DocsLayout :menu="menu" route="release" :title="$page.releases.name" :title-border="true">
-		<div v-html="blogContent"></div>
+	<DocsLayout
+		:menu="menu"
+		route="release"
+		:title="title"
+		:title-border="true"
+		:assets="$page.releases.release.assets"
+	>
+		<VueRemarkContent />
 	</DocsLayout>
 </template>
 
@@ -9,30 +15,30 @@ query ($path: String!) {
 	menu: allReleases {
 		edges {
 			node {
-				id
-				name
-				prerelease
 				slug
+				release {
+					name
+					created_at (format: "MMMM, YYYY")
+					prerelease
+				}
 			}
 		}
 	}
-
 	releases (path: $path) {
-		name
-		slug
-		path
 		content
+		release {
+			name
+			created_at (format: "MMMM DD, YYYY")
+			assets {
+				name
+				browser_download_url
+			}
+		}
 	}
 }
 </page-query>
 
-
 <script>
-// packages
-const remark = require("remark");
-const recommended = require("remark-preset-lint-recommended");
-const html = require("remark-html");
-
 // components
 import DocsLayout from "../layouts/Docs";
 
@@ -55,36 +61,47 @@ export default {
 	computed: {
 		menu() {
 			const data = this.$page.menu.edges;
-			let stable = [];
-			let prerelease = [];
-			data.forEach(item => {
-				if (item.node.prerelease) {
-					prerelease.push(item.node);
-				} else {
-					stable.push(item.node);
+
+			let section = [];
+			let monthsArray = [];
+
+			for (let i = 0; i < data.length; i++) {
+				const month = data[i].node.release.created_at;
+				let arrayValue;
+				for (let j = 0; j < monthsArray.length; j++) {
+					arrayValue = monthsArray[j];
 				}
-			});
-			return [
-				{
-					section: "Stable",
-					topics: stable
-				},
-				{
-					section: "Pre-Release",
-					topics: prerelease
+				if (month !== arrayValue) {
+					monthsArray.push(month);
 				}
-			];
-		},
-		blogContent() {
-			let content;
-			remark()
-				// .use(recommended)
-				.use(html)
-				.process(this.$page.releases.content, function(err, file) {
-					if (err) console.error(err);
-					content = file.contents;
+			}
+
+			for (let i = 0; i < monthsArray.length; i++) {
+				const topics = [];
+				for (let j = 0; j < data.length; j++) {
+					const date = data[j].node.release.created_at;
+
+					if (date === monthsArray[i]) {
+						topics.push({
+							name: data[j].node.release.name,
+							slug: `v${data[j].node.slug}`,
+							prerelease: data[j].node.release.prerelease
+						});
+					}
+				}
+
+				section.push({
+					section: monthsArray[i],
+					topics: topics
 				});
-			return content;
+			}
+
+			return section;
+		},
+		title() {
+			return `${this.$page.releases.release.created_at} (version ${
+				this.$page.releases.release.name
+			})`;
 		}
 	}
 };
