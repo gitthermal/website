@@ -10,6 +10,7 @@
 							<div class="docs__meta-description">{{ description }}</div>
 							<hr v-if="titleBorder" class="docs__meta-titleBorder" />
 						</div>
+						<release-assets v-if="assets.length > 0" :releases="assets" />
 						<post-layout>
 							<slot />
 						</post-layout>
@@ -22,6 +23,7 @@
 
 <script>
 import Header from "../components/Header";
+import ReleaseAssets from "../components/ReleaseAssets";
 import PostLayout from "./Post";
 import Navbar from "./partials/Navbar";
 import DocSidebar from "../components/DocSidebar";
@@ -30,6 +32,7 @@ export default {
 	name: "DocsLayout",
 	components: {
 		Header,
+		ReleaseAssets,
 		PostLayout,
 		Navbar,
 		DocSidebar
@@ -39,7 +42,8 @@ export default {
 		description: String,
 		titleBorder: Boolean,
 		menu: Array,
-		route: String
+		route: String,
+		assets: Array
 	},
 	methods: {
 		linkToDocs(link) {
