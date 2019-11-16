@@ -93,13 +93,17 @@
 </template>
 
 <script>
+// components
 import container from "../layouts/Container";
-import PlatformMixin from "../mixins/platform";
 import OutlineButton from "../components/Button/OutlineButton";
 
 import DropdownParent from "../components/Dropdown/DropdownParent";
 import DropdownList from "../components/Dropdown/DropdownList";
 import DropdownItem from "../components/Dropdown/DropdownItem";
+
+// mixins
+import platformMixin from "../mixins/platform";
+import organizeReleasesAssets from "../mixins/organizeReleasesAssets";
 
 export default {
 	name: "Download",
@@ -112,22 +116,11 @@ export default {
 			}
 		]
 	},
+	mixins: [platformMixin, organizeReleasesAssets],
 	data() {
 		return {
 			linuxToggle: false,
-			linuxBuild: "",
-			assets: {
-				linux: {
-					deb: "",
-					appimage: ""
-				},
-				mac: {
-					dmg: ""
-				},
-				windows: {
-					exe: ""
-				}
-			}
+			linuxBuild: ""
 		};
 	},
 	components: {
@@ -142,34 +135,16 @@ export default {
 			this.linuxBuild = format;
 			this.linuxToggle = false;
 		},
-		organizeAssets() {
-			const releases = this.$page.allLatestRelease.edges
-			releases.forEach(({ node }) => {
-				if (node.browser_download_url.includes("linux")) {
-					if (node.browser_download_url.includes("deb")) {
-						this.assets.linux.deb = node.browser_download_url
-					}
-					if (node.browser_download_url.includes("AppImage")) {
-						this.assets.linux.appimage = node.browser_download_url
-					}
-				}
-				if (node.browser_download_url.includes("mac")) {
-					if (node.browser_download_url.includes("dmg")) {
-						this.assets.mac.dmg = node.browser_download_url
-					}
-				}
-				if (node.browser_download_url.includes("win")) {
-					if (node.browser_download_url.includes("exe")) {
-						this.assets.windows.exe = node.browser_download_url
-					}
-				}
-			})
-		}
+		oa() {
+			}
 	},
 	mounted() {
-		this.organizeAssets()
-	},
-	mixins: [PlatformMixin]
+		let array = [];
+		this.$page.allLatestRelease.edges.forEach(item => {
+			array.push(item.node);
+		});
+		this.organizeAssets(array);
+	}
 };
 </script>
 
