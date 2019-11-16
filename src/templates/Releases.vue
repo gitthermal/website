@@ -46,7 +46,15 @@ export default {
 	name: "Release",
 	metaInfo() {
 		return {
-			title: this.$page.releases.title,
+			title: `v${this.$page.releases.release.name} release`,
+			meta: [
+				{
+					name: "description",
+					content: `See what is new in the Thermal release v${this.$page.releases.release.name} (${
+						this.$page.releases.release.created_at
+					})`
+				}
+			],
 			link: [
 				{
 					rel: "canonical",
