@@ -25,24 +25,24 @@
 					<div class="footer__nav-col">
 						<h5>Resources</h5>
 						<ul>
-							<li><g-link to="/docs/setup">How to install Thermal</g-link></li>
+							<li><g-link to="/docs/installing-thermal/">How to install Thermal</g-link></li>
 							<li><g-link to="/docs/introduction">How to use Thermal</g-link></li>
 							<li><g-link to="/download">Mac/Win/Linx</g-link></li>
 						</ul>
 					</div>
 					<div class="footer__nav-col">
-						<h5>Developers</h5>
+						<h5>Contribute</h5>
 						<ul>
-							<li><g-link to="/docs/concepts">Core concepts</g-link></li>
-							<li><g-link to="/docs/api">API documentation</g-link></li>
+							<li><a href="https://github.com/gitthermal/thermal/wiki">Core concepts</a></li>
+							<li><a href="https://github.com/gitthermal/thermal/wiki">API documentation</a></li>
 							<li><a href="https://www.github.com/gitthermal/thermal">Source code</a></li>
 						</ul>
 					</div>
 					<div class="footer__nav-col">
 						<h5>Support</h5>
 						<ul>
-							<li><g-link to="/faq">FAQ</g-link></li>
-							<li><a href="https://discordapp.com/invite/KT3nAR5/">Community support</a></li>
+							<li><g-link to="/docs/faq">FAQ</g-link></li>
+							<li><a href="https://discordapp.com/invite/KT3nAR5/">Discord</a></li>
 						</ul>
 					</div>
 				</div>
@@ -54,9 +54,7 @@
 					<h5>One place to manage Git repositories</h5>
 					<div class="footer__bottom-nav">
 						<g-link to="/terms">Terms</g-link>
-						<g-link to="/privacy">Privacy</g-link>
-						<g-link to="/contact">Contact</g-link>
-						<g-link to="/">CodeCarrot Labs © {{ new Date().getFullYear() }}</g-link>
+						<a href="https://www.codecarrot.net/">Created by CodeCarrot Labs © {{ new Date().getFullYear() }}</a>
 					</div>
 				</div>
 			</container>
