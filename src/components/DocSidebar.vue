@@ -1,13 +1,6 @@
 <template>
 	<div>
-		<div
-			:class="{ 'docs__sidebar-none': !sidebarView }"
-			class="docs__sidebar"
-			:style="{
-				height: `${sidebar.height}px`,
-				top: `${sidebar.top}px`
-			}"
-		>
+		<div :class="{ 'docs__sidebar-none': !sidebarView }" class="docs__sidebar">
 			<template v-for="section in menu" class="sidebar__menu">
 				<h6 :key="`section-${section.section}`" class="sidebar__menu-heading">
 					{{ section.section }}
@@ -64,7 +57,7 @@ export default {
 	},
 	computed: {
 		sidebarView() {
-			return this.sidebarToggleable && window.innerWidth <= 768;
+			return this.sidebarToggleable && this.window.innerWidth <= 768;
 		}
 	},
 	methods: {
@@ -77,26 +70,7 @@ export default {
 			} else {
 				return "#28a745";
 			}
-		},
-		handleScroll() {
-			this.scrollY = window.scrollY;
-			if (window.screenY <= 35) {
-				this.sidebar.height = window.innerHeight - 69;
-				this.sidebar.top = 69;
-			} else {
-				this.sidebar.height = window.innerHeight - 69 - 35;
-				this.sidebar.top = 69 + 35;
-			}
 		}
-	},
-	mounted() {
-		this.handleScroll();
-	},
-	created() {
-		window.addEventListener("scroll", this.handleScroll);
-	},
-	destroyed() {
-		window.removeEventListener("scroll", this.handleScroll);
 	}
 };
 </script>
@@ -105,8 +79,10 @@ export default {
 .docs__sidebar
 	position: sticky
 	border-right: 1px solid rgba(#474C55, .3)
-	max-width: 300px
+	max-width: 280px
+	height: calc(100vh - 69px)
 	overflow-y: scroll
+	top: 69px
 	padding:
 		top: 1rem
 		left: 2rem
