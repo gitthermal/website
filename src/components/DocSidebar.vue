@@ -18,6 +18,13 @@
 						:key="`${section.section}-item-${item.slug}`"
 						class="sidebar__menu-item"
 					>
+						<div
+							v-if="route === 'release'"
+							class="releases__type"
+							:style="{
+								backgroundColor: preReleaseColor(item.prerelease)
+							}"
+						/>
 						{{ item.name }}
 					</g-link>
 				</template>
@@ -63,6 +70,13 @@ export default {
 	methods: {
 		toggleSidebar() {
 			this.sidebarToggleable = !this.sidebarToggleable;
+		},
+		preReleaseColor(prerelease) {
+			if (prerelease) {
+				return "#f66a0a";
+			} else {
+				return "#28a745";
+			}
 		},
 		handleScroll() {
 			this.scrollY = window.scrollY;
@@ -133,7 +147,7 @@ export default {
 
 		&-item
 			display: flex
-			flex-direction: column
+			align-items: center
 			padding: 3px 10px
 			margin-bottom: 5px
 			color: rgba(#474C55, .8)
@@ -162,4 +176,11 @@ export default {
 @media (min-width: 768px)
 	.docs__sidebar-toggle
 		display: none
+
+.releases__type
+	width: 6px
+	height: 6px
+	border-radius: 1rem
+	margin-right: 10px
+
 </style>
