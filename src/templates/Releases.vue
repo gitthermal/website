@@ -107,7 +107,7 @@ export default {
 };
 </script>
 
-<style lang='sass'>
+<style lang="sass">
 .releases__content
 	margin-top: 4rem
 

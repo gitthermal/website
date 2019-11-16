@@ -19,10 +19,7 @@
 						</p>
 						<div class="download__other-list">
 							<div class="download__other-item">
-								<g-image
-									src="../../static/images/icon/windows.svg"
-									class="download__other-image"
-								/>
+								<g-image src="../../static/images/icon/windows.svg" class="download__other-image" />
 								<h4>Windows</h4>
 								<div>
 									<outline-button
@@ -35,10 +32,7 @@
 								</div>
 							</div>
 							<div class="download__other-item">
-								<g-image
-									src="../../static/images/icon/mac.png"
-									class="download__other-image"
-								/>
+								<g-image src="../../static/images/icon/mac.png" class="download__other-image" />
 								<h4>MacOS</h4>
 								<div>
 									<outline-button
@@ -51,13 +45,12 @@
 								</div>
 							</div>
 							<div class="download__other-item">
-								<g-image
-									src="../../static/images/icon/linux.svg"
-									class="download__other-image"
-								/>
+								<g-image src="../../static/images/icon/linux.svg" class="download__other-image" />
 								<h4>Linux</h4>
 
-								<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+								<div
+									style="display: flex; flex-direction: row; align-items: center; justify-content: center;"
+								>
 									<div style="position: relative; margin-right: 10px;">
 										<dropdown-parent
 											@click.native="linuxToggle = !linuxToggle"
@@ -70,6 +63,9 @@
 											</dropdown-item>
 											<dropdown-item @click.native="selectAsset('deb')">
 												Deb
+											</dropdown-item>
+											<dropdown-item @click.native="selectAsset('snap')">
+												Snap
 											</dropdown-item>
 										</dropdown-list>
 									</div>
