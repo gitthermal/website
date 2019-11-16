@@ -6,7 +6,7 @@ const octokit = new Octokit()
 module.exports = function (api, options) {
 
 	api.onCreateNode(options => {
-		if (options.internal.typeName === 'BlogPage' && options.draft) {
+		if (options.internal.typeName === 'Blog' && options.draft) {
 			return null
 		}
 	})
