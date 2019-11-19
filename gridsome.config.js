@@ -12,11 +12,6 @@ module.exports = {
 			.loader('vue-svg-loader')
 	},
 
-	templates: {
-		BlogPage: "/blog/:slug",
-		ReleasePage: "/releases/:slug"
-	},
-
 	plugins: [
 		{
 			use: '@gridsome/plugin-google-analytics',
@@ -24,6 +19,19 @@ module.exports = {
 				id: 'UA-131193769-3',
 				debug: {
 					sendHitTask: process.env.NODE_ENV === 'production'
+				}
+			}
+		},
+		{
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: 'Blog',
+				baseDir: "./blogs",
+				pathPrefix: '/blog',
+				template: "./src/templates/Blog.vue",
+				route: "/blog/:slug",
+				refs: {
+					author: 'Author'
 				}
 			}
 		},
@@ -36,10 +44,16 @@ module.exports = {
 			}
 		},
 		{
-			use: "@gridsome/source-filesystem",
+			use: "@gridsome/vue-remark",
 			options: {
-				path: "releases/**/*.md",
-				typeName: 'ReleasePage'
+				typeName: 'Releases',
+				baseDir: "./releases",
+				pathPrefix: '/releases',
+				template: "./src/templates/Releases.vue",
+				route: "/release/v:slug",
+				refs: {
+					release: 'releasesData'
+				}
 			}
 		}
 	]

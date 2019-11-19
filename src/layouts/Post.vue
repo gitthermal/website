@@ -1,10 +1,5 @@
 <template>
 	<div class="post">
-		<div class="post__meta">
-			<h1 class="post__heading">{{ title }}</h1>
-			<div class="post__description">{{ description }}</div>
-			<hr v-if="titleBorder" class="post__titleBorder" />
-		</div>
 		<div class="post__content">
 			<slot />
 		</div>
@@ -35,9 +30,6 @@ export default {
 		}
 	},
 	props: {
-		title: String,
-		description: String,
-		titleBorder: Boolean,
 		editOnGH: {
 			type: Boolean,
 			default: true
@@ -47,24 +39,6 @@ export default {
 </script>
 
 <style lang='sass'>
-.post__heading
-	margin-top: 0
-	font-weight: 300
-
-.post__meta
-	margin-bottom: 1.5rem
-
-.post__description
-	color: lighten(#000, 40%)
-	font-size: 1.05rem
-	margin-bottom: 1rem
-
-.post__titleBorder
-	border:
-		color: #dee0e3
-		width: 1px
-		style: solid
-
 .post__content
 	margin-bottom: 2rem
 
@@ -79,11 +53,16 @@ export default {
 		color: #474C55
 		line-height: 1.7
 
+	p
+		margin-bottom: 1.125rem
+		word-wrap: break-word
+
 	ol, ul
 		padding-left: 1.2rem
 
 		li
 			margin-bottom: .25rem
+			word-wrap: break-word
 
 	a
 		color: #00ADB5
@@ -96,13 +75,15 @@ export default {
 	hr
 		margin-top: 4rem
 		margin-bottom: 4rem
-		border-color: rgba(#474C55, .2)
+		border:
+			width: 1px
+			color: rgba(#474C55, .2)
 
 	p img
 		display: flex
 
 	img
-		margin: 0 auto
+		margin: 0 auto 1.5rem
 		max-width: 100%
 		padding: 5px
 		border: 1px solid #eeeeee

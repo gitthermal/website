@@ -21,8 +21,8 @@
 						Docs
 					</g-link>
 
-					<g-link :to="'/sponsor' + HeaderUrl" :style="'color: #' + textColor" class="header__navbar-item">
-						Sponsor
+					<g-link :to="'/blog' + HeaderUrl" :style="'color: #' + textColor" class="header__navbar-item">
+						Blog
 					</g-link>
 
 					<a

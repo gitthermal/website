@@ -1,0 +1,16 @@
+[
+	{
+		"id": "mittalyashu",
+		"name": "Yashu Mittal",
+		"twitter": "mittalyashu",
+		"bio": "Creator of Thermal application",
+		"image": "/images/author/mittalyashu.jpg"
+	},
+	{
+		"id": "gitthermal",
+		"name": "Thermal",
+		"twitter": "gitthermal",
+		"bio": "Happy commits!!!",
+		"image": "/images/author/gitthermal.png"
+	}
+]
