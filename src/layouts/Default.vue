@@ -149,6 +149,11 @@ export default {
 <style lang="sass">
 @import url('https://rsms.me/inter/inter.css')
 
+@font-face
+  font-family: 'Cascadia Code'
+  font-weight: 400
+  src: url("../assets/fonts/Cascadia.ttf") format("ttf")
+
 *
 	padding: 0
 	margin: 0
@@ -190,4 +195,7 @@ h6, .h6
 
 .active--exact
 	color: #00ADB5
+
+.font-mono
+	font-family: "Cascadia Code", sans-serif;
 </style>
