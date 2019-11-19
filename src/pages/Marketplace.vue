@@ -12,7 +12,6 @@
 						idea/suggestions/feedback.
 					</p>
 				</div>
-				<g-image class="marketplace__hero-image" src="~/assets/images/marketplace-hero-4x.png" />
 				<div style="text-align: center">
 					<primary-button
 						class="marketplace__hero-button"
@@ -21,6 +20,7 @@
 						:external="true"
 					/>
 				</div>
+				<g-image class="marketplace__hero-image" src="~/assets/images/marketplace-hero-4x.png" />
 			</container>
 		</div>
 	</layout>
