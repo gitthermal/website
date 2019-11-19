@@ -53,7 +53,7 @@
 				<div class="footer__bottom-content">
 					<h5>One place to manage Git repositories</h5>
 					<div class="footer__bottom-nav">
-						<g-link to="/terms">Terms</g-link>
+						<a href="https://github.com/gitthermal/thermal/blob/master/LICENCE">LICENSE</a>
 						<a href="https://www.codecarrot.net/">Created by CodeCarrot Labs © {{ new Date().getFullYear() }}</a>
 					</div>
 				</div>
