@@ -30,7 +30,7 @@
     "@gridsome/transformer-remark": "^0.4.0",
     "@gridsome/vue-remark": "^0.1.8",
     "apexcharts": "^3.8.6",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-prettier": "^3.1.1",
