@@ -1499,10 +1499,10 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-apexcharts@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.14.0.tgz#6c9d2343e8511acfe2527cea46679f3b4ea9b647"
-  integrity sha512-5n12kX9pn7bzVSQOKMezVs14YQqyV+aKv5oy4tWrevie+q3oGtkihc4DmmJlEnibORTX4IRl1xhodfxrBeETIA==
+apexcharts@^3.15.5:
+  version "3.15.5"
+  resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.15.5.tgz#e544b6d28e4582631ae759b770f6ca6b56c7044a"
+  integrity sha512-ODINxP01p1ASSWhAIoqN9pvd/T62XQR+6snxA0STAaiipo0aBRGEX+ZBAgWqCM/zcH47eda3nBnTYHpLscSfnA==
   dependencies:
     svg.draggable.js "^2.2.2"
     svg.easing.js "^2.0.0"
