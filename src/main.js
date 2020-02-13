@@ -30,4 +30,12 @@ export default function (Vue, { router, head, isClient }) {
 	head.script.push({
 		src: "https://js.stripe.com/v3"
 	})
+
+	// codefund
+	head.script.push({
+		src: "https://app.codefund.io/properties/707/funder.js"
+	})
+	head.script.push({
+		src: "https://app.codefund.io/properties/708/funder.js"
+	})
 }
