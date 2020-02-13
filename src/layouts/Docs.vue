@@ -10,11 +10,17 @@
 							<div class="docs__meta-description">{{ description }}</div>
 							<hr v-if="titleBorder" class="docs__meta-titleBorder" />
 						</div>
+						<div v-if="route !== 'release'" class="docs__ads-inline">
+							<div id="codefund" />
+						</div>
 						<release-assets v-if="route === 'release' && assets.length > 0" :releases="assets" />
 						<post-layout>
 							<slot />
 						</post-layout>
 					</div>
+				</div>
+				<div class="docs__ads-sidebar">
+					<div id="codefund" />
 				</div>
 			</div>
 		</div>
@@ -55,6 +61,14 @@ export default {
 </script>
 
 <style lang='sass'>
+@media screen and (min-width: 1200px)
+	.docs__ads-inline
+		display: none
+
+@media screen and (max-width: 1200px)
+	.docs__ads-sidebar
+		display: none
+
 .docs
 	&__container
 		display: flex
@@ -89,4 +103,10 @@ export default {
 			margin-right: auto
 			padding-left: 20px
 			padding-right: 20px
+
+	&__ads-sidebar
+		width: 200px
+
+	&__ads-inline
+		margin-bottom: 1.5rem
 </style>
