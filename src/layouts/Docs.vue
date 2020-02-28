@@ -70,6 +70,11 @@ export default {
 		LeftArrow,
 		RightArrow
 	},
+	data() {
+		return {
+			sidebarToggleable: false
+		};
+	},
 	props: {
 		title: String,
 		description: String,
