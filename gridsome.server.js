@@ -1,6 +1,6 @@
 const path = require('path')
 const fs = require('fs-extra')
-const Octokit = require('@octokit/rest')
+const { Octokit } = require("@octokit/rest")
 const octokit = new Octokit()
 
 module.exports = function (api, options) {
@@ -60,6 +60,7 @@ module.exports = function (api, options) {
 
 		// list all releases
 		const listReleases = await octokit.repos.listReleases({ ...thermalRepository, per_page: 100 })
+		console.log(listReleases);
 		try {
 			const releases = actions.addCollection({
 				typeName: 'releasesData'
