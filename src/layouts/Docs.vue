@@ -3,32 +3,35 @@
 		<div class="docs">
 			<div class="docs__container">
 				<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
-					<input
-						ref="search_input"
-						id="search_input"
-						class="header-search__input"
-						placeholder="Search docs..."
-						title="Search docs"
-						type="search"
-						@click="loadDocSearch()"
-					/>
-					<template v-for="section in menu" class="sidebar__menu">
-						<h6
-							:key="`section-${section.section}`"
-							class="sidebar__menu-heading"
-						>
-							{{ section.section }}
-						</h6>
-						<template v-for="item in section.topics">
-							<g-link
-								:to="`/docs/${item.slug}`"
-								:key="`${section.section}-item-${item.slug}`"
-								class="sidebar__menu-item"
+					<div class="docs__search-container">
+						<input
+							ref="search_input"
+							id="search_input"
+							placeholder="Search docs..."
+							title="Search docs"
+							type="search"
+							@click="loadDocSearch()"
+						/>
+					</div>
+					<div class="docs__sidebar-content">
+						<template v-for="section in menu" class="sidebar__menu">
+							<h6
+								:key="`section-${section.section}`"
+								class="sidebar__menu-heading"
 							>
-								{{ item.title }}
-							</g-link>
+								{{ section.section }}
+							</h6>
+							<template v-for="item in section.topics">
+								<g-link
+									:to="`/docs/${item.slug}`"
+									:key="`${section.section}-item-${item.slug}`"
+									class="sidebar__menu-item"
+								>
+									{{ item.title }}
+								</g-link>
+							</template>
 						</template>
-					</template>
+					</div>
 				</div>
 				<div class="docs__content">
 					<div class="docs__content-container">
@@ -110,21 +113,28 @@ export default {
 		display: flex
 		flex-direction: row
 
+	&__search-container
+		padding: 1rem 2rem
+		border-bottom: 1px solid rgba(71, 76, 85, 0.2)
+
 	&__sidebar
 		position: sticky
 		border-right: 1px solid rgba(#474C55, .3)
 		max-width: 300px
-		overflow-y: scroll
-		overflow-x: hidden
 		top: 69px
-		padding:
-			top: 1rem
-			left: 2rem
-			right: 2rem
-			bottom: 2rem
 		height: calc(100vh - 69px)
 		z-index: 5
 		background-color: white
+
+		&-content
+			padding:
+				top: 1rem
+				left: 2rem
+				right: 2rem
+				bottom: 2rem
+			overflow-y: scroll
+
+			height: calc(100vh - 136px)
 
 		&-toggle
 			position: fixed
@@ -167,6 +177,7 @@ export default {
 			&:first-child
 				border: none
 				margin-top: 0
+				padding-top: 1rem
 
 		&-item
 			display: flex
@@ -189,9 +200,6 @@ export default {
 	.docs
 		&__sidebar
 			position: fixed
-			padding:
-				left: 1rem
-				right: 1rem
 
 			&-none
 				display: none
@@ -199,6 +207,9 @@ export default {
 @media (min-width: 768px)
 	.docs__sidebar-toggle
 		display: none
+
+.algolia-autocomplete
+	width: 100%
 
 #search_input
 	padding: .5rem .8rem
