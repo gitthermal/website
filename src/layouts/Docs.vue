@@ -2,51 +2,25 @@
 	<Layout :headerSize="1" :footer="false">
 		<div class="docs">
 			<div class="docs__container">
-				<div :class="{ 'docs__sidebar-none': !sidebar }" class="docs__sidebar">
-					<div class="docs__search-container">
-						<input
-							ref="search_input"
-							id="search_input"
-							placeholder="Search docs..."
-							title="Search docs"
-							type="search"
-							@click="loadDocSearch()"
-						/>
-					</div>
-					<div class="docs__sidebar-content">
-						<template v-for="section in menu" class="sidebar__menu">
-							<h6
-								:key="`section-${section.section}`"
-								class="sidebar__menu-heading"
-							>
-								{{ section.section }}
-							</h6>
-							<template v-for="item in section.topics">
-								<g-link
-									:to="`/docs/${item.slug}`"
-									:key="`${section.section}-item-${item.slug}`"
-									class="sidebar__menu-item"
-								>
-									{{ item.title }}
-								</g-link>
-							</template>
-						</template>
-					</div>
-				</div>
+				<doc-sidebar :menu="menu" :route="route" />
 				<div class="docs__content">
 					<div class="docs__content-container">
-						<PostLayout
-							:title="title"
-							:description="description"
-							:titleBorder="titleBorder"
-						>
+						<div class="docs__meta">
+							<h1 class="docs__meta-heading">{{ title }}</h1>
+							<div class="docs__meta-description">{{ description }}</div>
+							<hr v-if="titleBorder" class="docs__meta-titleBorder" />
+						</div>
+						<div v-if="route !== 'release'" class="docs__ads-inline">
+							<div id="codefund" />
+						</div>
+						<release-assets v-if="route === 'release' && assets.length > 0" :releases="assets" />
+						<post-layout>
 							<slot />
-						</PostLayout>
+						</post-layout>
 					</div>
 				</div>
-				<div @click="toggleSidebar()" class="docs__sidebar-toggle">
-					<LeftArrow v-if="sidebar" />
-					<RightArrow v-else />
+				<div class="docs__ads-sidebar">
+					<div id="codefund" />
 				</div>
 			</div>
 		</div>
@@ -54,42 +28,31 @@
 </template>
 
 <script>
+// components
 import Header from "../components/Header";
+import ReleaseAssets from "../components/ReleaseAssets";
 import PostLayout from "./Post";
 import Navbar from "./partials/Navbar";
-import LeftArrow from "../assets/images/chevrons-left.svg";
-import RightArrow from "../assets/images/chevrons-right.svg";
-import docsearch from "docsearch.js";
+import DocSidebar from "../components/DocSidebar";
 
 export default {
 	name: "DocsLayout",
 	components: {
 		Header,
+		ReleaseAssets,
 		PostLayout,
 		Navbar,
-		LeftArrow,
-		RightArrow
-	},
-	data() {
-		return {
-			sidebarToggleable: false
-		};
+		DocSidebar
 	},
 	props: {
 		title: String,
 		description: String,
 		titleBorder: Boolean,
-		menu: Array
-	},
-	computed: {
-		sidebar() {
-			return this.sidebarToggleable && window.innerWidth <= 768;
-		}
+		menu: Array,
+		route: String,
+		assets: Array
 	},
 	methods: {
-		toggleSidebar() {
-			this.sidebarToggleable = !this.sidebarToggleable;
-		},
 		linkToDocs(link) {
 			this.sidebarToggleable = false;
 			this.$router.push(link);
@@ -111,50 +74,36 @@ export default {
 </script>
 
 <style lang='sass'>
-@import '~docsearch.js/dist/cdn/docsearch.min.css';
+@media screen and (min-width: 1200px)
+	.docs__ads-inline
+		display: none
+
+@media screen and (max-width: 1200px)
+	.docs__ads-sidebar
+		display: none
 
 .docs
 	&__container
 		display: flex
 		flex-direction: row
 
-	&__search-container
-		padding: 1rem 2rem
-		border-bottom: 1px solid rgba(71, 76, 85, 0.2)
+	&__meta
+		margin-bottom: 1.5rem
 
-	&__sidebar
-		position: sticky
-		border-right: 1px solid rgba(#474C55, .3)
-		max-width: 300px
-		top: 69px
-		height: calc(100vh - 69px)
-		z-index: 5
-		background-color: white
+		&-heading
+			margin-top: 0
+			font-weight: 300
 
-		&-content
-			padding:
-				top: 1rem
-				left: 2rem
-				right: 2rem
-				bottom: 2rem
-			overflow-y: scroll
+		&-description
+			color: lighten(#000, 40%)
+			font-size: 1.05rem
+			margin-bottom: 1rem
 
-			height: calc(100vh - 136px)
-
-		&-toggle
-			position: fixed
-			background-color: #00ADB5
-			bottom: 4.225rem
-			cursor: pointer
-			right: 1.5rem
-			display: flex
-			border-radius: 50px
-			padding: .6rem
-
-			svg
-				stroke: white
-				width: 25px
-				height: 25px
+		&-titleBorder
+			border:
+				color: #dee0e3
+				width: 1px
+				style: solid
 
 	&__content
 		padding-top: 2rem
@@ -168,63 +117,9 @@ export default {
 			padding-left: 20px
 			padding-right: 20px
 
-.sidebar
-	&__menu
-		&-heading
-			color: rgba(#474C55, .5)
-			font-weight: 600
-			margin-top: 2rem
-			margin-bottom: .5rem
-			border-top: 1px solid rgba(#474C55, .2)
-			padding-top: 2rem
-			text-transform: uppercase
+	&__ads-sidebar
+		width: 200px
 
-			&:first-child
-				border: none
-				margin-top: 0
-				padding-top: 1rem
-
-		&-item
-			display: flex
-			flex-direction: column
-			padding: 3px 10px
-			margin-bottom: 5px
-			color: rgba(#474C55, .8)
-			font-weight: 500
-			cursor: pointer
-
-			&:hover
-				color: #00ADB5
-
-		&-item.active--exact
-			background-color: rgba(#00ADB5, .1)
-			color: #00ADB5
-			border-radius: 1rem
-
-@media (max-width: 768px)
-	.docs
-		&__sidebar
-			position: fixed
-
-			&-none
-				display: none
-
-@media (min-width: 768px)
-	.docs__sidebar-toggle
-		display: none
-
-.algolia-autocomplete
-	width: 100%
-
-#search_input
-	padding: .5rem .8rem
-	font-size: .85rem
-	border-radius: .3rem
-	outline: none
-	border:
-		color: #eeeeee
-		width: 1px
-		style: solid
-	width: 100%
-	font-family: inherit
+	&__ads-inline
+		margin-bottom: 1.5rem
 </style>

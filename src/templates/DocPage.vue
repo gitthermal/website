@@ -1,6 +1,7 @@
 <template>
 	<DocsLayout
 		:menu="docsmenu"
+		route="docs"
 		:title="$page.doc.title"
 		:description="$page.doc.description"
 		:titleBorder="$page.doc.titleBorder"
@@ -11,7 +12,7 @@
 
 <script>
 import DocsLayout from "../layouts/Docs";
-import DocsMenu from "../../data/docs-menu.json"
+import DocsMenu from "../../data/docs-menu.json";
 
 export default {
 	name: "Docs",
@@ -20,9 +21,14 @@ export default {
 			title: this.$page.doc.title,
 			meta: [
 				{
-					key: "description",
 					name: "description",
 					content: this.$page.doc.description
+				}
+			],
+			link: [
+				{
+					rel: "canonical",
+					href: `https://thermal.codecarrot.net${this.$page.doc.path}`
 				}
 			]
 		};
@@ -44,6 +50,7 @@ query DocPage ($path: String!) {
 		title
 		description
 		titleBorder
+		path
 		content
 	}
 }

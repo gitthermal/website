@@ -12,25 +12,25 @@ There are many ways in which you can contribute, beyond writing code, by logging
 
 ## Reporting Issues
 
-Have you identified a reproducible problem inside the application? Have a feature request? Or a suggestion. We want to hear about it! Read more about [reporting issues](/docs/reporting-issues/) to know more about it.
+Have you identified a reproducible problem inside the application? Have a feature request? Or a suggestion. We want to hear about it! Read more about [reporting issues](/docs/reporting-issue/) to know more about it.
 
 ## Pull requests
 
 Check out our [Contributing Guide](/docs/contribution-guide/) for ideas on contributing and setup steps for getting our repositories up and running on your local machine.
 
-*Once your pull request is accepted, you will alos get a contributor badge [in discord](https://discord.gg/spyxbGt).*
+*Once your pull request is accepted, you will also get a contributor badge [in discord](https://discord.gg/spyxbGt).*
 
 ## Bug hunter
 
 We'll be releasing a canary build soon, which can be downloaded from the [GitHub repository](https://github.com/gitthermal/thermal/).
 
-*You will also get a bug hunter badge [in discord](https://discord.gg/spyxbGt).*
+_You will also get a bug hunter badge [in discord](https://discord.gg/spyxbGt)._
 
 ## Join core team
 
 Joining the Thermal core team has it's own fun and few perks.
 
-* Discord `core-team` badge
-* Member of Thermal orgnization on GitHub
+- Discord `core-team` badge
+- Member of Thermal organization on GitHub
 
 Learn, [how to join core team?](/docs/how-to-join-core-team/)

@@ -1,5 +1,6 @@
 module.exports = {
 	siteName: 'Thermal',
+	siteDescription: 'One stop to all Git repository',
 	siteUrl: 'https://thermal.codecarrot.net/',
 	titleTemplate: "%s | Thermal",
 
@@ -15,7 +16,23 @@ module.exports = {
 		{
 			use: '@gridsome/plugin-google-analytics',
 			options: {
-				id: 'UA-131193769-3'
+				id: 'UA-131193769-3',
+				debug: {
+					sendHitTask: process.env.NODE_ENV === 'production'
+				}
+			}
+		},
+		{
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: 'Blog',
+				baseDir: "./blogs",
+				pathPrefix: '/blog',
+				template: "./src/templates/Blog.vue",
+				route: "/blog/:slug",
+				refs: {
+					author: 'Author'
+				}
 			}
 		},
 		{
@@ -27,11 +44,16 @@ module.exports = {
 			}
 		},
 		{
-			use: "@gridsome/source-filesystem",
+			use: "@gridsome/vue-remark",
 			options: {
-				path: "releases/**/*.md",
-				typeName: 'ReleasePage',
-				route: '/releases/:slug'
+				typeName: 'Releases',
+				baseDir: "./releases",
+				pathPrefix: '/releases',
+				template: "./src/templates/Releases.vue",
+				route: "/release/v:slug",
+				refs: {
+					release: 'releasesData'
+				}
 			}
 		}
 	]

@@ -19,18 +19,12 @@
 						</p>
 						<div class="download__other-list">
 							<div class="download__other-item">
-								<g-image
-									src="../../static/images/icon/windows.svg"
-									class="download__other-image"
-								/>
+								<g-image src="../../static/images/icon/windows.svg" class="download__other-image" />
 								<h4>Windows</h4>
 								<div>
-									<select v-model="winBuild" name="download__os-win">
-										<option value="exe">Exe</option>
-									</select>
 									<outline-button
 										text="Download"
-										:link="downloadBuild(0, winBuild)"
+										:link="assets.windows.exe"
 										:size="1"
 										theme="dark"
 										:external="true"
@@ -38,19 +32,12 @@
 								</div>
 							</div>
 							<div class="download__other-item">
-								<g-image
-									src="../../static/images/icon/mac.png"
-									class="download__other-image"
-								/>
+								<g-image src="../../static/images/icon/mac.png" class="download__other-image" />
 								<h4>MacOS</h4>
 								<div>
-									<select v-model="macBuild" name="download__os-mac">
-										<option value="dmg">Dmg</option>
-										<option value="zip">Zip</option>
-									</select>
 									<outline-button
 										text="Download"
-										:link="downloadBuild(1, macBuild)"
+										:link="assets.mac.dmg"
 										:size="1"
 										theme="dark"
 										:external="true"
@@ -58,22 +45,36 @@
 								</div>
 							</div>
 							<div class="download__other-item">
-								<g-image
-									src="../../static/images/icon/linux.svg"
-									class="download__other-image"
-								/>
+								<g-image src="../../static/images/icon/linux.svg" class="download__other-image" />
 								<h4>Linux</h4>
-								<div>
-									<select v-model="linuxBuild" name="download__os-linux">
-										<option value="deb">Deb</option>
-										<option value="snap">Snap</option>
-										<option value="zip">Zip</option>
-										<option value="AppImage">AppImage</option>
-									</select>
+
+								<div
+									style="display: flex; flex-direction: row; align-items: center; justify-content: center;"
+								>
+									<div style="position: relative; margin-right: 10px;">
+										<dropdown-parent
+											@click.native="linuxToggle = !linuxToggle"
+											:toggle="linuxToggle"
+											:text="linuxBuild"
+										/>
+										<dropdown-list v-if="linuxToggle" style="top: calc(37px + 5px);">
+											<dropdown-item @click.native="selectAsset('appimage')">
+												AppImage
+											</dropdown-item>
+											<dropdown-item @click.native="selectAsset('deb')">
+												Deb
+											</dropdown-item>
+											<dropdown-item @click.native="selectAsset('snap')">
+												Snap
+											</dropdown-item>
+										</dropdown-list>
+									</div>
+
 									<outline-button
 										text="Download"
-										:link="downloadBuild(2, linuxBuild)"
+										:link="assets.linux[linuxBuild]"
 										:size="1"
+										:disabled="linuxBuild ? false : true"
 										theme="dark"
 										:external="true"
 									/>
@@ -88,125 +89,69 @@
 </template>
 
 <script>
+// components
 import container from "../layouts/Container";
-import PlatformMixin from "../mixins/platform";
 import OutlineButton from "../components/Button/OutlineButton";
+
+import DropdownParent from "../components/Dropdown/DropdownParent";
+import DropdownList from "../components/Dropdown/DropdownList";
+import DropdownItem from "../components/Dropdown/DropdownItem";
+
+// mixins
+import platformMixin from "../mixins/platform";
+import organizeReleasesAssets from "../mixins/organizeReleasesAssets";
 
 export default {
 	name: "Download",
 	metaInfo: {
-		title: "Download application"
+		title: "Download windows, mac & linux",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/download"
+			}
+		]
 	},
+	mixins: [platformMixin, organizeReleasesAssets],
 	data() {
 		return {
-			currentOSDownloadURL: "",
-			winBuild: "",
-			linuxBuild: "",
-			macBuild: "",
-			osBuild: [
-				{
-					os: "windows",
-					ext: []
-				},
-				{
-					os: "mac",
-					ext: []
-				},
-				{
-					os: "linux",
-					ext: []
-				}
-			]
+			linuxToggle: false,
+			linuxBuild: ""
 		};
 	},
 	components: {
 		container,
-		OutlineButton
-	},
-	computed: {
-		downloadLink() {
-			return this.currentOSDownloadURL;
-		}
+		OutlineButton,
+		DropdownParent,
+		DropdownList,
+		DropdownItem
 	},
 	methods: {
-		osDownloadRedirect(url) {
-			setTimeout(function() {
-				window.open(url);
-			}, 1500);
+		selectAsset(format) {
+			this.linuxBuild = format;
+			this.linuxToggle = false;
 		},
-		osReleasesAssets(assets) {
-			for (let i = 0; i < assets.length; i++) {
-				let downloadUrl = assets[i].browser_download_url;
-				if (downloadUrl.includes("linux")) {
-					if (downloadUrl.includes("deb")) {
-						this.addBuildType(2, "deb", downloadUrl);
-					}
-					if (downloadUrl.includes("snap")) {
-						this.addBuildType(2, "snap", downloadUrl);
-					}
-					if (downloadUrl.includes("zip")) {
-						this.addBuildType(2, "zip", downloadUrl);
-					}
-					if (downloadUrl.includes("AppImage")) {
-						this.addBuildType(2, "AppImage", downloadUrl);
-					}
-				}
-				if (downloadUrl.includes("mac")) {
-					if (downloadUrl.includes("dmg")) {
-						this.addBuildType(1, "dmg", downloadUrl);
-					}
-					if (downloadUrl.includes("zip")) {
-						this.addBuildType(1, "zip", downloadUrl);
-					}
-				}
-				if (downloadUrl.includes("win")) {
-					this.addBuildType(0, "exe", downloadUrl);
-				}
+		oa() {
 			}
-		},
-		addBuildType(index, type, downloadUrl) {
-			let data = {
-				name: type,
-				browser_download_url: downloadUrl
-			};
-			this.osBuild[index].ext.push(data);
-		},
-		downloadBuild(index, build) {
-			for (let i = 0; i < this.osBuild[index].ext.length; i++) {
-				if (this.osBuild[index].ext[i].name === build) {
-					return this.osBuild[index].ext[i].browser_download_url;
-				}
-			}
-		}
 	},
 	mounted() {
-		this.osReleasesAssets(this.$page.allgithub.edges[0].node.assets);
-		for (let i = 0; i < this.osBuild.length; i++) {
-			if (this.$router.history.current.query.os === this.osBuild[i].os) {
-				for (let j = 0; j < this.osBuild[i].ext.length; j++) {
-					this.currentOSDownloadURL = this.osBuild[i].ext[
-						j
-					].browser_download_url;
-					this.osDownloadRedirect(this.currentOSDownloadURL);
-				}
-			}
-		}
-	},
-	mixins: [PlatformMixin]
+		let array = [];
+		this.$page.allLatestRelease.edges.forEach(item => {
+			array.push(item.node);
+		});
+		this.organizeAssets(array);
+	}
 };
 </script>
 
 <page-query>
-	query GitHub {
-		allgithub (sort: [{ by: "published_at" }]) {
+	query {
+		allLatestRelease {
 			edges {
 				node {
-					id
 					name
-					assets {
-						url
-						browser_download_url
-					}
+					id
+					browser_download_url
 				}
 			}
 		}

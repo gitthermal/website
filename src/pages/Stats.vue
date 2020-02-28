@@ -22,7 +22,13 @@ import Container from "../layouts/Container";
 export default {
 	name: "Stats",
 	metaInfo: {
-		title: "Stats"
+		title: "Stats",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://thermal.codecarrot.net/stats"
+			}
+		]
 	},
 	data() {
 		return {
@@ -70,8 +76,8 @@ export default {
 		let win = 0;
 		let mac = 0;
 		let linux = 0;
-		for (let i = 0; i < this.$page.allgithub.edges.length; i++) {
-			let releaseAssets = this.$page.allgithub.edges[i].node.assets;
+		for (let i = 0; i < this.$page.allGithub.edges.length; i++) {
+			let releaseAssets = this.$page.allGithub.edges[i].node.assets;
 			for (let j = 0; j < releaseAssets.length; j++) {
 				if (releaseAssets[j].name.includes("win")) {
 					win += releaseAssets[j].download_count;
@@ -90,16 +96,13 @@ export default {
 </script>
 
 <page-query>
-	query GitHub {
-		allgithub {
+	query {
+		allLatestRelease {
 			edges {
 				node {
-					id
 					name
-					assets {
-						download_count
-						name
-					}
+					id
+					download_count
 				}
 			}
 		}

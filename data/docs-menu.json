@@ -1,10 +1,18 @@
 [
 	{
-		"section": "Introduction",
+		"section": "Getting started",
 		"topics": [
 			{
-				"title": "Getting started",
-				"slug": "getting-started"
+				"name": "Introduction",
+				"slug": "introduction"
+			},
+			{
+				"name": "Why Thermal?",
+				"slug": "why-thermal"
+			},
+			{
+				"name": "Installing Thermal",
+				"slug": "installing-thermal"
 			}
 		]
 	},
@@ -12,11 +20,11 @@
 		"section": "First step with Thermal",
 		"topics": [
 			{
-				"title": "How it works",
+				"name": "How it works",
 				"slug": "how-it-works"
 			},
 			{
-				"title": "User interface overview",
+				"name": "User interface overview",
 				"slug": "user-interface-overview"
 			}
 		]
@@ -25,19 +33,19 @@
 		"section": "Adding repositories",
 		"topics": [
 			{
-				"title": "Add existing repository",
+				"name": "Add existing repository",
 				"slug": "add-existing-repository"
 			},
 			{
-				"title": "Initialize repository",
+				"name": "Initialize repository",
 				"slug": "initialize-repository"
 			},
 			{
-				"title": "Clone repository",
+				"name": "Clone repository",
 				"slug": "clone-repository"
 			},
 			{
-				"title": "Create repository",
+				"name": "Create repository",
 				"slug": "create-repository"
 			}
 		]
@@ -46,19 +54,19 @@
 		"section": "Managing repositories",
 		"topics": [
 			{
-				"title": "Overview",
+				"name": "Overview",
 				"slug": "manage-repository-overview"
 			},
 			{
-				"title": "Organizing repositories",
+				"name": "Organizing repositories",
 				"slug": "organizing-repositories"
 			},
 			{
-				"title": "Opening repository",
+				"name": "Opening repository",
 				"slug": "opening-repository"
 			},
 			{
-				"title": "Repository settings",
+				"name": "Repository settings",
 				"slug": "repository-settings"
 			}
 		]
@@ -67,8 +75,12 @@
 		"section": "Remote repositories",
 		"topics": [
 			{
-				"title": "Publish local repository",
+				"name": "Publish local repository",
 				"slug": "publish-local-repository"
+			},
+			{
+				"name": "Push to remote",
+				"slug": "push-to-remote"
 			}
 		]
 	},
@@ -76,35 +88,35 @@
 		"section": "Contribute",
 		"topics": [
 			{
-				"title": "How to contribute",
+				"name": "How to contribute",
 				"slug": "how-to-contribute"
 			},
 			{
-				"title": "Contribution guide",
+				"name": "Contribution guide",
 				"slug": "contribution-guide"
 			},
 			{
-				"title": "Development environment",
+				"name": "Development environment",
 				"slug": "development-environment"
 			},
 			{
-				"title": "Experimental features",
+				"name": "Experimental features",
 				"slug": "experimental-features"
 			},
 			{
-				"title": "Reporting issues",
+				"name": "Reporting issues",
 				"slug": "reporting-issue"
 			},
 			{
-				"title": "Pair programming",
+				"name": "Pair programming",
 				"slug": "pair-programming"
 			},
 			{
-				"title": "How to join core team?",
+				"name": "How to join core team?",
 				"slug": "how-to-join-core-team"
 			},
 			{
-				"title": "Code of conduct",
+				"name": "Code of conduct",
 				"slug": "code-of-conduct"
 			}
 		]
@@ -113,11 +125,11 @@
 		"section": "FAQ & Help",
 		"topics": [
 			{
-				"title": "How to upgrade?",
+				"name": "How to upgrade?",
 				"slug": "how-to-upgrade"
 			},
 			{
-				"title": "FAQ",
+				"name": "FAQ",
 				"slug": "faq"
 			}
 		]

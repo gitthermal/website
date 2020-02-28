@@ -4,4 +4,7 @@ https://thermal.netlify.com/* https://thermal.codecarrot.net/:splat 301!
 /github http://github.com/gitthermal/thermal 302
 /patreon https://patreon.com/mittalyashu 302
 
+/docs /docs/introduction/ 302
+/docs/getting-started/ /docs/introduction/ 302
+
 /* /404 404
