@@ -72,6 +72,22 @@ export default {
 		RightArrow
 	},
 	methods: {
+		linkToDocs(link) {
+			this.sidebarToggleable = false;
+			this.$router.push(link);
+		},
+		loadDocSearch() {
+			docsearch({
+				apiKey: "951a5443c76379c2aa75205eb62b2f7c",
+				indexName: "codecarrot-thermal",
+				inputSelector: "#search_input",
+				debug: false, // process.env.NODE_ENV === 'development'
+				algoliaOptions: {
+					hitsPerPage: 5
+				}
+			});
+			this.$refs.search_input.focus();
+		},
 		toggleSidebar() {
 			this.sidebarToggleable = !this.sidebarToggleable;
 		},
