@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div :class="{ 'docs__sidebar-none': !sidebarToggleable }" class="docs__sidebar">
-			<div class="docs__search-container">
+			<div v-if="route !== 'release'" class="docs__search-container">
 				<input
 					ref="search_input"
 					id="search_input"
