@@ -57,8 +57,7 @@ export default {
 			sidebar: {
 				height: 0,
 				top: 0
-			},
-			searchLoad: false
+			}
 		};
 	},
 	props: {
@@ -75,21 +74,18 @@ export default {
 			this.$router.push(link);
 		},
 		loadDocSearch() {
-			if (this.searchLoad) {
-				import("docsearch.js").then(({ default: docsearch }) => {
-					docsearch({
-						apiKey: "951a5443c76379c2aa75205eb62b2f7c",
-						indexName: "codecarrot-thermal",
-						inputSelector: "#search_input",
-						debug: false, // process.env.NODE_ENV === 'development'
-						algoliaOptions: {
-							hitsPerPage: 5
-						}
-					});
-					this.searchLoad = true;
-					this.$refs.search_input.focus();
+			import("docsearch.js").then(({ default: docsearch }) => {
+				docsearch({
+					apiKey: "951a5443c76379c2aa75205eb62b2f7c",
+					indexName: "codecarrot-thermal",
+					inputSelector: "#search_input",
+					debug: false, // process.env.NODE_ENV === 'development'
+					algoliaOptions: {
+						hitsPerPage: 5
+					}
 				});
-			}
+				this.$refs.search_input.focus();
+			});
 		},
 		toggleSidebar() {
 			this.sidebarToggleable = !this.sidebarToggleable;
