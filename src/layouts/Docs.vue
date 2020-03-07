@@ -28,6 +28,7 @@
 </template>
 
 <script>
+// components
 import Header from "../components/Header";
 import ReleaseAssets from "../components/ReleaseAssets";
 import PostLayout from "./Post";
@@ -50,12 +51,6 @@ export default {
 		menu: Array,
 		route: String,
 		assets: Array
-	},
-	methods: {
-		linkToDocs(link) {
-			this.sidebarToggleable = false;
-			this.$router.push(link);
-		}
 	}
 };
 </script>
