@@ -8,7 +8,7 @@ Installing Thermal should be fairly simple. Generally, you can go to [https://th
 
 ![Thermal website homepage](./images/thermal-website-homepage.png)
 
-You can download application for any operating system of your choice.
+You can download the application for any operating system of your choice.
 
 - There are no sign ups, just download, install and you are good to go.
 - No Git tools are required, once you’ve run the installer, you can open the app and get going.
