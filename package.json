@@ -24,7 +24,7 @@
 		"@octokit/rest": "^16.43.1",
 		"docsearch.js": "^2.6.3",
 		"gridsome": "0.7.12",
-		"vue-github-button": "^1.1.2"
+		"vue-github-button": "^1.2.0"
 	},
 	"devDependencies": {
 		"@gridsome/source-filesystem": "^0.6.2",
