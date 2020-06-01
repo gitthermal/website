@@ -23,7 +23,7 @@
 		"@gridsome/plugin-google-analytics": "^0.1.0",
 		"@octokit/rest": "^16.43.1",
 		"docsearch.js": "^2.6.3",
-		"gridsome": "0.7.12",
+		"gridsome": "0.7.15",
 		"vue-github-button": "^1.2.0"
 	},
 	"devDependencies": {
