@@ -887,10 +887,10 @@
     unist-util-visit "^1.4.0"
     vfile "^4.0.0"
 
-"@gridsome/transformer-remark@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/transformer-remark/-/transformer-remark-0.6.0.tgz#5b7c34d3daf872fd8eb2679e2c3b79c64aa0167c"
-  integrity sha512-2/mX3MIlchfLaRCaFG0s6A8iqEo160dFL1rqM20gxmA+n8ACFE+4PmWHoBHGpjevd5ROsPhyAn9LaTacdsCIpA==
+"@gridsome/transformer-remark@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@gridsome/transformer-remark/-/transformer-remark-0.6.1.tgz#0fa71527289a21ff9cfeaf3a07c236b4165772ed"
+  integrity sha512-2GHBYB9qP4MvOK8gVTZvSzzaeP5qsjqO+1zscYQ4rfstsv7/BjBQ54oGWTMsg9UqYJLxZAl45eEhgkM6CyO0lg==
   dependencies:
     gray-matter "^4.0.2"
     hash-sum "^1.0.2"
@@ -910,17 +910,17 @@
     unist-util-visit "^1.4.0"
     vfile "^4.0.0"
 
-"@gridsome/vue-remark@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.2.1.tgz#c5e16d0b1c52f534a5bc0534f430f3b5853ec5a5"
-  integrity sha512-8wo/kPLb9vGOxwlkBHd0je8glUytBMGhUKHUto89hetxc680l0jN9Ctt06UN+iX2EIymsX+uFAW8RkVyUGcvvg==
+"@gridsome/vue-remark@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@gridsome/vue-remark/-/vue-remark-0.2.2.tgz#451518e646f0f729a981c44d26788dc22cefebe8"
+  integrity sha512-lnu5bK8HbcfWa4311pO+seOR3vgvhsVQ9xqZ5P6J9GJRe7RtXQJyJ8Ia2Y7SPeWQwkgM72aFxe6tfH4jWhj6mQ==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/parser" "^7.0.0"
     "@babel/preset-env" "^7.0.0"
     "@babel/traverse" "^7.0.0"
     "@gridsome/source-filesystem" "^0.6.2"
-    "@gridsome/transformer-remark" "^0.6.0"
+    "@gridsome/transformer-remark" "^0.6.1"
     hash-sum "^1.0.2"
     hast-util-to-html "^5.0.0"
     he "^1.2.0"
