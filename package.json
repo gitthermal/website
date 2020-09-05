@@ -42,7 +42,7 @@
 		"prettier": "^2.1.1",
 		"remark": "^12.0.1",
 		"remark-html": "^10.0.0",
-		"remark-preset-lint-recommended": "^3.0.3",
+		"remark-preset-lint-recommended": "^4.0.1",
 		"sass-loader": "^7.3.1",
 		"vue-apexcharts": "^1.6.0",
 		"vue-svg-loader": "^0.12.0"
