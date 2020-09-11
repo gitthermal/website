@@ -20,7 +20,7 @@
 		"url": "https://github.com/gitthermal/website/"
 	},
 	"dependencies": {
-		"@gridsome/plugin-google-analytics": "^0.1.0",
+		"@gridsome/plugin-google-analytics": "^0.1.1",
 		"@octokit/rest": "^18.0.5",
 		"docsearch.js": "^2.6.3",
 		"gridsome": "0.7.20",
