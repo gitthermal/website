@@ -4,7 +4,7 @@ description:
 titleBorder: true
 ---
 
-There is a lot of Git graphical user interface out there; why should you spend your time learning about and using Thermal?
+There is a lot of Git graphical user interfaces out there; why should you spend your time learning about and using Thermal?
 
 Tools like GitHub Desktop and SourceTree offer convenience but only limited extensibility, but there aren't any other graphical interface providing extreme flexibility approachable.
 
